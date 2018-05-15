@@ -1,0 +1,621 @@
+{
+  "warnings": [
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancelRideRequest.h",
+      "line": 25,
+      "symbol": "HereSDKDemandCancelRideRequest.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancelRideRequest.h",
+      "line": 26,
+      "symbol": "HereSDKDemandCancelRideRequest.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancelRideRequest.h",
+      "line": 35,
+      "symbol": "HereSDKDemandCancelRideRequest.-initWithRideId:cancelReason:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 14,
+      "symbol": "HereSDKDemandCancellationPolicy.HereSDKDemandTripCancellationPolicyAllowed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 15,
+      "symbol": "HereSDKDemandCancellationPolicy.HereSDKDemandTripCancellationPolicyNotAllowed",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 26,
+      "symbol": "HereSDKDemandCancellationInfoParty.HereSDKDemandCancellationInfoPartUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 27,
+      "symbol": "HereSDKDemandCancellationInfoParty.HereSDKDemandCancellationInfoPartDemander",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 28,
+      "symbol": "HereSDKDemandCancellationInfoParty.HereSDKDemandCancellationInfoPartSupplier",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 40,
+      "symbol": "HereSDKDemandCancellationStatus.HereSDKDemandCancellationStatusUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 41,
+      "symbol": "HereSDKDemandCancellationStatus.HereSDKDemandCancellationStatusProcessing",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 42,
+      "symbol": "HereSDKDemandCancellationStatus.HereSDKDemandCancellationStatusAccepted",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandCancellationInfo.h",
+      "line": 43,
+      "symbol": "HereSDKDemandCancellationStatus.HereSDKDemandCancellationStatusRejected",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandDriver.h",
+      "line": 23,
+      "symbol": "HereSDKDemandDriver.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandDriver.h",
+      "line": 24,
+      "symbol": "HereSDKDemandDriver.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPassenger.h",
+      "line": 39,
+      "symbol": "HereSDKDemandPassenger.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPassenger.h",
+      "line": 40,
+      "symbol": "HereSDKDemandPassenger.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPriceRange.h",
+      "line": 23,
+      "symbol": "HereSDKDemandPriceRange.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPriceRange.h",
+      "line": 24,
+      "symbol": "HereSDKDemandPriceRange.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRideOffer.h",
+      "line": 12,
+      "symbol": "HereSDKDemandPublicTransportRideOffer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 29,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 30,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeHighSpeedTrain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 31,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeIntercityTrain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 32,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeInterRegionalTrain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 33,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeRegionalTrain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 34,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeCityTrain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 35,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeBus",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 36,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeFerry",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 37,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeSubway",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 38,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeLightRail",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 39,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModePrivateBus",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 40,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeInclined",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 41,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeAerial",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 42,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeBusRapid",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 43,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeMonorail",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 44,
+      "symbol": "HereSDKDemandPublicTransportRouteLegTransportMode.HereSDKDemandPublicTransportRouteLegTransportModeWalk",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h",
+      "line": 49,
+      "symbol": "HereSDKDemandPublicTransportRouteLeg",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRide.h",
+      "line": 65,
+      "symbol": "HereSDKDemandRide.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 10,
+      "symbol": "HereSDKDemandTransitType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 10,
+      "symbol": "HereSDKDemandTransitType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 12,
+      "symbol": "HereSDKDemandTransitType.HereSDKDemandTransitTypeTaxi",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 13,
+      "symbol": "HereSDKDemandTransitType.HereSDKDemandTransitTypePublicTransport",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 16,
+      "symbol": "HereSDKDemandRideOfferProtocol",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h",
+      "line": 18,
+      "symbol": "HereSDKDemandRideOfferProtocol.-getTransitType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 23,
+      "symbol": "HereDemandRideOffersRequestSortType.HereDemandRideOffersRequestSortTypeUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 24,
+      "symbol": "HereDemandRideOffersRequestSortType.HereDemandRideOffersRequestSortTypeByPrice",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 25,
+      "symbol": "HereDemandRideOffersRequestSortType.HereDemandRideOffersRequestSortType_ByEta",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 72,
+      "symbol": "HereSDKDemandRideOffersRequest.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 73,
+      "symbol": "HereSDKDemandRideOffersRequest.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideOffersRequest.h",
+      "line": 87,
+      "symbol": "HereSDKDemandRideOffersRequest.-initOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 18,
+      "symbol": "HereSDKDemandRideQueryStatusFilter.HereSDKDemandRideQueryStatusUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 19,
+      "symbol": "HereSDKDemandRideQueryStatusFilter.HereSDKDemandRideQueryStatusPast",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 20,
+      "symbol": "HereSDKDemandRideQueryStatusFilter.HereSDKDemandRideQueryStatusFuture",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 21,
+      "symbol": "HereSDKDemandRideQueryStatusFilter.HereSDKDemandRideQueryStatusOngoing",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 22,
+      "symbol": "HereSDKDemandRideQueryStatusFilter.HereSDKDemandRideQueryStatusAll",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 35,
+      "symbol": "HereSDKDemandRideQuerySortType.HereSDKDemandRideQuerySortTypeUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 36,
+      "symbol": "HereSDKDemandRideQuerySortType.HereSDKDemandRideQuerySortTypeUpdateTimeAsc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 37,
+      "symbol": "HereSDKDemandRideQuerySortType.HereSDKDemandRideQuerySortTypeUpdateTimeDesc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 38,
+      "symbol": "HereSDKDemandRideQuerySortType.HereSDKDemandRideQuerySortTypeCreateTimeAsc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideQuery.h",
+      "line": 39,
+      "symbol": "HereSDKDemandRideQuerySortType.HereSDKDemandRideQuerySortTypeCreateTimeDesc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideRequest.h",
+      "line": 26,
+      "symbol": "HereSDKDemandRideRequest.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideRequest.h",
+      "line": 27,
+      "symbol": "HereSDKDemandRideRequest.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideRequest.h",
+      "line": 36,
+      "symbol": "HereSDKDemandRideRequest.-initWithOfferId:passengerDetails:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 24,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordUnknown",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 25,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordProcessing",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 26,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordRejected",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 27,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordAccepted",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 28,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordDriverAssigned",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 29,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordDriverEnRoute",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 30,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordDriverAtPickup",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 31,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordPassengerOnBoard",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 32,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordDriverAtDropoff",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 33,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordCompleted",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h",
+      "line": 34,
+      "symbol": "HereSDKDemandRideStatusUpdateStatus.HereSDKDemandRideStatusLogRecordCancelled",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandRoute.h",
+      "line": 21,
+      "symbol": "HereSDKDemandRoute.-initWithPickupLocation:destinationLocation:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandTaxiRideOffer.h",
+      "line": 11,
+      "symbol": "HereSDKDemandTaxiRideOffer",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandTransitOptions.h",
+      "line": 10,
+      "symbol": "HereSDKDemandTransitOptions",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandTransitOptions.h",
+      "line": 21,
+      "symbol": "HereSDKDemandTransitOptions.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandTransitOptions.h",
+      "line": 22,
+      "symbol": "HereSDKDemandTransitOptions.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandTransitOptions.h",
+      "line": 32,
+      "symbol": "HereSDKDemandTransitOptions.-initWithMaxTransfers:maxWalkingDistance:locale:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 7,
+      "symbol": "HereSDKDemandVehicleType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 7,
+      "symbol": "HereSDKDemandVehicleType",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 9,
+      "symbol": "HereSDKDemandVehicleType.HereSDKDemandVehicleTypeNotSupplied",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 10,
+      "symbol": "HereSDKDemandVehicleType.HereSDKDemandVehicleTypeStandard",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 11,
+      "symbol": "HereSDKDemandVehicleType.HereSDKDemandVehicleTypeLimo",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 12,
+      "symbol": "HereSDKDemandVehicleType.HereSDKDemandVehicleTypeVan",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 13,
+      "symbol": "HereSDKDemandVehicleType.HereSDKDemandVehicleTypeOther",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 38,
+      "symbol": "HereSDKDemandVehicle.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVehicle.h",
+      "line": 39,
+      "symbol": "HereSDKDemandVehicle.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration"
+}

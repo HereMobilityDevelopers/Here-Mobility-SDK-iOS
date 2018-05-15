@@ -1,0 +1,6 @@
+framework module HereSDKCoreKit {
+  umbrella header "HereSDKCoreKit.h"
+
+  export *
+  module * { export * }
+}

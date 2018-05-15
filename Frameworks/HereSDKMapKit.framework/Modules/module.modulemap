@@ -1,0 +1,6 @@
+framework module HereSDKMapKit {
+  umbrella header "HereSDKMapKit.h"
+
+  export *
+  module * { export * }
+}

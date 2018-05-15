@@ -1,0 +1,336 @@
+global:
+    ux_language: en
+    ux_language_text_source: |
+        function() {
+            var name = (global.ux_language && feature['name_' + global.ux_language]) ||
+                (global.ux_language_fallback && feature['name_'+global.ux_language_fallback]) ||
+                feature['name'];
+          return name;
+        }
+    text_font_family: 'Open Sans'
+    water_color: '#99CEFF'
+
+styles:
+    text-blend-order:
+        base: text
+
+    _hmsdk_custom_polyline_style:
+        base: lines
+        blend: overlay
+        blend_order: -1
+
+sources:
+    heremvt:
+        type: MVT
+        url: https://mp-prd-rest.inc-stg.solo-experiments.com/mvt/mvt-server/tile/{x}/{y}/{z}
+        max_zoom: 14
+        min_zoom: 1
+        layer: omv-base
+        
+scene:
+    background:
+        color: [0.870,0.870,0.870]
+
+layers:
+    landuse:
+        data: { source: heremvt, layer: landuse }
+        draw:
+            polygons:
+                order: 100
+                color: '#eaeaea'
+        builtup:
+            filter:
+                class: builtup
+            draw:
+                polygons:
+                    order: 100
+                    color: '#E1E9ED'
+        park:
+            filter:
+                class: park
+            draw:
+                polygons:
+                    order: 101
+                    color: '#A9E98D'
+        wood:
+            filter:
+                class: wood
+            draw:
+                polygons:
+                    order: 102
+                    color: '#CBF1B6'
+        hospital:
+            filter:
+                class: hospital
+            draw:
+                polygons:
+                    order: 104
+                    color: '#F3DAE4'
+        pitch:
+            filter:
+                class: pitch
+            draw:
+                polygons:
+                    order: 105
+                    color: 'hsl(100, 57%, 72%)'
+        cemetery:
+            filter:
+                class: cemetery
+            draw:
+                polygons:
+                    order: 106
+                    color: '#D3E9D8'
+
+    water:
+        data: { source: heremvt, layer: water }
+        draw:
+            polygons:
+                order: 103
+                color: global.water_color
+
+    admin:
+        data: { source: heremvt, layer: admin }
+        draw:
+            lines:
+                order: 107
+                color: 'hsl(230, 17%, 82%)'
+                width: 5
+
+    road:
+        data: { source: heremvt, layer: road }
+        draw:
+            lines:
+                interactive: true
+                order: 340
+                color: '#ffffff'
+#                color: red
+                width: 10
+        major_rail:
+            filter:
+                class: major_rail
+            draw:
+                lines:
+                    order: 342
+                    color: '#ccc'
+                    width: 10
+                    outline:
+                        color: '#ddd'
+                        width: 1
+        minor_rail:
+            filter:
+                class: minor_rail
+            draw:
+                lines:
+                    order: 342
+                    color: '#bbb'
+                    width: 10
+                    outline:
+                        color: '#aaa'
+                        width: 1
+        path:
+            filter:
+                class: path
+            draw:
+                lines:
+                    order: 341
+                    color: '#efefef'
+                    width: 10
+                    outline:
+                        color: '#e0e0e0'
+                        width: 1
+        service:
+            filter:
+                class: service
+            draw:
+                lines:
+                    order: 341
+                    color: '#f8f8f8'
+                    width: 10
+                    outline:
+                        color: '#ddd'
+                        width: 1
+        street:
+            filter:
+                class: street
+            draw:
+                lines:
+                    order: 342
+                    color: '#fff'
+                    width: [[10, 10], [15, 16], [17, 28]]
+                    outline:
+                        color: '#ddd'
+                        width: [[10, 1], [15, 1px]]
+        tertiary:
+            filter:
+                class: tertiary
+            draw:
+                lines:
+                    order: 341
+                    color: '#FFFC96'
+                    width: [[10, 10], [15, 14], [17, 28]]
+                    outline:
+                        color: '#BF9D86'
+                        width: 1
+        secondary:
+            filter:
+                class: secondary
+            draw:
+                lines:
+                    order: 342
+                    color: 'rgb(255,186,160)'
+#                    width: 8
+                    width: [[10, 14], [15, 18], [17, 28]]
+                    outline:
+                        color: 'rgb(201,138,111)'
+#                        width: 1
+                        width: [[10, 1], [13, 1px], [16, 2px]]
+        primary_and_motorway:
+            filter:
+                any:
+                    - { class: motorway }
+                    - { class: secondary }
+            draw:
+                lines:
+                    order: 342
+#                    color: red
+                    color: 'rgb(243,166,194)'
+                    width: [[10, 16], [15, 22], [17, 28]]
+                    cap: round
+                    outline:
+                        color: 'rgb(189,94,128)'
+                        width: [[10, 1], [13, 1px], [16, 2px]]
+
+    buildings:
+        data: { source: heremvt, layer: building }
+        draw:
+            polygons:
+                interactive: true
+                order: 800
+                color: '#f0e0c7'
+            lines:
+                order: 801
+                color: '#e0d0b7'
+                width: [[13, 0.55px], [15, 0.65px], [16,0.75px], [18, 1.25px]]
+        # 3d buildings
+        extrude:
+            draw:
+                polygons:
+                    order: 802
+                    extrude: global.building_extrude_height
+                    style: building-grid
+                    color: global.ux_building_color
+                lines:
+                    order: 803
+                    color: '#e0d0b7'
+                    extrude: global.building_extrude_height
+
+    place_label:
+        data: { source: heremvt, layer: place_label }
+        draw:
+            text-blend-order:
+                text_source: global.ux_language_text_source
+                font:
+                    fill: '#1E1E32'
+                    stroke: { color: white, width: 1 }
+                    family: global.text_font_family
+                    weight: 400
+                    size: 12px
+
+    water_label:
+        data: { source: heremvt, layer: water_label }
+        draw:
+            text-blend-order:
+                text_source: global.ux_language_text_source
+                order: 500
+                font:
+                    fill: '#699ECF'
+                    family: global.text_font_family
+                    size: 8px
+
+    road_label:
+        data: { source: heremvt, layer: road_label }
+        draw:
+            text-blend-order:
+                text_source: global.ux_language_text_source
+                order: 500
+                font:
+                    fill: '#1E1E32'
+                    stroke: { color: white, width: 1 }
+                    family: global.text_font_family
+                    size: 8px
+                    
+    airport_label:
+        data: { source: heremvt, layer: airport_label }
+        draw:
+            text-blend-order:
+                text_source: global.ux_language_text_source
+                font:
+                    fill: '#465A6E'
+                    stroke: { color: white, width: 1 }
+                    family: global.text_font_family
+                    weight: 400
+                    size: 8px
+
+    marine_label:
+        data: { source: heremvt, layer: marine_label }
+        draw:
+            text-blend-order:
+                text_source: global.ux_language_text_source
+                font:
+                    fill: '#2269BF'
+                    stroke: { color: white, width: 1 }
+                    family: global.text_font_family
+                    weight: 400
+                    size: 8px
+
+    country_label:
+        data: {source: heremvt}
+        draw:
+            text:
+                collidate: true
+                text_source: global.ux_language_text_source
+                font:
+                    transform: capitalize
+                    fill: '#9b9ea8'
+                    size: 14px
+                    
+    state_label:
+        data: {source: heremvt}
+        draw:
+            points:
+                order: 5
+                color: '#303030'
+                size: 4px
+                collide: false
+                text:
+                    text_source: global.ux_language_text_source
+                    blend: overlay
+                    blend_order: 1
+                    anchor: [top-right, bottom-right, bottom-left, bottom-right]
+                    font:
+                        fill: black
+                                                            
+    housenum_label:
+        data: { source: heremvt }
+        filter:
+            $zoom:
+                min: 18
+        draw:
+            text:
+                text_source: house_num
+                anchor: center
+                font:
+                    fill: '#7b9298'
+                    family: global.text_font_family
+                    size: 8px
+
+
+    # Line added from the SDK
+    _hmsdk_custom_polyline:
+            data: { source: _hmsdk_custom_polyline }
+            draw:
+                lines:
+                    style: _hmsdk_custom_polyline_style
+                    color: function() { return feature.color || '#06a6d4' }
+                    width: function() { return feature.width || '5px' }
+                    order: 500

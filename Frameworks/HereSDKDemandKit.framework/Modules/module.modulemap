@@ -1,0 +1,6 @@
+framework module HereSDKDemandKit {
+  umbrella header "HereSDKDemandKit.h"
+
+  export *
+  module * { export * }
+}

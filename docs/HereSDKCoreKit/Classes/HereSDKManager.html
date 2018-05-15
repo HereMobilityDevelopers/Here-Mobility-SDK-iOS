@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HereSDKManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Class/HereSDKManager" class="dashAnchor"></a>
+
+    <a title="HereSDKManager Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          HereSDKCoreKit Docs
+        </a>
+         (52% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">HereSDKCoreKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HereSDKManager Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKAddressData.html">HereSDKAddressData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKManager.html">HereSDKManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKUser.html">HereSDKUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@HereSDKCoreKitVersionNumber">HereSDKCoreKitVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@HereSDKCoreKitVersionString">HereSDKCoreKitVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKLoggingLevel.html">HereSDKLoggingLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>HereSDKManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The class for configuring the Here Mobility SDK.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cpy)sharedManager"></a>
+                    <a name="//apple_ref/objc/Property/sharedManager" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cpy)sharedManager">sharedManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared <code>HereSDKManager</code> instance. //not sure with that update
+The first time the sharedManager is required, it is initialized with credentials from the app&rsquo;s Info.plist file.
+Make sure the Info.plist includes correct values for keys <code>HereMobilitySDKAppId</code> and <code>HereMobilitySDKAppSecret</code>
+If either of the credentials is missing, the SDK initialization fails, and the results are undefined.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">HereSDKManager</span> <span class="o">*</span><span class="n">sharedManager</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">HereSDKManager</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The shared <code>HereSDKManager</code> instance.  nil if either credential is missing.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cpy)anonymousId"></a>
+                    <a name="//apple_ref/objc/Property/anonymousId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cpy)anonymousId">anonymousId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the unique anonymous identifier used by the SDK.</p>
+
+<p>Returns the unique anonymous identifier (for internal use by the SDK)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">anonymousId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">anonymousId</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(py)user"></a>
+                    <a name="//apple_ref/objc/Property/user" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(py)user">user</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code><a href="../Classes/HereSDKUser.html">HereSDKUser</a></code> instance.</p>
+
+<p>Holds user credentials data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/HereSDKUser.html">HereSDKUser</a></span> <span class="o">*</span><span class="n">user</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKUser.html">HereSDKUser</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(im)performFetchWithCompletionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-performFetchWithCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)performFetchWithCompletionHandler:">-performFetchWithCompletionHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the SDK to begin a fetch operation, if it has data to download.
+ To be called from application:performFetchWithCompletionHandler, if the application&rsquo;s <code>background fetch</code> mode is enabled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">performFetchWithCompletionHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UIBackgroundFetchResult</span><span class="p">))</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">performFetch</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">UIBackgroundFetchResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute when the download operation is complete. This block is called with the fetch result value that describes the results of the SDK download operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cm)allowCellularAccess:"></a>
+                    <a name="//apple_ref/objc/Method/+allowCellularAccess:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cm)allowCellularAccess:">+allowCellularAccess:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the global that determines whether network calls can be made over a cellular connection. The default is <code>NO</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">allowCellularAccess</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">allow</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">allowCellularAccess</span><span class="p">(</span><span class="n">_</span> <span class="nv">allow</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a boolean flag, Set to <code>YES</code> to allow network calls should be allowed.  Set to <code>YES</code> to allow network calls to be made over a cellular connection, or to &lsquo;NO&rsquo; to prevent it.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cm)configureLoggingLevel:"></a>
+                    <a name="//apple_ref/objc/Method/+configureLoggingLevel:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cm)configureLoggingLevel:">+configureLoggingLevel:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the global log level setting, which determines the level of logs that are printed to the console.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureLoggingLevel</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKLoggingLevel.html">HereSDKLoggingLevel</a></span><span class="p">)</span><span class="nv">loggingLevel</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">configureLoggingLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">loggingLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKLoggingLevel.html">HereSDKLoggingLevel</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loggingLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The level of logs that are printed to the console.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cm)configure"></a>
+                    <a name="//apple_ref/objc/Method/+configure" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cm)configure">+configure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the HereSDK and starts its services. This method should be called after the app is launched
+and before using HereSDK services.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">configure</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(cm)sdkVersion"></a>
+                    <a name="//apple_ref/objc/Method/+sdkVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(cm)sdkVersion">+sdkVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the SDK Version</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">sdkVersion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sdkVersion</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

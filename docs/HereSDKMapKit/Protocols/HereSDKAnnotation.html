@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HereSDKAnnotation Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Protocol/HereSDKAnnotation" class="dashAnchor"></a>
+
+    <a title="HereSDKAnnotation Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          HereSDKMapKit Docs
+        </a>
+         (70% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">HereSDKMapKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      HereSDKAnnotation Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKGeocodeResult.html">HereSDKGeocodeResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKMapGeometry.html">HereSDKMapGeometry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKMapService.html">HereSDKMapService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKMapView.html">HereSDKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPointAnnotation.html">HereSDKPointAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKRoute.html">HereSDKRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKRouteLeg.html">HereSDKRouteLeg</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKRouteManeuver.html">HereSDKRouteManeuver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKRoutePoint.html">HereSDKRoutePoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKRouteRequest.html">HereSDKRouteRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKShape.html">HereSDKShape</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotationStyle">HereSDKUserLocationAnnotationStyle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKAnnotationAnchor.html">HereSDKAnnotationAnchor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKGeocodeResultType.html">HereSDKGeocodeResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKRouteLegManeuverAction.html">HereSDKRouteLegManeuverAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKRouteLegManeuverDirection.html">HereSDKRouteLegManeuverDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKRouteMeasurementType.html">HereSDKRouteMeasurementType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKRouteProfile.html">HereSDKRouteProfile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/HereSDKMapViewDelegate.html">HereSDKMapViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:HereSDKMapService.h@T@HereSDKGeocodeCompletionHandler">HereSDKGeocodeCompletionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions/HereSDKMapRect.html">HereSDKMapRect</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectEqualToRect">HereSDKMapRectEqualToRect</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetCenter">HereSDKMapRectGetCenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetHeight">HereSDKMapRectGetHeight</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMaxLatitude">HereSDKMapRectGetMaxLatitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMaxLongitude">HereSDKMapRectGetMaxLongitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMidLatitude">HereSDKMapRectGetMidLatitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMidLongitude">HereSDKMapRectGetMidLongitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMinLatitude">HereSDKMapRectGetMinLatitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetMinLongitude">HereSDKMapRectGetMinLongitude</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectGetWidth">HereSDKMapRectGetWidth</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectInvalid">HereSDKMapRectInvalid</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectIsValid">HereSDKMapRectIsValid</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Functions.html#/c:@F@HereSDKMapRectMake">HereSDKMapRectMake</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>HereSDKAnnotation</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">HereSDKAnnotation</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>An abstract class that represents an annotation object.
+You can create annotation objects to indicate a specific point on the map.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKAnnotation(py)coordinate"></a>
+                    <a name="//apple_ref/objc/Property/coordinate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKAnnotation(py)coordinate">coordinate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The coordinate point of the annotation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="err">@required</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CLLocationCoordinate2D</span> <span class="n">coordinate</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
