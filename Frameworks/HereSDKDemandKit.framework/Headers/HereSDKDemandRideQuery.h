@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -7,35 +6,33 @@
 
 /**
  Type definition for ride statuses
-
- - HereSDKDemandRideQueryStatusUnknown: status Unknown
- - HereSDKDemandRideQueryStatusPast:    status Past rides (COMPLETED, REJECTED or CANCELLED)
- - HereSDKDemandRideQueryStatusFuture:  status Rides that were prebooked
- - HereSDKDemandRideQueryStatusOngoing: status Ongoing rides
- - HereSDKDemandRideQueryStatusAll:     status All rides
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandRideQueryStatusFilter) {
+    /** Ride status filter: Unknown */
     HereSDKDemandRideQueryStatusUnknown = 0,
+    /** Ride status filter: Past rides (COMPLETED, REJECTED or CANCELLED) */
     HereSDKDemandRideQueryStatusPast    = 1,
+    /** Ride status filter: Rides that were prebooked */
     HereSDKDemandRideQueryStatusFuture  = 2,
+    /** Ride status filter: Ongoing rides */
     HereSDKDemandRideQueryStatusOngoing = 3,
+    /** Ride status filter: All rides */
     HereSDKDemandRideQueryStatusAll     = 4,
 };
 
 /**
  Sorting ride results by update or created time
-
- - HereSDKDemandRideQuerySortTypeUnknown: sorting type Unknown
- - HereSDKDemandRideQuerySortTypeUpdateTimeAsc: sorting type by update (ascending)
- - HereSDKDemandRideQuerySortTypeUpdateTimeDesc: sorting type by update (descending)
- - HereSDKDemandRideQuerySortTypeCreateTimeAsc: sorting type by created (ascending)
- - HereSDKDemandRideQuerySortTypeCreateTimeDesc: sorting type by created (descending)
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandRideQuerySortType) {
+    /** Ride sorting type: Unknown */
     HereSDKDemandRideQuerySortTypeUnknown = 0,
+    /** Ride sorting type: by update time (ascending) */
     HereSDKDemandRideQuerySortTypeUpdateTimeAsc = 1,
+    /** Ride sorting type: by update time (descending) */
     HereSDKDemandRideQuerySortTypeUpdateTimeDesc = 2,
+    /** Ride sorting type: by created time (ascending) */
     HereSDKDemandRideQuerySortTypeCreateTimeAsc = 3,
+    /** Ride sorting type: by created time (descending) */
     HereSDKDemandRideQuerySortTypeCreateTimeDesc = 4,
 };
 

@@ -18,6 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 /** The route's end point */
 @property (nonatomic) HereSDKDemandLocation *destination;
 
+/**
+ Return a ride route
+
+ @param pickup The route's start point
+ @param destination The route's end point
+ @return A ride route
+ */
 - (instancetype)initWithPickupLocation:(HereSDKDemandLocation *)pickup
                    destinationLocation:(HereSDKDemandLocation *)destination;
 

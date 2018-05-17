@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -14,14 +13,13 @@
 
 /**
  Type definition for ride offer sort order.
-
- - HereDemandRideOffersRequestSortTypeUnknown: sort type unknown
- - HereDemandRideOffersRequestSortTypeByPrice: sort type by price (lowest first)
- - HereDemandRideOffersRequestSortType_ByEta: sort type ETA (earliest first)
  */
 typedef NS_ENUM(NSUInteger, HereDemandRideOffersRequestSortType) {
+    /** Sort type: Unknown */
     HereDemandRideOffersRequestSortTypeUnknown = 0,
+    /** Sort type: by price (lowest first) */
     HereDemandRideOffersRequestSortTypeByPrice = 1,
+    /** Sort type: by ETA (earliest first) */
     HereDemandRideOffersRequestSortType_ByEta  = 2,
 };
 
@@ -69,7 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly, nullable) HereSDKDemandTransitOptions *transitOptions;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 /**
@@ -84,7 +84,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param transitOptions Added constraints for public transport offers
  */
 +(instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
--(instancetype)initOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *)constraints prebookPickupTime:(NSDate *)prebookPickupTime priceRange:(HereSDKDemandPriceRange *)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
 
 @end
 

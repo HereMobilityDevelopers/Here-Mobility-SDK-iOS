@@ -8,59 +8,57 @@
 /**
  The direction of the maneuver action.  For turns, it represents the turn direction.
  For departure/arrival, it indicates the position's side of the street in the current direction of travel.
-
- - HereSDKRouteLegManeuverDirectionUnknownDirection: maneuver direction unknown
- - HereSDKRouteLegManeuverDirectionStraight:         maneuver direction straight
- - HereSDKRouteLegManeuverDirectionSlightRight:      maneuver direction slight right
- - HereSDKRouteLegManeuverDirectionRight:            maneuver direction right
- - HereSDKRouteLegManeuverDirectionSharpRight:       maneuver direction sharp right
- - HereSDKRouteLegManeuverDirectionSlightLeft:       maneuver direction slight left
- - HereSDKRouteLegManeuverDirectionLeft:             maneuver direction left
- - HereSDKRouteLegManeuverDirectionSharpLeft:        maneuver direction sharp left
- - HereSDKRouteLegManeuverDirectionUTurn:            maneuver direction U-Turn
  */
 typedef NS_ENUM(NSInteger, HereSDKRouteLegManeuverDirection) {
+    /** Maneuver direction: unknown */
     HereSDKRouteLegManeuverDirectionUnknownDirection,
+    /** Maneuver direction: straight */
     HereSDKRouteLegManeuverDirectionStraight,
+    /** Maneuver direction: slight right */
     HereSDKRouteLegManeuverDirectionSlightRight,
+    /** Maneuver direction: right */
     HereSDKRouteLegManeuverDirectionRight,
+    /** Maneuver direction: sharp right */
     HereSDKRouteLegManeuverDirectionSharpRight,
+    /** Maneuver direction: slight left */
     HereSDKRouteLegManeuverDirectionSlightLeft,
+    /** Maneuver direction: left */
     HereSDKRouteLegManeuverDirectionLeft,
+    /** Maneuver direction: sharp left */
     HereSDKRouteLegManeuverDirectionSharpLeft,
+    /** Maneuver direction: u-turn */
     HereSDKRouteLegManeuverDirectionUTurn,
 };
 
 /**
  The maneuver action
-
- - HereSDKRouteLegManeuverActionUnknownAction:  action unknown
- - HereSDKRouteLegManeuverActionDepart:         action depart
- - HereSDKRouteLegManeuverActionArrive:         action arrive
- - HereSDKRouteLegManeuverActionTurn:           action turn
- - HereSDKRouteLegManeuverActionContinue:       action continue
- - HereSDKRouteLegManeuverActionExit:           action exit
- - HereSDKRouteLegManeuverActionRamp:           action on-ramp
- - HereSDKRouteLegManeuverActionFork:           action fork
- - HereSDKRouteLegManeuverActionMerge:          action merge
- - HereSDKRouteLegManeuverActionNameChange:     action street name change
- - HereSDKRouteLegManeuverActionTrafficCircle:  action circle
- - HereSDKRouteLegManeuverActionFerry:          action ferry
- - HereSDKRouteLegManeuverActionRoundAbout:     action roundabout (NOTE: Roundabouts are smaller than traffic circles, and meant to be driven through at lower speeds.)
  */
 typedef NS_ENUM(NSInteger, HereSDKRouteLegManeuverAction) {
+    /** Maneuver action: unknown */
     HereSDKRouteLegManeuverActionUnknownAction,
+    /** Maneuver action: depart */
     HereSDKRouteLegManeuverActionDepart,
+    /** Maneuver action: arrive */
     HereSDKRouteLegManeuverActionArrive,
+    /** Maneuver action: turn */
     HereSDKRouteLegManeuverActionTurn,
+    /** Maneuver action: continue */
     HereSDKRouteLegManeuverActionContinue,
+    /** Maneuver action: exit */
     HereSDKRouteLegManeuverActionExit,
+    /** Maneuver action: on-ramp */
     HereSDKRouteLegManeuverActionRamp,
+    /** Maneuver action: fork */
     HereSDKRouteLegManeuverActionFork,
+    /** Maneuver action: merge */
     HereSDKRouteLegManeuverActionMerge,
+    /** Maneuver action: street name change */
     HereSDKRouteLegManeuverActionNameChange,
+    /** Maneuver action: circle */
     HereSDKRouteLegManeuverActionTrafficCircle,
+    /** Maneuver action: ferry */
     HereSDKRouteLegManeuverActionFerry,
+    /** Maneuver action: roundabout (NOTE: Roundabouts are smaller than traffic circles, and meant to be driven through at lower speeds.) */
     HereSDKRouteLegManeuverActionRoundAbout,
 };
 

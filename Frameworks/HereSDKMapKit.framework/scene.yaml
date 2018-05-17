@@ -10,6 +10,14 @@ global:
     text_font_family: 'Open Sans'
     water_color: '#99CEFF'
 
+fonts:
+    Open Sans:
+        - weight: 400
+          url: https://fonts.gstatic.com/s/opensans/v13/wMws1cEtxWZc6AZZIpiqWALUuEpTyoUstqEm5AMlJo4.woff
+        - weight: 400
+          style: italic
+          url: https://fonts.gstatic.com/s/opensans/v13/O4NhV7_qs9r9seTo7fnsVLO3LdcAZYWl9Si6vvxL-qU.woff
+
 styles:
     text-blend-order:
         base: text

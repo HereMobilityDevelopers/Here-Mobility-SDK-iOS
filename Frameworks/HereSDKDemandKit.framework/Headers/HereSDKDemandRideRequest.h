@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -23,7 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly) HereSDKDemandPassenger *passengerDetails;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 /**
@@ -33,7 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param passengerDetails Details about the passenger booking the ride
  */
 +(instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails;
--(instancetype)initWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails;
 
 @end
 

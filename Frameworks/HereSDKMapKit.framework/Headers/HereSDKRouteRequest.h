@@ -17,12 +17,11 @@ typedef NS_ENUM(NSInteger, HereSDKRouteProfile) {
 
 /**
  The route measurement units
-
- - HereSDKRouteMeasurementTypeMetric: Metric measurement type (kilometers, meters)
- - HereSDKRouteMeasurementTypeImperial: Imperial measurement type (miles, feet)
  */
 typedef NS_ENUM(NSInteger, HereSDKRouteMeasurementType) {
+    /** Measurement type: metric (kilometers, meters) */
     HereSDKRouteMeasurementTypeMetric,
+    /** Measurement type: imperial (miles, feet) */
     HereSDKRouteMeasurementTypeImperial,
 };
 

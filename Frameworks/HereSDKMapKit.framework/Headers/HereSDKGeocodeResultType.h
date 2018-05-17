@@ -6,16 +6,16 @@
 
 /**
  Type definition for of geocoding result types
-
- - HereSDKGeocodeResultTypeUnknown: Unknown
- - HereSDKGeocodeResultTypeAddress: Address (e.g. "121 Main Street, Smithsville, CA 20289, USA")
- - HereSDKGeocodeResultTypePlace: Place name (e.g. "General Hospital")
  */
 typedef NS_OPTIONS (NSUInteger, HereSDKGeocodeResultType) {
+    /** Geocode Result type: Unknown */
     HereSDKGeocodeResultTypeUnknown = 0,
 
+    /** Geocode Result type: Address (e.g. "121 Main Street, Smithsville, CA 20289, USA") */
     HereSDKGeocodeResultTypeAddress = 1 << 0,
+    /** Geocode Result type: Place name (e.g. "General Hospital") */
     HereSDKGeocodeResultTypePlace   = 1 << 1,
 
+    /** Geocode Result type: Any (Address or Place) */
     HereSDKGeocodeResultTypeAll     = NSUIntegerMax
 };

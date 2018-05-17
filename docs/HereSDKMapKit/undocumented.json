@@ -1,34 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKGeocodeResultType.h",
-      "line": 15,
-      "symbol": "HereSDKGeocodeResultType.HereSDKGeocodeResultTypeUnknown",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKGeocodeResultType.h",
-      "line": 17,
-      "symbol": "HereSDKGeocodeResultType.HereSDKGeocodeResultTypeAddress",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKGeocodeResultType.h",
-      "line": 18,
-      "symbol": "HereSDKGeocodeResultType.HereSDKGeocodeResultTypePlace",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKGeocodeResultType.h",
-      "line": 20,
-      "symbol": "HereSDKGeocodeResultType.HereSDKGeocodeResultTypeAll",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapGeometry.h",
       "line": 14,
       "symbol": "HereSDKMapRect",
@@ -65,316 +37,43 @@
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 18,
-      "symbol": "HereSDKMapViewDelegate",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 21,
-      "symbol": "HereSDKMapViewDelegate.-mapViewDidFinishLoadingMap:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 22,
-      "symbol": "HereSDKMapViewDelegate.-mapView:didFailLoadingMapWithError:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 23,
-      "symbol": "HereSDKMapViewDelegate.-mapView:styleForAnnotation:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 24,
-      "symbol": "HereSDKMapViewDelegate.-mapView:didUpdateUserLocationAnnotation:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 25,
-      "symbol": "HereSDKMapViewDelegate.-mapView:didRecognizeLongPressGestureForLocation:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 136,
+      "line": 173,
       "symbol": "HereSDKMapView.polylines",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 138,
+      "line": 175,
       "symbol": "HereSDKMapView.-addPolyline:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 139,
+      "line": 176,
       "symbol": "HereSDKMapView.-addPolyline:withStyle:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 140,
+      "line": 177,
       "symbol": "HereSDKMapView.-removePolyline:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 141,
+      "line": 178,
       "symbol": "HereSDKMapView.-removePolylines:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 24,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorCenter",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 25,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorTop",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 26,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorBottom",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 27,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 28,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 29,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorTopLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 30,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorTopRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 31,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorBottomLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKPointAnnotationStyle.h",
-      "line": 32,
-      "symbol": "HereSDKAnnotationAnchor.HereSDKAnnotationAnchorBottomRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 23,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionUnknownDirection",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 24,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionStraight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 25,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionSlightRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 26,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 27,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionSharpRight",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 28,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionSlightLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 29,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 30,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionSharpLeft",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 31,
-      "symbol": "HereSDKRouteLegManeuverDirection.HereSDKRouteLegManeuverDirectionUTurn",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 52,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionUnknownAction",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 53,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionDepart",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 54,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionArrive",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 55,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionTurn",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 56,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionContinue",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 57,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionExit",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 58,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionRamp",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 59,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionFork",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 60,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionMerge",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 61,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionNameChange",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 62,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionTrafficCircle",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 63,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionFerry",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteManeuver.h",
-      "line": 64,
-      "symbol": "HereSDKRouteLegManeuverAction.HereSDKRouteLegManeuverActionRoundAbout",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteRequest.h",
       "line": 15,
       "symbol": "HereSDKRouteProfile.HereSDKRouteProfileCar",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteRequest.h",
-      "line": 25,
-      "symbol": "HereSDKRouteMeasurementType.HereSDKRouteMeasurementTypeMetric",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKRouteRequest.h",
-      "line": 26,
-      "symbol": "HereSDKRouteMeasurementType.HereSDKRouteMeasurementTypeImperial",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     }

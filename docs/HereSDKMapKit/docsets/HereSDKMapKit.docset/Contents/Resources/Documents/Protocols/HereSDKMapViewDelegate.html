@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKMapKit Docs
         </a>
-         (70% documented)
+         (93% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -195,20 +195,11 @@
             <h1>HereSDKMapViewDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">HereSDKMapViewDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span>
-<span class="k">@optional</span>
-
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">mapViewDidFinishLoadingMap</span><span class="o">:</span><span class="p">(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="n">mapView</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didFailLoadingMapWithError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">styleForAnnotation</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didUpdateUserLocationAnnotation</span><span class="p">:(</span><span class="n"><a href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">userLocationAnnotation</span><span class="p">;</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didRecognizeLongPressGestureForLocation</span><span class="p">:(</span><span class="n">CLLocation</span> <span class="o">*</span><span class="p">)</span><span class="nv">location</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">HereSDKMapViewDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Protocol for receiving map view updates.</p>
 
           </div>
         </section>
@@ -230,14 +221,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Update that mapview did finish load (its definition)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapViewDidFinishLoadingMap</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapViewDidFinishLoadingMap</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -245,6 +236,25 @@
                           <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapViewDidFinishLoadingMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that did finish load</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -262,14 +272,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Update that mapview did fail loading</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didFailLoadingMapWithError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didFailLoadingMapWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -277,6 +288,37 @@
                           <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">,</span> <span class="n">didFailLoadingMapWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that did fail to load.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -294,16 +336,53 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Method that ask to return annotation style for specific annotation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">styleForAnnotation</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a></span> <span class="o">*</span><span class="p">)</span>
+           <span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+<span class="nf">styleForAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that has annotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>annotation to style</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>annotation style</p>
                       </div>
                     </section>
                   </div>
@@ -321,14 +400,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Update that user location did update on mapview</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didUpdateUserLocationAnnotation</span><span class="p">:(</span><span class="n"><a href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">userLocationAnnotation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didUpdateUserLocationAnnotation</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">userLocationAnnotation</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -336,6 +417,37 @@
                           <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">,</span> <span class="n">didUpdate</span> <span class="nv">userLocationAnnotation</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that present user location</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userLocationAnnotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>userLocationAnnotation that has been updated</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -353,14 +465,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Update that mapview did recognize long press gesture</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span> <span class="nf">didRecognizeLongPressGestureForLocation</span><span class="p">:(</span><span class="n">CLLocation</span> <span class="o">*</span><span class="p">)</span><span class="nv">location</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didRecognizeLongPressGestureForLocation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CLLocation</span> <span class="o">*</span><span class="p">)</span><span class="nv">location</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -368,6 +481,37 @@
                           <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">,</span> <span class="n">didRecognizeLongPressGestureFor</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that did recognize the long press gesture</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CLLocation of the gesture</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -380,7 +524,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

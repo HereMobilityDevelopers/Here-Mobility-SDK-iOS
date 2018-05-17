@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKCoreKit Docs
         </a>
-         (52% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -55,17 +55,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKUser.html">HereSDKUser</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Constants.html#/c:@HereSDKCoreKitVersionNumber">HereSDKCoreKitVersionNumber</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Constants.html#/c:@HereSDKCoreKitVersionString">HereSDKCoreKitVersionString</a>
               </li>
             </ul>
           </li>
@@ -112,7 +101,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The shared <code>HereSDKManager</code> instance. //not sure with that update
+                        <p>The shared <code>HereSDKManager</code> instance.
 The first time the sharedManager is required, it is initialized with credentials from the app&rsquo;s Info.plist file.
 Make sure the Info.plist includes correct values for keys <code>HereMobilitySDKAppId</code> and <code>HereMobilitySDKAppSecret</code>
 If either of the credentials is missing, the SDK initialization fails, and the results are undefined.</p>
@@ -141,40 +130,6 @@ If either of the credentials is missing, the SDK initialization fails, and the r
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKManager(cpy)anonymousId"></a>
-                    <a name="//apple_ref/objc/Property/anonymousId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKManager(cpy)anonymousId">anonymousId</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the unique anonymous identifier used by the SDK.</p>
-
-<p>Returns the unique anonymous identifier (for internal use by the SDK)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">class</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">anonymousId</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="k">var</span> <span class="nv">anonymousId</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)HereSDKManager(py)user"></a>
                     <a name="//apple_ref/objc/Property/user" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKManager(py)user">user</a>
@@ -187,7 +142,8 @@ If either of the credentials is missing, the SDK initialization fails, and the r
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/HereSDKUser.html">HereSDKUser</a></code> instance.</p>
 
-<p>Holds user credentials data</p>
+<p>Holds user credentials data
+To log out, set this property to nil</p>
 
                       </div>
                       <div class="declaration">
@@ -434,7 +390,7 @@ and before using HereSDK services.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -8,6 +7,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ A class representing a taxi ride offer, returned in response to requestRide.
+ */
 @interface HereSDKDemandTaxiRideOffer : HereSDKDemandRideOffer <HereSDKDemandRideOfferProtocol>
 
 /** The offer identifier */

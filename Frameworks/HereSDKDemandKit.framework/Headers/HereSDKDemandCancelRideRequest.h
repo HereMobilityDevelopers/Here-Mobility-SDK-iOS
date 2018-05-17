@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -22,7 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly, nullable) NSString *cancelReason;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 /**
@@ -32,7 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param cancelReason The cancellation reason
  */
 +(instancetype)cancelRideWithRideId:(NSString *)rideId cancelReason:(NSString *_Nullable)cancelReason;
--(instancetype)initWithRideId:(NSString *)rideId cancelReason:(NSString *_Nullable)cancelReason;
 
 @end
 

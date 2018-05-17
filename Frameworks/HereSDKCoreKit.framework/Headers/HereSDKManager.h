@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
- * The shared `HereSDKManager` instance. //not sure with that update
+ * The shared `HereSDKManager` instance.
  * The first time the sharedManager is required, it is initialized with credentials from the app's Info.plist file.
  * Make sure the Info.plist includes correct values for keys `HereMobilitySDKAppId` and `HereMobilitySDKAppSecret`
  * If either of the credentials is missing, the SDK initialization fails, and the results are undefined.
@@ -30,16 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, nonatomic, readonly, nullable) HereSDKManager *sharedManager;
 
 /**
- * Returns the unique anonymous identifier used by the SDK.
-
-  * Returns the unique anonymous identifier (for internal use by the SDK)
- */
-@property (class, nonatomic, readonly) NSString *anonymousId;
-
-/**
  * Returns a `HereSDKUser` instance.
 
  * Holds user credentials data
+ * To log out, set this property to nil
  */
 @property (nonatomic, readwrite, nullable) HereSDKUser *user;
 

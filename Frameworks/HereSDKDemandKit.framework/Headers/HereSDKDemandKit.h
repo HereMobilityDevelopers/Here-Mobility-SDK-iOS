@@ -4,27 +4,31 @@
 
 #import <HereSDKCoreKit/HereSDKCoreKit.h>
 
-#import <HereSDKDemandKit/HereSDKDemandManager.h>
-#import <HereSDKDemandKit/HereSDKDemandRideOffer.h>
-#import <HereSDKDemandKit/HereSDKDemandTaxiRideOffer.h>
-#import <HereSDKDemandKit/HereSDKDemandPublicTransportRideOffer.h>
 #import <HereSDKDemandKit/HereSDKDemandBookingConstraints.h>
+#import <HereSDKDemandKit/HereSDKDemandCancelRideRequest.h>
 #import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
-#import <HereSDKDemandKit/HereSDKDemandPassenger.h>
-#import <HereSDKDemandKit/HereSDKDemandSupplier.h>
-#import <HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h>
-#import <HereSDKDemandKit/HereSDKDemandRideStatusLog.h>
-#import <HereSDKDemandKit/HereSDKDemandPriceEstimate.h>
-#import <HereSDKDemandKit/HereSDKDemandPrice.h>
-#import <HereSDKDemandKit/HereSDKDemandLocation.h>
-#import <HereSDKDemandKit/HereSDKDemandRoute.h>
-#import <HereSDKDemandKit/HereSDKDemandRide.h>
-#import <HereSDKDemandKit/HereSDKDemandPriceRange.h>
 #import <HereSDKDemandKit/HereSDKDemandDriver.h>
-#import <HereSDKDemandKit/HereSDKDemandVehicle.h>
+#import <HereSDKDemandKit/HereSDKDemandLocation.h>
+#import <HereSDKDemandKit/HereSDKDemandManager.h>
+#import <HereSDKDemandKit/HereSDKDemandPassenger.h>
+#import <HereSDKDemandKit/HereSDKDemandPrice.h>
+#import <HereSDKDemandKit/HereSDKDemandPriceEstimate.h>
+#import <HereSDKDemandKit/HereSDKDemandPriceRange.h>
+#import <HereSDKDemandKit/HereSDKDemandPublicTransportRideOffer.h>
+#import <HereSDKDemandKit/HereSDKDemandPublicTransportRouteLeg.h>
+#import <HereSDKDemandKit/HereSDKDemandQueryRidesResponse.h>
+#import <HereSDKDemandKit/HereSDKDemandRide.h>
 #import <HereSDKDemandKit/HereSDKDemandRideLocation.h>
+#import <HereSDKDemandKit/HereSDKDemandRideOffer.h>
+#import <HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h>
+#import <HereSDKDemandKit/HereSDKDemandRideOffersRequest.h>
 #import <HereSDKDemandKit/HereSDKDemandRideQuery.h>
+#import <HereSDKDemandKit/HereSDKDemandRideRequest.h>
+#import <HereSDKDemandKit/HereSDKDemandRideStatusLog.h>
+#import <HereSDKDemandKit/HereSDKDemandRideStatusUpdate.h>
+#import <HereSDKDemandKit/HereSDKDemandRidesUpdatesProtocol.h>
+#import <HereSDKDemandKit/HereSDKDemandRoute.h>
+#import <HereSDKDemandKit/HereSDKDemandSupplier.h>
+#import <HereSDKDemandKit/HereSDKDemandTaxiRideOffer.h>
 #import <HereSDKDemandKit/HereSDKDemandTransitOptions.h>
-
-
-
+#import <HereSDKDemandKit/HereSDKDemandVehicle.h>

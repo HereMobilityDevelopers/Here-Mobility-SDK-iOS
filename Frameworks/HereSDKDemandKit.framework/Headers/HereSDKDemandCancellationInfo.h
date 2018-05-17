@@ -5,41 +5,40 @@
 #import <Foundation/Foundation.h>
 
 /**
- Cancellation policy types:
- - HereSDKDemandTripCancellationPolicyUnknown:    type policy unknown
- - HereSDKDemandTripCancellationPolicyAllowed:    type cancellation allowed
- - HereSDKDemandTripCancellationPolicyNotAllowed: type cancellation not allowed
+ Cancellation policy types
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationPolicy) {
+    /** Cancellation Allowed */
     HereSDKDemandTripCancellationPolicyAllowed = 0,
+    /** Cancellation not allowed */
     HereSDKDemandTripCancellationPolicyNotAllowed = 1,
 };
 
 /**
  The party responsible for the cancellation action.
- - HereSDKDemandCancellationInfoPartUnknown:  type unknown
- - HereSDKDemandCancellationInfoPartDemander: type demander
- - HereSDKDemandCancellationInfoPartSupplier: type supplier
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationInfoParty)
 {
-    HereSDKDemandCancellationInfoPartUnknown  = 0,
-    HereSDKDemandCancellationInfoPartDemander = 1,
-    HereSDKDemandCancellationInfoPartSupplier = 2,
+    /** Cancellation Party: Unknown */
+    HereSDKDemandCancellationInfoPartyUnknown  = 0,
+    /** Cancellation Party: Demander */
+    HereSDKDemandCancellationInfoPartyDemander = 1,
+    /** Cancellation Party: Supplier */
+    HereSDKDemandCancellationInfoPartySupplier = 2,
 };
 
 /**
  The cancellation status.
- - HereSDKDemandCancellationStatusUnknown:  type unknown
- - HereSDKDemandCancellationStatusProcessing: type processing
- - HereSDKDemandCancellationStatusAccepted: type accepted
- - HereSDKDemandCancellationStatusRejected: type rejected
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationStatus)
 {
+    /** Cancellation status: Unknown */
     HereSDKDemandCancellationStatusUnknown  = 0,
+    /** Cancellation status: Processing */
     HereSDKDemandCancellationStatusProcessing,
+    /** Cancellation status: Accepted */
     HereSDKDemandCancellationStatusAccepted,
+    /** Cancellation status: Rejected */
     HereSDKDemandCancellationStatusRejected,
 };
 

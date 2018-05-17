@@ -20,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** The price range's ISO 4217 currency code */
 @property (nonatomic, readonly) NSString *currency;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 /**

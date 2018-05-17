@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -8,44 +7,47 @@
 
 /**
  The Transport mode available types.
- - HereSDKDemandPublicTransportRouteLegTransportModeUnknown: type unknown
- - HereSDKDemandPublicTransportRouteLegTransportModeHighSpeedTrain: High speed train
- - HereSDKDemandPublicTransportRouteLegTransportModeIntercityTrain: Intercity Train
- - HereSDKDemandPublicTransportRouteLegTransportModeInterRegionalTrain: Inter Regional Train
- - HereSDKDemandPublicTransportRouteLegTransportModeRegionalTrain: Regional Train
- - HereSDKDemandPublicTransportRouteLegTransportModeCityTrain: City Train
- - HereSDKDemandPublicTransportRouteLegTransportModeBus: Bus
- - HereSDKDemandPublicTransportRouteLegTransportModeFerry: Ferry
- - HereSDKDemandPublicTransportRouteLegTransportModeSubway: Subway
- - HereSDKDemandPublicTransportRouteLegTransportModeLightRail: Light Rail
- - HereSDKDemandPublicTransportRouteLegTransportModePrivateBus: Private Bus
- - HereSDKDemandPublicTransportRouteLegTransportModeInclined: Inclined elevator or funicular
- - HereSDKDemandPublicTransportRouteLegTransportModeAerial: Aerial section (e.g. cable car)
- - HereSDKDemandPublicTransportRouteLegTransportModeBusRapid: Bus Rapid
- - HereSDKDemandPublicTransportRouteLegTransportModeMonorail: Monorail
- - HereSDKDemandPublicTransportRouteLegTransportModeWalk: Walk
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandPublicTransportRouteLegTransportMode) {
+    /**Public Transport Mode for route leg: Unknown */
     HereSDKDemandPublicTransportRouteLegTransportModeUnknown = 0,
+    /**Public Transport Mode for route leg: High speed Train */
     HereSDKDemandPublicTransportRouteLegTransportModeHighSpeedTrain = 1,
+    /**Public Transport Mode for route leg: Intercity Train */
     HereSDKDemandPublicTransportRouteLegTransportModeIntercityTrain = 2,
+    /**Public Transport Mode for route leg: Inter Regional Train */
     HereSDKDemandPublicTransportRouteLegTransportModeInterRegionalTrain = 3,
+    /**Public Transport Mode for route leg: Regional Train */
     HereSDKDemandPublicTransportRouteLegTransportModeRegionalTrain = 4,
+    /**Public Transport Mode for route leg: City Train */
     HereSDKDemandPublicTransportRouteLegTransportModeCityTrain = 5,
+    /**Public Transport Mode for route leg: Bus */
     HereSDKDemandPublicTransportRouteLegTransportModeBus = 6,
+    /**Public Transport Mode for route leg: Ferry */
     HereSDKDemandPublicTransportRouteLegTransportModeFerry = 7,
+    /**Public Transport Mode for route leg: Subway */
     HereSDKDemandPublicTransportRouteLegTransportModeSubway = 8,
+    /**Public Transport Mode for route leg: Light Rail */
     HereSDKDemandPublicTransportRouteLegTransportModeLightRail = 9,
+    /**Public Transport Mode for route leg: Private Bus */
     HereSDKDemandPublicTransportRouteLegTransportModePrivateBus = 10,
+    /**Public Transport Mode for route leg: Inclined elevator or funicular */
     HereSDKDemandPublicTransportRouteLegTransportModeInclined = 11,
+    /**Public Transport Mode for route leg: Awerial section (e.g. cable car) */
     HereSDKDemandPublicTransportRouteLegTransportModeAerial = 12,
+    /**Public Transport Mode for route leg: Bus Rapid */
     HereSDKDemandPublicTransportRouteLegTransportModeBusRapid = 13,
+    /**Public Transport Mode for route leg: Monorail */
     HereSDKDemandPublicTransportRouteLegTransportModeMonorail = 14,
+    /**Public Transport Mode for route leg: Walk */
     HereSDKDemandPublicTransportRouteLegTransportModeWalk = 15,
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ A class representing a public transport route leg.
+ */
 @interface HereSDKDemandPublicTransportRouteLeg : NSObject
 
 /** Mode of transportation */

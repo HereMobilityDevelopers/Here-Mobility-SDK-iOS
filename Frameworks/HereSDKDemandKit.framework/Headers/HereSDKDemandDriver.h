@@ -20,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Driver's photo URL */
 @property (nonatomic, readonly) NSString *photoURL;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 @end

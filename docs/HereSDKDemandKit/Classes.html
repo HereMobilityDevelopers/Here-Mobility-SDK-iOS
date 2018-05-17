@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           HereSDKDemandKit Docs
         </a>
-         (65% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -572,7 +572,7 @@ The estimate can be either a single fixed price or a price range.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A class representing a public transport ride offer, returned in response to requestRide.</p>
 
                         <a href="Classes/HereSDKDemandPublicTransportRideOffer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -610,7 +610,7 @@ The estimate can be either a single fixed price or a price range.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A class representing a public transport route leg.</p>
 
                         <a href="Classes/HereSDKDemandPublicTransportRouteLeg.html" class="slightly-smaller">See more</a>
                       </div>
@@ -618,39 +618,7 @@ The estimate can be either a single fixed price or a price range.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKDemandPublicTransportRouteLeg</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/** Mode of transportation */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Enums/HereSDKDemandPublicTransportRouteLegTransportMode.html">HereSDKDemandPublicTransportRouteLegTransportMode</a></span> <span class="n">transportMode</span><span class="p">;</span>
-
-<span class="cm">/** Duration of the section in seconds */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="n">duration</span><span class="p">;</span>
-
-<span class="cm">/** Distance of the section (units set in HereSDKDemandTransitOptions) */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="n">distance</span><span class="p">;</span>
-
-<span class="cm">/** If relevant/applicable */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">line</span><span class="p">;</span>
-
-<span class="cm">/** The starting point of the route */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/HereSDKDemandLocation.html">HereSDKDemandLocation</a></span> <span class="o">*</span><span class="n">origin</span><span class="p">;</span>
-
-<span class="cm">/** The departure time (if known/applicable) */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">departureTime</span><span class="p">;</span>
-
-<span class="cm">/** The end point of the route */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="Classes/HereSDKDemandLocation.html">HereSDKDemandLocation</a></span> <span class="o">*</span><span class="n">destination</span><span class="p">;</span>
-
-<span class="cm">/** Contains the arrival time */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">arrivalTime</span><span class="p">;</span>
-
-<span class="cm">/** Transport operator name. If relevant/applicable */</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">transportOperator</span><span class="p">;</span>
-
-<span class="cm">/** Return description of transport mode as NSString */</span>
-<span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">transportModeDescription</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKDemandPublicTransportRouteLeg</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1087,7 +1055,7 @@ Contains relatively static info: driver, vehicle, passengers etc.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A class representing a taxi ride offer, returned in response to requestRide.</p>
 
                         <a href="Classes/HereSDKDemandTaxiRideOffer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1125,7 +1093,7 @@ Contains relatively static info: driver, vehicle, passengers etc.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Class representing public transit ride options</p>
 
                         <a href="Classes/HereSDKDemandTransitOptions.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1133,31 +1101,7 @@ Contains relatively static info: driver, vehicle, passengers etc.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKDemandTransitOptions</span> <span class="p">:</span> <span class="nc">NSObject</span>
-
-<span class="cm">/** Maximum number of changes or transfers allowed in a route. Default is unlimited. Range is 0-6.*/</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="n">maxTransfers</span><span class="p">;</span>
-
-<span class="cm">/** Specifies a maximum walking distance. Default is 2000. Range is 0-6000.*/</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="n">maxWalkingDistance</span><span class="p">;</span>
-
-<span class="cm">/** The client's locale. Complies with the ISO 639-1 standard and defaults to en.*/</span>
-<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">locale</span><span class="p">;</span>
-
-<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">new</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span>
-
-<span class="cm">/**
- Creates HereSDKDemandTransitOptions object
-
- @param maxTransfers The Maximum number of changes or transfers allowed in a route
- @param maxWalkingDistance Specifies a maximum walking distance
- @param locale The client's locale
- */</span>
-<span class="k">+</span><span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">transitOptionsWithMaxTransfers</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">maxTransfers</span>  <span class="nf">maxWalkingDistance</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">maxWalkingDistance</span> <span class="nf">locale</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">locale</span><span class="p">;</span>
-<span class="k">-</span><span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMaxTransfers</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">maxTransfers</span>  <span class="nf">maxWalkingDistance</span><span class="p">:(</span><span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">maxWalkingDistance</span> <span class="nf">locale</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">locale</span><span class="p">;</span>
-
-<span class="k">@end</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKDemandTransitOptions</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1214,7 +1158,7 @@ Contains relatively static info: driver, vehicle, passengers etc.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

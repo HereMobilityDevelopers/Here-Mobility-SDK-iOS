@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           HereSDKDemandKit Docs
         </a>
-         (65% documented)
+         (100% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -201,13 +201,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Cancellation policy types:</p>
-
-<ul>
-<li>HereSDKDemandTripCancellationPolicyUnknown:    type policy unknown</li>
-<li>HereSDKDemandTripCancellationPolicyAllowed:    type cancellation allowed</li>
-<li>HereSDKDemandTripCancellationPolicyNotAllowed: type cancellation not allowed</li>
-</ul>
+                        <p>Cancellation policy types</p>
 
                         <a href="Enums/HereSDKDemandCancellationPolicy.html" class="slightly-smaller">See more</a>
                       </div>
@@ -242,12 +236,6 @@
                       <div class="abstract">
                         <p>The party responsible for the cancellation action.</p>
 
-<ul>
-<li>HereSDKDemandCancellationInfoPartUnknown:  type unknown</li>
-<li>HereSDKDemandCancellationInfoPartDemander: type demander</li>
-<li>HereSDKDemandCancellationInfoPartSupplier: type supplier</li>
-</ul>
-
                         <a href="Enums/HereSDKDemandCancellationInfoParty.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -280,13 +268,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The cancellation status.</p>
-
-<ul>
-<li>HereSDKDemandCancellationStatusUnknown:  type unknown</li>
-<li>HereSDKDemandCancellationStatusProcessing: type processing</li>
-<li>HereSDKDemandCancellationStatusAccepted: type accepted</li>
-<li>HereSDKDemandCancellationStatusRejected: type rejected</li>
-</ul>
 
                         <a href="Enums/HereSDKDemandCancellationStatus.html" class="slightly-smaller">See more</a>
                       </div>
@@ -325,25 +306,6 @@
                       <div class="abstract">
                         <p>The Transport mode available types.</p>
 
-<ul>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeUnknown: type unknown</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeHighSpeedTrain: High speed train</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeIntercityTrain: Intercity Train</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeInterRegionalTrain: Inter Regional Train</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeRegionalTrain: Regional Train</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeCityTrain: City Train</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeBus: Bus</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeFerry: Ferry</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeSubway: Subway</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeLightRail: Light Rail</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModePrivateBus: Private Bus</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeInclined: Inclined elevator or funicular</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeAerial: Aerial section (e.g. cable car)</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeBusRapid: Bus Rapid</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeMonorail: Monorail</li>
-<li>HereSDKDemandPublicTransportRouteLegTransportModeWalk: Walk</li>
-</ul>
-
                         <a href="Enums/HereSDKDemandPublicTransportRouteLegTransportMode.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -379,7 +341,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type definition for transit type</p>
 
                         <a href="Enums/HereSDKDemandTransitType.html" class="slightly-smaller">See more</a>
                       </div>
@@ -387,11 +349,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">HereSDKDemandTransitType</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">HereSDKDemandTransitTypeTaxi</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">HereSDKDemandTransitTypePublicTransport</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">HereSDKDemandTransitType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -421,12 +379,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Type definition for ride offer sort order.</p>
-
-<ul>
-<li>HereDemandRideOffersRequestSortTypeUnknown: sort type unknown</li>
-<li>HereDemandRideOffersRequestSortTypeByPrice: sort type by price (lowest first)</li>
-<li>HereDemandRideOffersRequestSortType_ByEta: sort type ETA (earliest first)</li>
-</ul>
 
                         <a href="Enums/HereDemandRideOffersRequestSortType.html" class="slightly-smaller">See more</a>
                       </div>
@@ -465,14 +417,6 @@
                       <div class="abstract">
                         <p>Type definition for ride statuses</p>
 
-<ul>
-<li>HereSDKDemandRideQueryStatusUnknown: status Unknown</li>
-<li>HereSDKDemandRideQueryStatusPast:    status Past rides (COMPLETED, REJECTED or CANCELLED)</li>
-<li>HereSDKDemandRideQueryStatusFuture:  status Rides that were prebooked</li>
-<li>HereSDKDemandRideQueryStatusOngoing: status Ongoing rides</li>
-<li>HereSDKDemandRideQueryStatusAll:     status All rides</li>
-</ul>
-
                         <a href="Enums/HereSDKDemandRideQueryStatusFilter.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -505,14 +449,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Sorting ride results by update or created time</p>
-
-<ul>
-<li>HereSDKDemandRideQuerySortTypeUnknown: sorting type Unknown</li>
-<li>HereSDKDemandRideQuerySortTypeUpdateTimeAsc: sorting type by update (ascending)</li>
-<li>HereSDKDemandRideQuerySortTypeUpdateTimeDesc: sorting type by update (descending)</li>
-<li>HereSDKDemandRideQuerySortTypeCreateTimeAsc: sorting type by created (ascending)</li>
-<li>HereSDKDemandRideQuerySortTypeCreateTimeDesc: sorting type by created (descending)</li>
-</ul>
 
                         <a href="Enums/HereSDKDemandRideQuerySortType.html" class="slightly-smaller">See more</a>
                       </div>
@@ -551,20 +487,6 @@
                       <div class="abstract">
                         <p>Type definition for ride statuses</p>
 
-<ul>
-<li>HereSDKDemandRideStatusLogRecordUnknown: Unknown</li>
-<li>HereSDKDemandRideStatusLogRecordProcessing: The request is being processed, looking for a supplier.</li>
-<li>HereSDKDemandRideStatusLogRecordRejected: None of the suppliers accepted the offer. No driver was assigned.</li>
-<li>HereSDKDemandRideStatusLogRecordAccepted: A supplier accepted the ride, no driver was assigned yet.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverAssigned: A driver was assigned to the ride.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverEnRoute: The vehicle is on the way to the pickup point.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverAtPickup: The vehicle is waiting at the pickup point.</li>
-<li>HereSDKDemandRideStatusLogRecordPassengerOnBoard: The vehicle is on the way to the drop-off point.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverAtDropoff: The vehicle arrived at the drop-off point.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverCompleted: The ride was completed.</li>
-<li>HereSDKDemandRideStatusLogRecordDriverCancelled: The ride was cancelled (either by the driver or by the passenger).</li>
-</ul>
-
                         <a href="Enums/HereSDKDemandRideStatusUpdateStatus.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -600,7 +522,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type definition for vehicle type</p>
 
                         <a href="Enums/HereSDKDemandVehicleType.html" class="slightly-smaller">See more</a>
                       </div>
@@ -608,14 +530,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">HereSDKDemandVehicleType</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">HereSDKDemandVehicleTypeNotSupplied</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="n">HereSDKDemandVehicleTypeStandard</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="n">HereSDKDemandVehicleTypeLimo</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="n">HereSDKDemandVehicleTypeVan</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="n">HereSDKDemandVehicleTypeOther</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
-<span class="p">}</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">HereSDKDemandVehicleType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -635,7 +550,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-15)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

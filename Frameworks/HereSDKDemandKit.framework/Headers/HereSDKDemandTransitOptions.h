@@ -1,5 +1,4 @@
-//
- /***************************************************************
+/***************************************************************
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
@@ -7,6 +6,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Class representing public transit ride options 
+ */
 @interface HereSDKDemandTransitOptions : NSObject
 
 /** Maximum number of changes or transfers allowed in a route. Default is unlimited. Range is 0-6.*/
@@ -18,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** The client's locale. Complies with the ISO 639-1 standard and defaults to en.*/
 @property(nonatomic, readonly, nullable) NSString *locale;
 
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 /**
@@ -29,7 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param locale The client's locale
  */
 +(instancetype)transitOptionsWithMaxTransfers:(NSNumber *_Nullable)maxTransfers  maxWalkingDistance:(NSNumber *_Nullable)maxWalkingDistance locale:(NSString *_Nullable)locale;
--(instancetype)initWithMaxTransfers:(NSNumber *_Nullable)maxTransfers  maxWalkingDistance:(NSNumber *_Nullable)maxWalkingDistance locale:(NSString *_Nullable)locale;
 
 @end
 

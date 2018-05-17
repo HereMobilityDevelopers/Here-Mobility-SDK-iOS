@@ -36,7 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
  @return a new 'HereSDKDemandPassenger' instance
  */
 + (instancetype)passengerWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber photoUrl:(NSString *_Nullable)photoUrl email:(NSString *_Nullable)email;
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
+/// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
 
 @end

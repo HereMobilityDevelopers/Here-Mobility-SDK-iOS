@@ -9,26 +9,25 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Options for the location of the HereSDKAnnotationAnchor.
  (The image anchor is the point on the annotation image that is placed over the location coordinates on the map.)
-
- - HereSDKAnnotationAnchorCenter:      The styling will be anchor center.
- - HereSDKAnnotationAnchorTop:         The styling will be anchor top.
- - HereSDKAnnotationAnchorBottom:      The styling will be anchor bottom.
- - HereSDKAnnotationAnchorLeft:        The styling will be anchor left.
- - HereSDKAnnotationAnchorRight:       The styling will be anchor right.
- - HereSDKAnnotationAnchorTopLeft:     The styling will be anchor top left.
- - HereSDKAnnotationAnchorTopRight:    The styling will be anchor top right
- - HereSDKAnnotationAnchorBottomLeft:  The styling will be anchor bottom left
- - HereSDKAnnotationAnchorBottomRight: The styling will be anchor bottom right
  */
 typedef NS_ENUM(NSInteger, HereSDKAnnotationAnchor) {
+    /** The styling will be anchor center. */
     HereSDKAnnotationAnchorCenter = 0,
+    /** The styling will be anchor top. */
     HereSDKAnnotationAnchorTop,
+    /** The styling will be anchor bottom. */
     HereSDKAnnotationAnchorBottom,
+    /** The styling will be anchor left. */
     HereSDKAnnotationAnchorLeft,
+    /** The styling will be anchor right. */
     HereSDKAnnotationAnchorRight,
+    /** The styling will be anchor top left. */
     HereSDKAnnotationAnchorTopLeft,
+    /** The styling will be anchor top right. */
     HereSDKAnnotationAnchorTopRight,
+    /** The styling will be anchor bottom left. */
     HereSDKAnnotationAnchorBottomLeft,
+    /** The styling will be anchor bottom right. */
     HereSDKAnnotationAnchorBottomRight
 };
 

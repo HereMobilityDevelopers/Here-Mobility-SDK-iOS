@@ -6,31 +6,30 @@
 
 /**
  Type definition for ride statuses
-
- - HereSDKDemandRideStatusLogRecordUnknown: Unknown
- - HereSDKDemandRideStatusLogRecordProcessing: The request is being processed, looking for a supplier.
- - HereSDKDemandRideStatusLogRecordRejected: None of the suppliers accepted the offer. No driver was assigned.
- - HereSDKDemandRideStatusLogRecordAccepted: A supplier accepted the ride, no driver was assigned yet.
- - HereSDKDemandRideStatusLogRecordDriverAssigned: A driver was assigned to the ride.
- - HereSDKDemandRideStatusLogRecordDriverEnRoute: The vehicle is on the way to the pickup point.
- - HereSDKDemandRideStatusLogRecordDriverAtPickup: The vehicle is waiting at the pickup point.
- - HereSDKDemandRideStatusLogRecordPassengerOnBoard: The vehicle is on the way to the drop-off point.
- - HereSDKDemandRideStatusLogRecordDriverAtDropoff: The vehicle arrived at the drop-off point.
- - HereSDKDemandRideStatusLogRecordDriverCompleted: The ride was completed.
- - HereSDKDemandRideStatusLogRecordDriverCancelled: The ride was cancelled (either by the driver or by the passenger).
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandRideStatusUpdateStatus)
 {
+    /** Unknown */
     HereSDKDemandRideStatusLogRecordUnknown = 0,
+    /** The request is being processed, looking for a supplier. */
     HereSDKDemandRideStatusLogRecordProcessing = 1,
+    /** None of the suppliers accepted the offer. No driver was assigned. */
     HereSDKDemandRideStatusLogRecordRejected = 2,
+    /** A supplier accepted the ride, no driver was assigned yet. */
     HereSDKDemandRideStatusLogRecordAccepted = 3,
+    /** A driver was assigned to the ride. */
     HereSDKDemandRideStatusLogRecordDriverAssigned = 4,
+    /** The vehicle is on the way to the pickup point. */
     HereSDKDemandRideStatusLogRecordDriverEnRoute = 5,
+    /** The vehicle is waiting at the pickup point. */
     HereSDKDemandRideStatusLogRecordDriverAtPickup = 6,
+    /** The vehicle is on the way to the drop-off point. */
     HereSDKDemandRideStatusLogRecordPassengerOnBoard = 7,
+    /** The vehicle arrived at the drop-off point. */
     HereSDKDemandRideStatusLogRecordDriverAtDropoff = 8,
+    /** The ride was completed. */
     HereSDKDemandRideStatusLogRecordCompleted = 9,
+    /** The ride was cancelled (either by the driver or by the passenger). */
     HereSDKDemandRideStatusLogRecordCancelled = 10,
 };
 

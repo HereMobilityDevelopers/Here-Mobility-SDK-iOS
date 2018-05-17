@@ -13,8 +13,6 @@
 #import <HereSDKDemandKit/HereSDKDemandPassenger.h>
 #import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
 
-
-
 /**
  A class representing a ride from a specific supplier.
  Contains relatively static info: driver, vehicle, passengers etc.
@@ -27,8 +25,8 @@
 /** The ride's route */
 @property (nonatomic, readonly) HereSDKDemandRoute *route;
 
-/** The requested pickup time, for a pre-booked ride */
-@property (nonatomic, readonly) NSDate *prebookPickupTime;
+/** The requested pickup time */
+@property (nonatomic, readonly) NSDate *requestedPickupTime;
 
 /** Price at the time of booking */
 @property (nonatomic, readonly) HereSDKDemandPriceEstimate *bookingEstimatedPrice;
@@ -62,6 +60,7 @@
 
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
+/// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
