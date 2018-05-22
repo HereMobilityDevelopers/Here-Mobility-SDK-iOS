@@ -22,22 +22,22 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
- Update that mapview did finish load (its definition)
+ Update that mapview finished loading (its definition)
 
- @param mapView mapview that did finish load
+ @param mapView mapview that finished loading
  */
 - (void)mapViewDidFinishLoadingMap:(HereSDKMapView *)mapView;
 
 /**
- Update that mapview did fail loading
+ Update that mapview failed to load
 
- @param mapView  mapview that did fail to load.
+ @param mapView  mapview that failed to load.
  @param error error
  */
 - (void)mapView:(HereSDKMapView *)mapView didFailLoadingMapWithError:(NSError *)error;
 
 /**
- Method that ask to return annotation style for specific annotation
+ Return annotation style for specific annotation
 
  @param mapView mapview that has annotation
  @param annotation annotation to style
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable HereSDKPointAnnotationStyle *)mapView:(HereSDKMapView *)mapView styleForAnnotation:(id<HereSDKAnnotation>)annotation;
 
 /**
- Update that user location did update on mapview
+ Update that user location was updated on mapview
 
  @param mapView mapview that present user location
  @param userLocationAnnotation userLocationAnnotation that has been updated
@@ -54,9 +54,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mapView:(HereSDKMapView *)mapView didUpdateUserLocationAnnotation:(HereSDKUserLocationAnnotation *)userLocationAnnotation;
 
 /**
- Update that mapview did recognize long press gesture
+ Update that mapview recognized a long press gesture
 
- @param mapView mapview that did recognize the long press gesture
+ @param mapView mapview that recognized the long press gesture
  @param location CLLocation of the gesture 
  */
 - (void)mapView:(HereSDKMapView *)mapView didRecognizeLongPressGestureForLocation:(CLLocation *)location;

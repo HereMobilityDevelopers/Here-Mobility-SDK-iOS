@@ -23,12 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, nullable) NSString *freeText;
 
 /**
- Returns `HereSDKDemandLocation`
+ Returns HereSDKDemandLocation
 
  @param location Coordinate object for location
  @param address Optional address object for location
 
- @return `HereSDKDemandLocation`
+ @return HereSDKDemandLocation
  */
 - (instancetype)initWithLocation:(CLLocation *)location address:(nullable HereSDKAddressData *)address freeText:(nullable NSString *)freeText;
 

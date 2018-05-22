@@ -17,7 +17,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * A factory class for 'HereSDKDemandClient'.
+ * A factory class for HereSDKDemandClient.
  */
 @interface HereSDKDemandManager : NSObject
 
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 # pragma mark - demand client
 
 /**
- An object conforming to the `HereSDKDemandRidesUpdatesDelegate` method that receives
+ An object conforming to the HereSDKDemandRidesUpdatesDelegate method that receives
  messages related to the open rides updates.
  */
 @property (weak, nonatomic, readonly) id<HereSDKDemandRidesUpdatesDelegate> ridesUpdatesDelegate;
@@ -52,9 +52,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unregisterForRidesUpdates;
 
 /**
- Request ride offers that match a given request
+ Request ride offers that match a given request.
 
- @param request The 'HereSDKDemandRideOffersRequest' object containing the ride constraints (e.g. numbers of passengers and suitcases).
+ @param request The HereSDKDemandRideOffersRequest object containing the ride constraints (e.g. numbers of passengers and suitcases).
  @param handler The block that will handle the response.
  */
 - (void)requestRide:(HereSDKDemandRideOffersRequest *)request withHandler:(void(^)(NSArray<id<HereSDKDemandRideOfferProtocol>> *_Nullable offers, NSError *_Nullable error))handler;
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Create a new ride object with the given offer ID.
 
- @param request The 'HereSDKDemandRideRequest' object containing the offerId.
+ @param request The HereSDKDemandRideRequest object containing the offerId.
  @param handler The block that will handle the response.
  */
 - (void)createRideWithRequest:(HereSDKDemandRideRequest *)request withHandler:(void(^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Query for rides with the given statuses and update time.
 
- @param query The 'HereSDKDemandRideQuery' object containing the filters on ride statuses and update time.
+ @param query The HereSDKDemandRideQuery object containing the filters on ride statuses and update time.
  @param handler The block that will handle the response.
  */
 - (void)getRides:(HereSDKDemandRideQuery *)query withHandler:(void(^)(HereSDKDemandQueryRidesResponse *ridesResponse, NSError *_Nullable error))handler;
@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Cancel a ride related to a given request.
 
- @param request The 'HereSDKDemandCancelRideRequest' object representing the ride to be cancelled.
+ @param request The HereSDKDemandCancelRideRequest object representing the ride to be cancelled.
  @param handler The block that will handle the response.
  */
 - (void)cancelRideWithRequest:(HereSDKDemandCancelRideRequest *)request withHandler:(void(^)(NSError *_Nullable error))handler;

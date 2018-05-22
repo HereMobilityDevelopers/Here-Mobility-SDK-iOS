@@ -57,14 +57,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- Creates a 'HereSDKDemandRideQuery' instance.
+ Creates a HereSDKDemandRideQuery instance.
 
  @param updateTime The time from which rides were updated
  @param limit The Number of rides returned
  @param statusFilter The filter on the ride status
  @param sortBy Sorting ride results algorithm
 
- @return a new 'HereSDKDemandRideQuery' instance
+ @return a new HereSDKDemandRideQuery instance
  */
 + (instancetype)rideQueryWithUpdateTime:(NSDate *_Nullable)updateTime limit:(uint32_t)limit statusFilter:(HereSDKDemandRideQueryStatusFilter)statusFilter sortBy:(HereSDKDemandRideQuerySortType)sortBy;
 

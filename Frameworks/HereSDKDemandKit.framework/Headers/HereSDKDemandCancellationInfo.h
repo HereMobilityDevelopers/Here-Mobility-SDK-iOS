@@ -8,7 +8,7 @@
  Cancellation policy types
  */
 typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationPolicy) {
-    /** Cancellation Allowed */
+    /** Cancellation allowed */
     HereSDKDemandTripCancellationPolicyAllowed = 0,
     /** Cancellation not allowed */
     HereSDKDemandTripCancellationPolicyNotAllowed = 1,
@@ -55,10 +55,10 @@ NS_ASSUME_NONNULL_BEGIN
 /** The reason for the cancellation (textual description) */
 @property(nonatomic, readonly) NSString *cancelReason;
 
-/** Request time at demand handler */
+/** The time the cancellation request arrived at the demand handler */
 @property(nonatomic, readonly) NSDate * requestTime;
 
-/** status of cancellation */
+/** Status of cancellation */
 @property(nonatomic, readonly) HereSDKDemandCancellationStatus cancellationStatus;
 
 @end

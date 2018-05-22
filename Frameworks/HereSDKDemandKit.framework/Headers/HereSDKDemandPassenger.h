@@ -26,14 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSString *email;
 
 /**
- Creates a 'HereSDKDemandPassenger' instance.
+ Creates a HereSDKDemandPassenger instance.
 
  @param name The passenger's name
  @param phoneNumber The passenger's phone number
  @param photoUrl The passenger's photo URL
  @param email The passenger's email
 
- @return a new 'HereSDKDemandPassenger' instance
+ @return a new HereSDKDemandPassenger instance
  */
 + (instancetype)passengerWithName:(NSString *)name phoneNumber:(NSString *)phoneNumber photoUrl:(NSString *_Nullable)photoUrl email:(NSString *_Nullable)email;
 /// :nodoc:

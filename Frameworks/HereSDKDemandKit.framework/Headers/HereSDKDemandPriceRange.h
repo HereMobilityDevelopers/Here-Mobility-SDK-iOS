@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface HereSDKDemandPriceRange : NSObject
 
-/**The maximum numeric value of the price range */
+/** The maximum numeric value of the price range */
 @property (nonatomic, readonly) NSDecimalNumber *upperBound;
 
 /** The minimum numeric value of the price range */
@@ -26,13 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)new NS_UNAVAILABLE;
 
 /**
- Creates a 'HereSDKDemandPriceRange' instance with given parameters.
+ Creates a HereSDKDemandPriceRange instance with given parameters.
 
  @param upperBound The maximum numeric value of the price range
  @param lowerBound The minimum numeric value of the price range
  @param currency The price range's ISO 4217 currency code
 
- @return A new instance of 'HereSDKDemandPriceRange'
+ @return A new instance of HereSDKDemandPriceRange
  */
 +(instancetype)priceRangeWithUpperBound:(NSDecimalNumber *)upperBound lowerBound:(NSDecimalNumber *)lowerBound currency:(NSString *)currency;
 

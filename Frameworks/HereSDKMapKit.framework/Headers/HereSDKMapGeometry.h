@@ -29,7 +29,7 @@ typedef struct {
 extern HereSDKMapRect HereSDKMapRectMake(double latitude, double longitude, double width, double height);
 
 /**
- Creates an invalid `HereSDKMapRect`.
+ Creates an invalid HereSDKMapRect.
  */
 extern HereSDKMapRect HereSDKMapRectInvalid(void);
 

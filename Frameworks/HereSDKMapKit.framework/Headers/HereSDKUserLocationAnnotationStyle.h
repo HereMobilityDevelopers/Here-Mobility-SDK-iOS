@@ -5,7 +5,7 @@
 #import <HereSDKMapKit/HereSDKMapKit.h>
 
 /**
- An Object used to style `HereSDKUserLocationAnnotation`
+ An Object used to style HereSDKUserLocationAnnotation
  */
 @interface HereSDKUserLocationAnnotationStyle : HereSDKPointAnnotationStyle
 

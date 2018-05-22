@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Return the route request object that contains at least two locations (the start and end points) of the route. This parameter must not be nil.
  @param points which contain the location of the route
- @return A new `HereSDKRouteRequest` object or `nil`, if points parameter is invalid.
+ @return A new HereSDKRouteRequest object or `nil`, if points parameter is invalid.
  */
 - (nullable instancetype)initWithPoints:(NSArray<CLLocation *> *)points;
 
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param start start destination
  @param end end destination
- @return A new `HereSDKRouteRequest` object
+ @return A new HereSDKRouteRequest object
  */
 - (instancetype)initWithStart:(CLLocation *)start andEnd:(CLLocation *)end;
 

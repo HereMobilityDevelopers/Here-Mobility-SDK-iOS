@@ -12,28 +12,28 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HereSDKFeatureStyle : NSObject <NSCopying>
 
 /**
- Color of `HereSDKFeatureStyle`
+ Color of HereSDKFeatureStyle
  */
 @property (nonatomic) UIColor *color;
 /**
- Width n points of `HereSDKFeatureStyle' (the width with which the feature image will be displayed)
+ Width n points of HereSDKFeatureStyle (the width with which the feature image will be displayed)
  */
 @property (nonatomic) NSInteger width;
 
 /**
- Initializes and returns `HereSDKFeatureStyle`
+ Initializes and returns HereSDKFeatureStyle
 
- @param width The width value of `HereSDKFeatureStyle` object
- @param color The color value of `HereSDKFeatureStyle` object
- @return The `HereSDKFeatureStyle` object
+ @param width The width value of HereSDKFeatureStyle object
+ @param color The color value of HereSDKFeatureStyle object
+ @return The HereSDKFeatureStyle object
  */
 - (instancetype)initWithWidth:(NSInteger)width color:(UIColor *)color NS_DESIGNATED_INITIALIZER;
 /**
- Initializes and returns `HereSDKFeatureStyle`
+ Initializes and returns HereSDKFeatureStyle
 
- @param width The width value of `HereSDKFeatureStyle` object
- @param color The color value of `HereSDKFeatureStyle` object
- @return The `HereSDKFeatureStyle` object
+ @param width The width value of HereSDKFeatureStyle object
+ @param color The color value of HereSDKFeatureStyle object
+ @return The HereSDKFeatureStyle object
  */
 + (instancetype)styleWithWidth:(NSInteger)width color:(UIColor *)color;
 /// :nodoc:

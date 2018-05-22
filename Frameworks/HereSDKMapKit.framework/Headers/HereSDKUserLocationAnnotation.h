@@ -5,7 +5,7 @@
 #import <HereSDKMapKit/HereSDKAnnotation.h>
 
 /**
- An annotation that persist with user location on `HereSDKMapView`
+ An annotation that persists with user location on HereSDKMapView
  */
 @interface HereSDKUserLocationAnnotation : NSObject <HereSDKAnnotation>
 
