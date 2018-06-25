@@ -16,6 +16,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+ /**
+  A completion block for ride updates.
+  Will contain either one of the parameters.
+
+ @param statusLog ride status update
+ @param location ride location update
+ @param error error returned from ride updates
+ */
+typedef void (^HereSDKDemandRideUpdateBlock)(HereSDKDemandRideStatusLog *_Nullable statusLog, HereSDKDemandRideLocation *_Nullable location, NSError *_Nullable error);
+
+/**
+ A completion block for ride cancellation
+ Will contain either one of the parameters.
+
+ @param cancellationInfo cancellation info for a ride
+ @param error error returned from cancellation request
+ */
+typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo *_Nullable cancellationInfo, NSError *_Nullable error);
+
 /**
  * A factory class for HereSDKDemandClient.
  */
@@ -52,6 +72,21 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unregisterForRidesUpdates;
 
 /**
+ Starts monitoring a ride.
+
+ @param rideId The ride's identifier.
+ @param handler The handler for receiving updates.
+ */
+- (void)registerUpdatesForRide:(NSString *)rideId withHandler:(HereSDKDemandRideUpdateBlock)handler;
+
+/**
+ Stops monitoring a ride
+
+ @param rideId The ride's identifier.
+ */
+- (void)unregisterUpdatesForRide:(NSString *)rideId;
+
+/**
  Request ride offers that match a given request.
 
  @param request The HereSDKDemandRideOffersRequest object containing the ride constraints (e.g. numbers of passengers and suitcases).
@@ -81,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param request The HereSDKDemandCancelRideRequest object representing the ride to be cancelled.
  @param handler The block that will handle the response.
  */
-- (void)cancelRideWithRequest:(HereSDKDemandCancelRideRequest *)request withHandler:(void(^)(NSError *_Nullable error))handler;
+- (void)cancelRideWithRequest:(HereSDKDemandCancelRideRequest *)request withHandler:(HereSDKDemandRideCancellationBlock)handler;
 
 /**
  Get a ride by rideId.

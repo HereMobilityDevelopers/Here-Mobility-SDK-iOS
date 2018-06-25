@@ -2,71 +2,39 @@
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
-#import <UIKit/UIKit.h>
+#import <HereSDKMapKit/HereSDKAnnotationStyle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- Options for the location of the HereSDKAnnotationAnchor.
- (The image anchor is the point on the annotation image that is placed over the location coordinates on the map.)
+ A style class for point annotation style, for styling annotations with
+ a colored circle.
  */
-typedef NS_ENUM(NSInteger, HereSDKAnnotationAnchor) {
-    /** The styling will be anchor center. */
-    HereSDKAnnotationAnchorCenter = 0,
-    /** The styling will be anchor top. */
-    HereSDKAnnotationAnchorTop,
-    /** The styling will be anchor bottom. */
-    HereSDKAnnotationAnchorBottom,
-    /** The styling will be anchor left. */
-    HereSDKAnnotationAnchorLeft,
-    /** The styling will be anchor right. */
-    HereSDKAnnotationAnchorRight,
-    /** The styling will be anchor top left. */
-    HereSDKAnnotationAnchorTopLeft,
-    /** The styling will be anchor top right. */
-    HereSDKAnnotationAnchorTopRight,
-    /** The styling will be anchor bottom left. */
-    HereSDKAnnotationAnchorBottomLeft,
-    /** The styling will be anchor bottom right. */
-    HereSDKAnnotationAnchorBottomRight
-};
+@interface HereSDKPointAnnotationStyle : HereSDKAnnotationStyle
 
 /**
- An object used to style HereSDKPointAnnotation
+ Initializer for the point annotation style.
+
+ @param radius Radius of the annotation circle in points.
+
+ @return A point annotation style with set radius.
  */
-@interface HereSDKPointAnnotationStyle : NSObject
++ (instancetype)styleWithRadius:(CGFloat)radius;
 
 /**
- Image used for displaying the HereSDKPointAnnotation object on the map
+ Radius of the point annotation in points.
  */
-@property (nonatomic) UIImage *image;
+@property (nonatomic) CGFloat radius;
 
 /**
- Styling anchor type for HereSDKPointAnnotation
+ Point annotaion outline color. Default is `nil`.
  */
-@property (nonatomic) HereSDKAnnotationAnchor anchor;
+@property (nullable, nonatomic) UIColor *borderColor;
 
 /**
- Returns HereSDKPointAnnotationStyle used for styling HereSDKPointAnnotation
-
- @param image The image to use for displaying the annotation on the map
- @param anchor The anchor type
- @return HereSDKPointAnnotationStyle
+ Width in points of the point annotation outline. Default is `0`.
  */
-- (instancetype)initWithImage:(UIImage *)image anchor:(HereSDKAnnotationAnchor)anchor NS_DESIGNATED_INITIALIZER;
-
-/**
- Returns HereSDKPointAnnotationStyle used for styling HereSDKPointAnnotation
-
- @param image The image to use for displaying the annotation on the map
- @return HereSDKPointAnnotationStyle
- */
-+ (instancetype)styleWithImage:(UIImage *)image;
-
-/// :nodoc:
-- (instancetype)init NS_UNAVAILABLE;
-/// :nodoc:
-+ (instancetype)new NS_UNAVAILABLE;
+@property (nonatomic) NSUInteger borderWidth;
 
 @end
 

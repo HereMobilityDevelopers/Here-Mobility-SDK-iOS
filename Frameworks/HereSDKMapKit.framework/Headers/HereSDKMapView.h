@@ -5,6 +5,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import <HereSDKMapKit/HereSDKPolyline.h>
+#import <HereSDKMapKit/HereSDKPolygon.h>
 #import <HereSDKMapKit/HereSDKMapGeometry.h>
 
 @protocol HereSDKAnnotation;
@@ -12,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class HereSDKMapView;
-@class HereSDKPointAnnotationStyle;
+@class HereSDKAnnotationStyle;
 @class HereSDKUserLocationAnnotation;
 
 /**
@@ -29,21 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mapViewDidFinishLoadingMap:(HereSDKMapView *)mapView;
 
 /**
- Update that mapview failed to load
-
- @param mapView  mapview that failed to load.
- @param error error
- */
-- (void)mapView:(HereSDKMapView *)mapView didFailLoadingMapWithError:(NSError *)error;
-
-/**
  Return annotation style for specific annotation
 
  @param mapView mapview that has annotation
  @param annotation annotation to style
  @return annotation style
  */
-- (nullable HereSDKPointAnnotationStyle *)mapView:(HereSDKMapView *)mapView styleForAnnotation:(id<HereSDKAnnotation>)annotation;
+- (nullable HereSDKAnnotationStyle *)mapView:(HereSDKMapView *)mapView styleForAnnotation:(id<HereSDKAnnotation>)annotation;
 
 /**
  Update that user location was updated on mapview
@@ -61,8 +54,86 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)mapView:(HereSDKMapView *)mapView didRecognizeLongPressGestureForLocation:(CLLocation *)location;
 
+/**
+ Update that mapview recognized a tap gesture
+
+ @param mapView mapview that recognized the tap gesture
+ @param location CLLocation of the gesture
+ */
+- (void)mapView:(HereSDKMapView *)mapView didTapLocation:(CLLocation *)location;
+
+/**
+ Tells the receiver an annotation was tapped
+
+ @param mapView mapview that has annotation
+ @param annotation annotation that was tapped
+ */
+- (void)mapView:(HereSDKMapView *)mapView didTapAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
+ Returns a Boolean value indicating whether the annotation is able to display extra information in a callout bubble.
+
+ This method is called after an annotation is selected, before any callout is displayed for the annotation.
+
+ If the return value is `YES`, a callout view is shown when the user taps on an annotation, selecting it. The default callout displays the annotation’s `title` and `subtitle`. You can customize the callout’s contents by implementing the -`mapView:calloutViewForAnnotation:` method.
+
+ If the return value is `NO`, or if this method is absent from the delegate, or if the annotation lacks a title or subtitle or the `mapView:calloutViewForAnnotation:` is absent from the delegate or returns `nil`, the annotation will not show a callout even when selected.
+ */
+- (BOOL)mapView:(HereSDKMapView *)mapView annotationCanShowCallout:(id<HereSDKAnnotation>)annotation;
+
+/**
+ Returns a callout view to display for the given annotation.
+
+ If this method is present in the delegate, it must return a new instance of a view dedicated to display the callout. The returned view will be configured by the map view.
+
+ If this method is absent from the delegate, or if it returns `nil`, a standard, two-line, bubble-like callout view is displayed by default.
+ */
+- (UIView *)mapView:(HereSDKMapView *)mapView calloutViewForAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
+ Tells the receiver an annotation was selected and presented its view on the map
+
+ @param mapView mapview that has annotation
+ @param annotation annotation that was selected
+ */
+- (void)mapView:(HereSDKMapView *)mapView didSelectAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
+ Tells the receiver an annotation was deselected and its view on the map was hidden
+
+ @param mapView mapview that has annotation
+ @param annotation annotation that was deselected
+ */
+- (void)mapView:(HereSDKMapView *)mapView didDeselectAnnotation:(id<HereSDKAnnotation>)annotation;
+
 @end
 
+/**
+ Position of the compass indicator in the map view.
+ */
+typedef NS_ENUM (NSUInteger, HereSDKMapCompassPosition) {
+    /** Compass position in the top right corner of the view */
+    HereSDKMapCompassPositionTopRight = 0,
+    /** Compass position in the top left corner of the view */
+    HereSDKMapCompassPositionTopLeft,
+    /** Compass position in the bottom left corner of the view */
+    HereSDKMapCompassPositionBottomLeft,
+    /** Compass position in the bottom right corner of the view */
+    HereSDKMapCompassPositionBottomRight
+};
+
+/**
+ Visibility of the compass indicator in the map view.
+ */
+typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
+    /** Compass indicator is visible when the mapView's rotation
+     changes from North (0) */
+    HereSDKMapCompassVisibilityWhenRotated = 0,
+    /** Compass indicator is always visible */
+    HereSDKMapCompassVisibilityAlways,
+    /** Compass indicator is never visible */
+    HereSDKMapCompassVisibilityNone
+};
 
 /**
  * A UIView subclass for displaying a geographical map
@@ -135,17 +206,38 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setRotation:(float)rotation animated:(BOOL)animated;
 
 /**
+ The max tilt angle of the map "camera", measured in radians. Default is 1.309 radians (75 degrees).
+
+ Changing the value of the property limits user interaction for tilt. If the current
+ map tilt exceeds the new `maxTilt`, the map tilt is adjusted immediately.
+ To animate the change, use the `-setMaxTilt:animated:` method instead.
+ */
+@property (nonatomic) float maxTilt;
+
+/**
+ Changes the maximum tilt angle of the map "camera", measured in radians.
+
+ @param maxTilt The maximum tilt angle of the map camera, measured in radians. Will be clamped between
+ 0 and 90 degrees (1.5708 radians)
+ @param animated Specify `YES`, if the map should animate to an adjusted tilt after setting a smaller `maxTilt`
+ than the current tilt angle of the map
+ */
+- (void)setMaxTilt:(float)maxTilt animated:(BOOL)animated;
+
+/**
  The tilt angle of the map "camera", measured in radians from the 0 direction (0 direction = camera is facing the ground).
 
  Changing the value of this property updates the map view immediately.
  To animate the change, use the `-setTilt:animated:` method instead.
+
+ Can not exceed `maxTilt`.
  */
 @property (nonatomic) float tilt;
 
 /**
  Changes the tilt angle of the map "camera", and optionally animates the change.
 
- @param tilt The tilt angle of the map camera, measured in radians.
+ @param tilt The tilt angle of the map camera, measured in radians. Can not exceed `maxTilt`.
 
  @param animated Specify `YES` to animate to the change to the new tilt angle,
  or `NO` to display the new tilt angle immediately.
@@ -165,17 +257,60 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isZoomEnabled) BOOL zoomEnabled;
 
 /**
+ A Boolean value that determines whether the user may tilt the map back and forth, changing the tilt level.
+
+ When this property is set to `YES` (the default) the user may tilt the map
+ back and forth by draging with two fingers.
+
+ This property controls only user interactions with the map.
+ If the property is set to `NO`, you can still change the map tilt programmatically.
+ */
+@property (nonatomic, getter=isTiltEnabled) BOOL tiltEnabled;
+
+/**
+ A Boolean value that determines whether the user may rotate the map, changing the rotation level.
+
+ When this property is set to `YES` (the default) the user may rotate the map
+ by rotating with two fingers.
+
+ This property controls only user interactions with the map.
+ If the property is set to `NO`, you can still change the map rotation programmatically.
+ */
+@property (nonatomic, getter=isRotationEnabled) BOOL rotationEnabled;
+
+/**
+ A Boolean value that determines whether the user may drag/scroll the map, changing the map region.
+
+ When this property is set to `YES` (the default) the user may scroll the map
+ by dragging/swiping with one finger.
+
+ This property controls only user interactions with the map.
+ If the property is set to `NO`, you can still change the map position programmatically.
+ */
+@property (nonatomic, getter=isScrollEnabled) BOOL scrollEnabled;
+
+/**
  The receiver’s delegate, for handling map view changes.
 
  A map view sends messages to its delegate to notify it of changes to its contents.
  */
 @property (nonatomic, weak, nullable) id<HereSDKMapViewDelegate> delegate;
+
+
 @property (nonatomic, readonly) NSArray<HereSDKPolyline *>* polylines;
 
 - (void)addPolyline:(HereSDKPolyline *)polyline;
-- (void)addPolyline:(HereSDKPolyline *)polyline withStyle:(HereSDKFeatureStyle *)style;
+- (void)addPolyline:(HereSDKPolyline *)polyline withStyle:(HereSDKPolylineStyle *)style;
 - (void)removePolyline:(HereSDKPolyline *)polyline;
 - (void)removePolylines:(NSArray<HereSDKPolyline *> *)polylines;
+
+
+@property (nonatomic, readonly) NSArray<HereSDKPolygon *>* polygons;
+
+- (void)addPolygon:(HereSDKPolygon *)polygon;
+- (void)addPolygon:(HereSDKPolygon *)polygon withStyle:(HereSDKFeatureStyle *)style;
+- (void)removePolygon:(HereSDKPolygon *)polygon;
+- (void)removePolygons:(NSArray<HereSDKPolygon *> *)polygons;
 
 /**
  Changes the receiver’s viewport to fit the given coordinate bounds,
@@ -224,6 +359,29 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAnnotation:(id<HereSDKAnnotation>)annotation;
 
 /**
+ A set of currently selected annotations;
+ */
+@property (nonatomic, readonly) NSSet<id<HereSDKAnnotation>> *selectedAnnotations;
+
+/**
+ Selects the specified annotation and displays a selected view for it.
+
+ If the annotation doesn't provide a title or subtitle or the mapView's delegate
+ does not provide a `selectedViewForAnnotation`, this method does nothing.
+
+ @param annotation Annotation to be selected
+ */
+- (void)selectAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
+ Deselects the specified annotation and hides the selected view for it. If the
+ annotation is currently not selected, this method does nothing.
+
+ @param annotation Annotation to be deselected
+ */
+- (void)deselectAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
  Annotation that represents the user location on map. `nil` if not present.
  */
 @property (nullable, nonatomic, readonly) HereSDKUserLocationAnnotation *userLocationAnnotation;
@@ -234,6 +392,33 @@ NS_ASSUME_NONNULL_BEGIN
  @param shouldShowUserLocation Boolean value that indicates whether the map should try to display the user’s location.
  */
 - (void)showUserLocation:(BOOL)shouldShowUserLocation;
+
+/**
+ Setting this value, changes the visibility of the compass indicator in the map view.
+ Default is `HereSDKMapCompassVisibiltyWhenRotated`.
+ */
+@property (nonatomic) HereSDKMapCompassVisibility compassVisibilty;
+
+/**
+ Setting this value, adjusts the position of the compass indicator in the map view.
+ Default is `HereSDKMapCompassPositionTopRight`.
+ */
+@property (nonatomic) HereSDKMapCompassPosition compassPosition;
+
+/**
+ Setting this value, updates the compass indicator with a custom image.
+
+ @param compassImage The image for the compass indicator. If this value is `nil`,
+ the compass will use the standard compass image.
+
+ @Note: to remove the compass, use the `compassVisibility` property.
+ */
+- (void)setCompassImage:(nullable UIImage *)compassImage;
+
+/**
+ Adjusts the inset of map accessory views (like the compass indicator view).
+ */
+@property (nonatomic) UIEdgeInsets contentInsets;
 
 @end
 

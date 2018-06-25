@@ -2,7 +2,7 @@
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
-#import "HereSDKAnnotation.h"
+#import <HereSDKMapKit/HereSDKAnnotation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

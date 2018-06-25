@@ -27,6 +27,11 @@ styles:
         blend: overlay
         blend_order: -1
 
+    _hmsdk_custom_polygon_style:
+        base: polygons
+        blend: overlay
+        blend_order: -1
+
 sources:
     heremvt:
         type: MVT
@@ -34,7 +39,7 @@ sources:
         max_zoom: 14
         min_zoom: 1
         layer: omv-base
-        
+
 scene:
     background:
         color: [0.870,0.870,0.870]
@@ -266,7 +271,7 @@ layers:
                     stroke: { color: white, width: 1 }
                     family: global.text_font_family
                     size: 8px
-                    
+
     airport_label:
         data: { source: heremvt, layer: airport_label }
         draw:
@@ -301,7 +306,7 @@ layers:
                     transform: capitalize
                     fill: '#9b9ea8'
                     size: 14px
-                    
+
     state_label:
         data: {source: heremvt}
         draw:
@@ -317,7 +322,7 @@ layers:
                     anchor: [top-right, bottom-right, bottom-left, bottom-right]
                     font:
                         fill: black
-                                                            
+
     housenum_label:
         data: { source: heremvt }
         filter:
@@ -337,8 +342,26 @@ layers:
     _hmsdk_custom_polyline:
             data: { source: _hmsdk_custom_polyline }
             draw:
-                lines:
-                    style: _hmsdk_custom_polyline_style
+                _hmsdk_custom_polyline_style:
                     color: function() { return feature.color || '#06a6d4' }
                     width: function() { return feature.width || '5px' }
+                    cap: function() { return feature.cap }
+                    join: function() { return feature.join }
+                    miter_limit: function() { return feature.miter_limit }
+                    outline:
+                        color: function() { return feature.outline_color }
+                        width: function() { return feature.outline_width }
                     order: 500
+
+    _hmsdk_custom_polygon:
+            data: { source: _hmsdk_custom_polygon }
+            draw:
+                #draw polygon fill
+                _hmsdk_custom_polygon_style:
+                    color: function() { return feature.color || '#06a6d4' }
+                    order: 800
+                # draw polygon outline/stroke
+                _hmsdk_custom_polyline_style:
+                    color: function() { return feature.outline_color }
+                    width: function() { return feature.outline_width }
+                    order: 801

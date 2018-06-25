@@ -7,39 +7,38 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- An object that stores color and width values
+ An object that stores the style for map features
  */
 @interface HereSDKFeatureStyle : NSObject <NSCopying>
 
 /**
- Color of HereSDKFeatureStyle
+ Generates the feature style with the given color.
+
+ @param color The fill color for the feature.
+
+ @return A featureStyle object with set feature color.
+ */
++ (instancetype)styleWithColor:(UIColor *)color;
+
+/**
+ Fill color of the feature
  */
 @property (nonatomic) UIColor *color;
-/**
- Width n points of HereSDKFeatureStyle (the width with which the feature image will be displayed)
- */
-@property (nonatomic) NSInteger width;
 
 /**
- Initializes and returns HereSDKFeatureStyle
-
- @param width The width value of HereSDKFeatureStyle object
- @param color The color value of HereSDKFeatureStyle object
- @return The HereSDKFeatureStyle object
+ Feature outline color
  */
-- (instancetype)initWithWidth:(NSInteger)width color:(UIColor *)color NS_DESIGNATED_INITIALIZER;
+@property (nullable, nonatomic) UIColor *borderColor;
+
 /**
- Initializes and returns HereSDKFeatureStyle
-
- @param width The width value of HereSDKFeatureStyle object
- @param color The color value of HereSDKFeatureStyle object
- @return The HereSDKFeatureStyle object
+ Width in points of the feature outline
  */
-+ (instancetype)styleWithWidth:(NSInteger)width color:(UIColor *)color;
-/// :nodoc:
-- (instancetype)init NS_UNAVAILABLE;
+@property (nonatomic) NSUInteger borderWidth;
+
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
+/// :nodoc:
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

@@ -4,8 +4,9 @@
  **************************************************************/
 
 #import <Foundation/Foundation.h>
-#import "HereSDKRouteManeuver.h"
-#import "HereSDKPolyline.h"
+
+#import <HereSDKMapKit/HereSDKRouteManeuver.h>
+#import <HereSDKMapKit/HereSDKPolyline.h>
 
 /**
  Part of the route between two consecutive waypoints

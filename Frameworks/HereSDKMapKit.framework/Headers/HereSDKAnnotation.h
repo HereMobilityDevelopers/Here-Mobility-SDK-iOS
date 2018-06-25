@@ -19,6 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
+@optional
+
+@property (nullable, nonatomic, readonly) NSString *title;
+@property (nullable, nonatomic, readonly) NSString *subtitle;
+
 @end
 
 NS_ASSUME_NONNULL_END

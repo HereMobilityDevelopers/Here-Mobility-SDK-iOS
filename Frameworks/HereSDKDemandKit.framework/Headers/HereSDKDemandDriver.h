@@ -18,7 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *phoneNumber;
 
 /** Driver's photo URL */
-@property (nonatomic, readonly) NSString *photoURL;
+@property (nonatomic, readonly, nullable) NSString *photoURL;
+
+/** Driver's driving license ID */
+@property (nonatomic, readonly, nullable) NSString *drivingLicenseId;
 
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;

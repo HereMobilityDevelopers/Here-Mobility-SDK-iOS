@@ -5,6 +5,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  A class containing information about the vehicle's progress. Updated every ~10 seconds.
  */
@@ -17,10 +19,10 @@
 @property (nonatomic, readonly) CLLocation *vehicleLocation;
 
 /** The estimated time of pickup. Constantly updated until the vehicle is at the pickup location. */
-@property (nonatomic, readonly) NSDate *estimatedPickupTime;
+@property (nonatomic, readonly, nullable) NSDate *estimatedPickupTime;
 
 /** The estimated time of dropoff. Constantly updated until the vehicle is at the dropoff location. */
-@property (nonatomic, readonly) NSDate *estimatedDropoffTime;
+@property (nonatomic, readonly, nullable) NSDate *estimatedDropoffTime;
 
 /** Last time this object was updated. Used for tracking updates. */
 @property (nonatomic, readonly) NSDate *lastUpdateTime;
@@ -31,3 +33,6 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

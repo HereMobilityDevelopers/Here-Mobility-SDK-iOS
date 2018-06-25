@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKMapKit Docs
         </a>
-         (93% documented)
+         (92% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -48,10 +48,19 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKAnnotationStyle.html">HereSDKAnnotationStyle</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKGeocodeResult.html">HereSDKGeocodeResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKImageAnnotationStyle.html">HereSDKImageAnnotationStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKMapFeature.html">HereSDKMapFeature</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKMapGeometry.html">HereSDKMapGeometry</a>
@@ -69,7 +78,13 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPolylineStyle.html">HereSDKPolylineStyle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKRoute.html">HereSDKRoute</a>
@@ -92,9 +107,6 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a>
               </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotationStyle">HereSDKUserLocationAnnotationStyle</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -105,6 +117,21 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKGeocodeResultType.html">HereSDKGeocodeResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassVisibility.html">HereSDKMapCompassVisibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineCapStyle.html">HereSDKPolylineCapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineJoinStyle.html">HereSDKPolylineJoinStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineWidthUnits.html">HereSDKPolylineWidthUnits</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKRouteLegManeuverAction.html">HereSDKRouteLegManeuverAction</a>
@@ -262,70 +289,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didFailLoadingMapWithError:"></a>
-                    <a name="//apple_ref/objc/Method/-mapView:didFailLoadingMapWithError:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didFailLoadingMapWithError:">-mapView:didFailLoadingMapWithError:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Update that mapview failed to load</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
-    <span class="nf">didFailLoadingMapWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">,</span> <span class="n">didFailLoadingMapWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>mapView</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>mapview that failed to load.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>error</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:styleForAnnotation:"></a>
                     <a name="//apple_ref/objc/Method/-mapView:styleForAnnotation:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:styleForAnnotation:">-mapView:styleForAnnotation:</a>
@@ -343,9 +306,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a></span> <span class="o">*</span><span class="p">)</span>
-           <span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
-<span class="nf">styleForAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/HereSDKAnnotationStyle.html">HereSDKAnnotationStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+                          <span class="nf">styleForAnnotation</span><span class="p">:</span>
+                              <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
@@ -516,6 +479,313 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didTapLocation:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:didTapLocation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didTapLocation:">-mapView:didTapLocation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Update that mapview recognized a tap gesture</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didTapLocation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CLLocation</span> <span class="o">*</span><span class="p">)</span><span class="nv">location</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span><span class="p">,</span> <span class="n">didTap</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">CLLocation</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that recognized the tap gesture</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>CLLocation of the gesture</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didTapAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:didTapAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didTapAnnotation:">-mapView:didTapAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the receiver an annotation was tapped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didTapAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that has annotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>annotation that was tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:annotationCanShowCallout:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:annotationCanShowCallout:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:annotationCanShowCallout:">-mapView:annotationCanShowCallout:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value indicating whether the annotation is able to display extra information in a callout bubble.</p>
+
+<p>This method is called after an annotation is selected, before any callout is displayed for the annotation.</p>
+
+<p>If the return value is <code>YES</code>, a callout view is shown when the user taps on an annotation, selecting it. The default callout displays the annotation’s <code>title</code> and <code>subtitle</code>. You can customize the callout’s contents by implementing the -<code>mapView:calloutViewForAnnotation:</code> method.</p>
+
+<p>If the return value is <code>NO</code>, or if this method is absent from the delegate, or if the annotation lacks a title or subtitle or the <code>mapView:calloutViewForAnnotation:</code> is absent from the delegate or returns <code>nil</code>, the annotation will not show a callout even when selected.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">annotationCanShowCallout</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:calloutViewForAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:calloutViewForAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:calloutViewForAnnotation:">-mapView:calloutViewForAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a callout view to display for the given annotation.</p>
+
+<p>If this method is present in the delegate, it must return a new instance of a view dedicated to display the callout. The returned view will be configured by the map view.</p>
+
+<p>If this method is absent from the delegate, or if it returns <code>nil</code>, a standard, two-line, bubble-like callout view is displayed by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">calloutViewForAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didSelectAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:didSelectAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didSelectAnnotation:">-mapView:didSelectAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the receiver an annotation was selected and presented its view on the map</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didSelectAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that has annotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>annotation that was selected</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didDeselectAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-mapView:didDeselectAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)HereSDKMapViewDelegate(im)mapView:didDeselectAnnotation:">-mapView:didDeselectAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the receiver an annotation was deselected and its view on the map was hidden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">mapView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKMapView.html">HereSDKMapView</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapView</span>
+    <span class="nf">didDeselectAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapView</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mapview that has annotation</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>annotation that was deselected</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -524,7 +794,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-22)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-25)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

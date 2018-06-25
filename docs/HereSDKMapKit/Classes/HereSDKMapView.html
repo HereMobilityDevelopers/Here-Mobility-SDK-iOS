@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKMapKit Docs
         </a>
-         (93% documented)
+         (92% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -48,10 +48,19 @@
             <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKAnnotationStyle.html">HereSDKAnnotationStyle</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKGeocodeResult.html">HereSDKGeocodeResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKImageAnnotationStyle.html">HereSDKImageAnnotationStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKMapFeature.html">HereSDKMapFeature</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKMapGeometry.html">HereSDKMapGeometry</a>
@@ -69,7 +78,13 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKPointAnnotationStyle.html">HereSDKPointAnnotationStyle</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKPolylineStyle.html">HereSDKPolylineStyle</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKRoute.html">HereSDKRoute</a>
@@ -92,9 +107,6 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotation">HereSDKUserLocationAnnotation</a>
               </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKUserLocationAnnotationStyle">HereSDKUserLocationAnnotationStyle</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -105,6 +117,21 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKGeocodeResultType.html">HereSDKGeocodeResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassVisibility.html">HereSDKMapCompassVisibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineCapStyle.html">HereSDKPolylineCapStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineJoinStyle.html">HereSDKPolylineJoinStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKPolylineWidthUnits.html">HereSDKPolylineWidthUnits</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKRouteLegManeuverAction.html">HereSDKRouteLegManeuverAction</a>
@@ -522,6 +549,107 @@ or <code>NO</code> to display the new rotation immediately.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)maxTilt"></a>
+                    <a name="//apple_ref/objc/Property/maxTilt" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The max tilt angle of the map <q>camera</q>, measured in radians. Default is 1.309 radians (75 degrees).</p>
+
+<p>Changing the value of the property limits user interaction for tilt. If the current
+map tilt exceeds the new <code>maxTilt</code>, the map tilt is adjusted immediately.
+To animate the change, use the <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(im)setMaxTilt:animated:">-setMaxTilt:animated:</a></code> method instead.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">float</span> <span class="n">maxTilt</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxTilt</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setMaxTilt:animated:"></a>
+                    <a name="//apple_ref/objc/Method/-setMaxTilt:animated:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setMaxTilt:animated:">-setMaxTilt:animated:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the maximum tilt angle of the map <q>camera</q>, measured in radians.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMaxTilt</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">maxTilt</span> <span class="nf">animated</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">animated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setMaxTilt</span><span class="p">(</span><span class="n">_</span> <span class="nv">maxTilt</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxTilt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum tilt angle of the map camera, measured in radians. Will be clamped between
+0 and 90 degrees (1.5708 radians)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify <code>YES</code>, if the map should animate to an adjusted tilt after setting a smaller <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a></code>
+than the current tilt angle of the map</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)HereSDKMapView(py)tilt"></a>
                     <a name="//apple_ref/objc/Property/tilt" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKMapView(py)tilt">tilt</a>
@@ -536,6 +664,8 @@ or <code>NO</code> to display the new rotation immediately.</p>
 
 <p>Changing the value of this property updates the map view immediately.
 To animate the change, use the <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(im)setTilt:animated:">-setTilt:animated:</a></code> method instead.</p>
+
+<p>Can not exceed <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -595,7 +725,7 @@ To animate the change, use the <code><a href="../Classes/HereSDKMapView.html#/c:
                               </td>
                               <td>
                                 <div>
-                                  <p>The tilt angle of the map camera, measured in radians.</p>
+                                  <p>The tilt angle of the map camera, measured in radians. Can not exceed <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -651,6 +781,122 @@ If the property is set to <code>NO</code>, you can still change the map zoom pro
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isZoomEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)tiltEnabled"></a>
+                    <a name="//apple_ref/objc/Property/tiltEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)tiltEnabled">tiltEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether the user may tilt the map back and forth, changing the tilt level.</p>
+
+<p>When this property is set to <code>YES</code> (the default) the user may tilt the map
+back and forth by draging with two fingers.</p>
+
+<p>This property controls only user interactions with the map.
+If the property is set to <code>NO</code>, you can still change the map tilt programmatically.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">isTiltEnabled</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">tiltEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isTiltEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)rotationEnabled"></a>
+                    <a name="//apple_ref/objc/Property/rotationEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)rotationEnabled">rotationEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether the user may rotate the map, changing the rotation level.</p>
+
+<p>When this property is set to <code>YES</code> (the default) the user may rotate the map
+by rotating with two fingers.</p>
+
+<p>This property controls only user interactions with the map.
+If the property is set to <code>NO</code>, you can still change the map rotation programmatically.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">isRotationEnabled</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">rotationEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isRotationEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)scrollEnabled"></a>
+                    <a name="//apple_ref/objc/Property/scrollEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)scrollEnabled">scrollEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value that determines whether the user may drag/scroll the map, changing the map region.</p>
+
+<p>When this property is set to <code>YES</code> (the default) the user may scroll the map
+by dragging/swiping with one finger.</p>
+
+<p>This property controls only user interactions with the map.
+If the property is set to <code>NO</code>, you can still change the map position programmatically.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">getter</span><span class="o">=</span><span class="n">isScrollEnabled</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">scrollEnabled</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isScrollEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -775,12 +1021,12 @@ If the property is set to <code>NO</code>, you can still change the map zoom pro
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addPolyline</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">polyline</span> <span class="nf">withStyle</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">style</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addPolyline</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">polyline</span> <span class="nf">withStyle</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolylineStyle.html">HereSDKPolylineStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">style</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPolyline</span><span class="p">(</span><span class="n">_</span> <span class="nv">polyline</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPolyline</span><span class="p">(</span><span class="n">_</span> <span class="nv">polyline</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolylineStyle.html">HereSDKPolylineStyle</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -845,6 +1091,166 @@ If the property is set to <code>NO</code>, you can still change the map zoom pro
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removePolylines</span><span class="p">(</span><span class="n">_</span> <span class="nv">polylines</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/HereSDKPolyline.html">HereSDKPolyline</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)polygons"></a>
+                    <a name="//apple_ref/objc/Property/polygons" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)polygons">polygons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span> <span class="o">*&gt;*</span> <span class="n">polygons</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">polygons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)addPolygon:"></a>
+                    <a name="//apple_ref/objc/Method/-addPolygon:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)addPolygon:">-addPolygon:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addPolygon</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">polygon</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPolygon</span><span class="p">(</span><span class="n">_</span> <span class="nv">polygon</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)addPolygon:withStyle:"></a>
+                    <a name="//apple_ref/objc/Method/-addPolygon:withStyle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)addPolygon:withStyle:">-addPolygon:withStyle:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addPolygon</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">polygon</span> <span class="nf">withStyle</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">style</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addPolygon</span><span class="p">(</span><span class="n">_</span> <span class="nv">polygon</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKFeatureStyle.html">HereSDKFeatureStyle</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)removePolygon:"></a>
+                    <a name="//apple_ref/objc/Method/-removePolygon:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)removePolygon:">-removePolygon:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removePolygon</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">polygon</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removePolygon</span><span class="p">(</span><span class="n">_</span> <span class="nv">polygon</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)removePolygons:"></a>
+                    <a name="//apple_ref/objc/Method/-removePolygons:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)removePolygons:">-removePolygons:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removePolygons</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">polygons</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removePolygons</span><span class="p">(</span><span class="n">_</span> <span class="nv">polygons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/HereSDKPolygon.html">HereSDKPolygon</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1128,6 +1534,130 @@ Otherwise returns <code>NO</code>. The method returns immediately.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)selectedAnnotations"></a>
+                    <a name="//apple_ref/objc/Property/selectedAnnotations" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)selectedAnnotations">selectedAnnotations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A set of currently selected annotations;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSSet</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">selectedAnnotations</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)selectAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-selectAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)selectAnnotation:">-selectAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Selects the specified annotation and displays a selected view for it.</p>
+
+<p>If the annotation doesn&rsquo;t provide a title or subtitle or the mapView&rsquo;s delegate
+does not provide a <code>selectedViewForAnnotation</code>, this method does nothing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">selectAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Annotation to be selected</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)deselectAnnotation:"></a>
+                    <a name="//apple_ref/objc/Method/-deselectAnnotation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)deselectAnnotation:">-deselectAnnotation:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deselects the specified annotation and hides the selected view for it. If the
+annotation is currently not selected, this method does nothing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deselectAnnotation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/HereSDKAnnotation.html">HereSDKAnnotation</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">annotation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>annotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Annotation to be deselected</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)HereSDKMapView(py)userLocationAnnotation"></a>
                     <a name="//apple_ref/objc/Property/userLocationAnnotation" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKMapView(py)userLocationAnnotation">userLocationAnnotation</a>
@@ -1209,6 +1739,160 @@ Otherwise returns <code>NO</code>. The method returns immediately.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)compassVisibilty"></a>
+                    <a name="//apple_ref/objc/Property/compassVisibilty" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)compassVisibilty">compassVisibilty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setting this value, changes the visibility of the compass indicator in the map view.
+Default is <code>HereSDKMapCompassVisibiltyWhenRotated</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Enums/HereSDKMapCompassVisibility.html">HereSDKMapCompassVisibility</a></span> <span class="n">compassVisibilty</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">compassVisibilty</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapCompassVisibility.html">HereSDKMapCompassVisibility</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)compassPosition"></a>
+                    <a name="//apple_ref/objc/Property/compassPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)compassPosition">compassPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setting this value, adjusts the position of the compass indicator in the map view.
+Default is <code>HereSDKMapCompassPositionTopRight</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a></span> <span class="n">compassPosition</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">compassPosition</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setCompassImage:"></a>
+                    <a name="//apple_ref/objc/Method/-setCompassImage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setCompassImage:">-setCompassImage:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setting this value, updates the compass indicator with a custom image.</p>
+
+<p>@Note: to remove the compass, use the <code>compassVisibility</code> property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCompassImage</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIImage</span> <span class="o">*</span><span class="p">)</span><span class="nv">compassImage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCompassImage</span><span class="p">(</span><span class="n">_</span> <span class="nv">compassImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>compassImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image for the compass indicator. If this value is <code>nil</code>,
+the compass will use the standard compass image.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(py)contentInsets"></a>
+                    <a name="//apple_ref/objc/Property/contentInsets" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(py)contentInsets">contentInsets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adjusts the inset of map accessory views (like the compass indicator view).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIEdgeInsets</span> <span class="n">contentInsets</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">contentInsets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1217,7 +1901,7 @@ Otherwise returns <code>NO</code>. The method returns immediately.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-05-22)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-25)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

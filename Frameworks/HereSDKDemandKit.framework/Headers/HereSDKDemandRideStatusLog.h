@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSDate *createTime;
 
 /** The time the ride was closed */
-@property (nonatomic, readonly) NSDate *closedTime;
+@property (nonatomic, readonly, nullable) NSDate *closedTime;
 
 /** If TRUE, there are updates on the RideLocation entity */
 @property (nonatomic, readonly) BOOL isRideLocationAvailable;
