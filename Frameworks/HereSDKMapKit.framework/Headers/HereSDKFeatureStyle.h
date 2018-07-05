@@ -12,33 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HereSDKFeatureStyle : NSObject <NSCopying>
 
 /**
- Generates the feature style with the given color.
-
- @param color The fill color for the feature.
-
- @return A featureStyle object with set feature color.
- */
-+ (instancetype)styleWithColor:(UIColor *)color;
-
-/**
- Fill color of the feature
+ Fill color of the feature. Default is `UIColor.blueColor`.
  */
 @property (nonatomic) UIColor *color;
 
 /**
- Feature outline color
+ Feature outline color. Default is `nil`.
  */
 @property (nullable, nonatomic) UIColor *borderColor;
 
 /**
- Width in points of the feature outline
+ Width in points of the feature outline. Default is `0`.
  */
 @property (nonatomic) NSUInteger borderWidth;
-
-/// :nodoc:
-+ (instancetype)new NS_UNAVAILABLE;
-/// :nodoc:
-- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

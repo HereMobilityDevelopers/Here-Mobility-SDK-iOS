@@ -59,22 +59,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HereSDKPolylineStyle : HereSDKFeatureStyle
 
 /**
- Generates the polyline style with the given width and color.
-
- @param width The width of the polyline.
- @param color The fill color for the polyline.
-
- @return A polylineStyle object with set width and color.
- */
-+ (instancetype)styleWithWidth:(NSUInteger)width color:(UIColor *)color;
-
-/**
  Width of the feature. Default unit is points and default value is 5.
  */
 @property (nonatomic) NSUInteger width;
 
 /**
- Units for width of polyline. Default is HereSDKPolylineWidthUnitsPoints.
+ Units for width of polyline. Default is `HereSDKPolylineWidthUnitsPoints`.
+
  If HereSDKPolylineWidthUnitsMeters, the width of polylines changes in
  proportion with the map.
  */

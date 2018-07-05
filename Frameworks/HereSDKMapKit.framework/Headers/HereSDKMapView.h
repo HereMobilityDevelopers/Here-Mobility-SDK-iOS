@@ -71,6 +71,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)mapView:(HereSDKMapView *)mapView didTapAnnotation:(id<HereSDKAnnotation>)annotation;
 
 /**
+ Tells the receiver an annotation was long tapped
+
+ @param mapView mapview that has annotation
+ @param annotation annotation that was long tapped
+ */
+- (void)mapView:(HereSDKMapView *)mapView didLongTapAnnotation:(id<HereSDKAnnotation>)annotation;
+
+/**
  Returns a Boolean value indicating whether the annotation is able to display extra information in a callout bubble.
 
  This method is called after an annotation is selected, before any callout is displayed for the annotation.
@@ -163,7 +171,6 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  */
 - (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated;
 
-
 /**
  The zoom level of the map view.
 
@@ -254,7 +261,7 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  This property controls only user interactions with the map.
  If the property is set to `NO`, you can still change the map zoom programmatically.
  */
-@property (nonatomic, getter=isZoomEnabled) BOOL zoomEnabled;
+@property (nonatomic, getter=isZoomEnabled) IBInspectable BOOL zoomEnabled;
 
 /**
  A Boolean value that determines whether the user may tilt the map back and forth, changing the tilt level.
@@ -265,7 +272,7 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  This property controls only user interactions with the map.
  If the property is set to `NO`, you can still change the map tilt programmatically.
  */
-@property (nonatomic, getter=isTiltEnabled) BOOL tiltEnabled;
+@property (nonatomic, getter=isTiltEnabled) IBInspectable BOOL tiltEnabled;
 
 /**
  A Boolean value that determines whether the user may rotate the map, changing the rotation level.
@@ -276,7 +283,7 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  This property controls only user interactions with the map.
  If the property is set to `NO`, you can still change the map rotation programmatically.
  */
-@property (nonatomic, getter=isRotationEnabled) BOOL rotationEnabled;
+@property (nonatomic, getter=isRotationEnabled) IBInspectable BOOL rotationEnabled;
 
 /**
  A Boolean value that determines whether the user may drag/scroll the map, changing the map region.
@@ -287,7 +294,7 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  This property controls only user interactions with the map.
  If the property is set to `NO`, you can still change the map position programmatically.
  */
-@property (nonatomic, getter=isScrollEnabled) BOOL scrollEnabled;
+@property (nonatomic, getter=isScrollEnabled) IBInspectable BOOL scrollEnabled;
 
 /**
  The receiver’s delegate, for handling map view changes.
@@ -419,6 +426,183 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
  Adjusts the inset of map accessory views (like the compass indicator view).
  */
 @property (nonatomic) UIEdgeInsets contentInsets;
+
+@end
+
+
+//
+// MARK: Parametrized animation methods extension
+//
+
+/**
+ Animation curve type to be used when animating map properties
+ */
+typedef NS_ENUM(NSUInteger, HereSDKMapAnimationCurve) {
+    /** Linear animation ease type */
+    HereSDKMapAnimationCurveLinear = 0,
+    /** Cube animation ease type */
+    HereSDKMapAnimationCurveCubic,
+    /** Quint animation ease type */
+    HereSDKMapAnimationCurveQuint,
+    /** Sine animation ease type */
+    HereSDKMapAnimationCurveSine,
+};
+
+/**
+ * A category for more granular animation control
+ */
+@interface HereSDKMapView (Animations)
+
+// centerCoordinate
+
+/**
+ Changes the center coordinate of the map with the specified duration and `HereSDKAnimationCurveCubic` animation type.
+
+ Changing the center coordinate centers the map on the new coordinate without
+ changing the current zoom level.
+
+ @param coordinate The new center coordinate for the map.
+ @param duration The time interval/duration of the animation.
+ */
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate
+               withDuration:(NSTimeInterval)duration;
+
+/**
+ Changes the center coordinate of the map with the specified duration and animation
+ type.
+
+ Changing the center coordinate centers the map on the new coordinate without
+ changing the current zoom level.
+
+ @param coordinate The new center coordinate for the map.
+ @param duration The time interval/duration of the animation.
+ @param animationCurve The animation type for the change. Defines the animation curve
+ and ease type for the change.
+ */
+- (void)setCenterCoordinate:(CLLocationCoordinate2D)coordinate
+               withDuration:(NSTimeInterval)duration
+             animationCurve:(HereSDKMapAnimationCurve)animationCurve;
+
+// zoom
+
+/**
+ Changes the zoom level of the map with the specified duration and `HereSDKAnimationCurveCubic` animation type.
+
+ Changes the zoom level of the map without changing the center coordinate.
+
+ @param zoom The new zoom level for the map.
+ @param duration The time interval/duration of the animation.
+ */
+- (void)setZoom:(float)zoom
+   withDuration:(NSTimeInterval)duration;
+
+/**
+ Changes the zoom level of the map with the specified duration and animation
+ type.
+
+ Changes the zoom level of the map without changing the center coordinate.
+
+ @param zoom The new zoom level for the map.
+ @param duration The time interval/duration of the animation.
+ @param animationCurve The animation type for the change. Defines the animation curve
+ and ease type for the change.
+ */
+- (void)setZoom:(float)zoom
+   withDuration:(NSTimeInterval)duration
+ animationCurve:(HereSDKMapAnimationCurve)animationCurve;
+
+// rotation
+
+/**
+ Changes the rotation of the map with the specified duration and `HereSDKAnimationCurveCubic` animation type.
+
+ Changes the rotation of the map without changing the center coordinate.
+
+ @param rotation The rotation of the map, measured in radians clockwise from true north.
+ @param duration The time interval/duration of the animation.
+ */
+- (void)setRotation:(float)rotation
+       withDuration:(NSTimeInterval)duration;
+
+/**
+ Changes the rotation of the map with the specified duration and animation
+ type.
+
+ Changes the rotation of the map without changing the center coordinate.
+
+ @param rotation The rotation of the map, measured in radians clockwise from true north.
+ @param duration The time interval/duration of the animation.
+ @param animationCurve The animation type for the change. Defines the animation curve
+ and ease type for the change.
+ */
+- (void)setRotation:(float)rotation
+       withDuration:(NSTimeInterval)duration
+     animationCurve:(HereSDKMapAnimationCurve)animationCurve;
+
+// tilt
+
+/**
+ Changes the tilt angle of the map "camera" with the specified duration and `HereSDKAnimationCurveCubic` animation type.
+
+ Changes the rotation of the map without changing the center coordinate.
+
+ @param tilt The tilt angle of the map camera, measured in radians. Can not exceed `maxTilt`.
+ @param duration The time interval/duration of the animation.
+ */
+- (void)setTilt:(float)tilt
+   withDuration:(NSTimeInterval)duration;
+
+/**
+ Changes the tilt angle of the map "camera" with the specified duration and animation
+ type.
+
+ Changes the rotation of the map without changing the center coordinate.
+
+ @param tilt The tilt angle of the map camera, measured in radians. Can not exceed `maxTilt`.
+ @param duration The time interval/duration of the animation.
+ @param animationCurve The animation type for the change. Defines the animation curve
+ and ease type for the change.
+ */
+- (void)setTilt:(float)tilt
+   withDuration:(NSTimeInterval)duration
+ animationCurve:(HereSDKMapAnimationCurve)animationCurve;
+
+// mapRect
+
+/**
+ Changes the receiver’s viewport to fit the given coordinate bounds with
+ additional padding on each side with the specified duration and `HereSDKAnimationCurveCubic` animation type.
+
+ @param mapRect The bounds that the viewport will show in its entirety.
+ @param insets The minimum padding (in screen points) that will be visible around the given coordinate bounds.
+ @param duration The time interval/duration of the animation.
+
+ @return `YES`, if coordinate bounds are valid and can be set.
+ Otherwise returns `NO`. The method returns immediately.
+ */
+- (BOOL)setVisibleMapRect:(HereSDKMapRect)mapRect
+              edgePadding:(UIEdgeInsets)insets
+             withDuration:(NSTimeInterval)duration;
+
+/**
+ Changes the receiver’s viewport to fit the given coordinate bounds with
+ additional padding on each side with the specified duration and animation
+ type.
+
+ @param mapRect The bounds that the viewport will show in its entirety.
+ @param insets The minimum padding (in screen points) that will be visible around the given coordinate bounds.
+ @param duration The time interval/duration of the animation.
+ @param animationCurve The animation type for the change. Defines the animation curve
+ and ease type for the change.
+
+ @return `YES`, if coordinate bounds are valid and can be set.
+ Otherwise returns `NO`. The method returns immediately.
+ */
+- (BOOL)setVisibleMapRect:(HereSDKMapRect)mapRect
+              edgePadding:(UIEdgeInsets)insets
+             withDuration:(NSTimeInterval)duration
+           animationCurve:(HereSDKMapAnimationCurve)animationCurve;
+
 
 @end
 

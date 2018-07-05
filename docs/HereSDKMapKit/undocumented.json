@@ -51,70 +51,70 @@
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 300,
+      "line": 307,
       "symbol": "HereSDKMapView.polylines",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 302,
+      "line": 309,
       "symbol": "HereSDKMapView.-addPolyline:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 303,
+      "line": 310,
       "symbol": "HereSDKMapView.-addPolyline:withStyle:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 304,
+      "line": 311,
       "symbol": "HereSDKMapView.-removePolyline:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 305,
+      "line": 312,
       "symbol": "HereSDKMapView.-removePolylines:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 308,
+      "line": 315,
       "symbol": "HereSDKMapView.polygons",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 310,
+      "line": 317,
       "symbol": "HereSDKMapView.-addPolygon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 311,
+      "line": 318,
       "symbol": "HereSDKMapView.-addPolygon:withStyle:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 312,
+      "line": 319,
       "symbol": "HereSDKMapView.-removePolygon:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKMapKit.framework/HereSDKMapKit/HereSDKMapView.h",
-      "line": 313,
+      "line": 320,
       "symbol": "HereSDKMapView.-removePolygons:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"

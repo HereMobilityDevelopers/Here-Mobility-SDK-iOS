@@ -42,8 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 /** Ride's current status, and status history */
 @property (nonatomic, readonly) HereSDKDemandRideStatusLog *statusLog;
 
-/** Supplier details, nil if no supplier was assigned */
-@property (nonatomic, readonly, nullable) HereSDKDemandSupplier *supplier;
+/** Supplier details */
+@property (nonatomic, readonly) HereSDKDemandSupplier *supplier;
 
 /** The (optional) passenger note at the time of ride creation */
 @property (nonatomic, readonly) HereSDKDemandPassenger *passenger;

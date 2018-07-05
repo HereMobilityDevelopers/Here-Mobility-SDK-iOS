@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HereSDKFeatureStyle Class Reference</title>
+    <title>HereSDKMapAnimationCurve Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/HereSDKFeatureStyle" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Enum/HereSDKMapAnimationCurve" class="dashAnchor"></a>
 
-    <a title="HereSDKFeatureStyle Class Reference"></a>
+    <a title="HereSDKMapAnimationCurve Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -38,7 +38,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">HereSDKMapKit Reference</a>
       <img class="carat" src="../img/carat.png" />
-      HereSDKFeatureStyle Class Reference
+      HereSDKMapAnimationCurve Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -222,14 +222,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>HereSDKFeatureStyle</h1>
+            <h1>HereSDKMapAnimationCurve</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">HereSDKFeatureStyle</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">HereSDKMapAnimationCurve</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            <p>An object that stores the style for map features</p>
+            <p>Animation curve type to be used when animating map properties</p>
 
           </div>
         </section>
@@ -241,9 +241,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKFeatureStyle(py)color"></a>
-                    <a name="//apple_ref/objc/Property/color" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKFeatureStyle(py)color">color</a>
+                    <a name="/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveLinear"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKMapAnimationCurveLinear" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveLinear">HereSDKMapAnimationCurveLinear</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -251,19 +251,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Fill color of the feature. Default is <code>UIColor.blueColor</code>.</p>
+                        <p>Linear animation ease type</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">color</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKMapAnimationCurveLinear</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">linear</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -273,9 +273,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKFeatureStyle(py)borderColor"></a>
-                    <a name="//apple_ref/objc/Property/borderColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKFeatureStyle(py)borderColor">borderColor</a>
+                    <a name="/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveCubic"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKMapAnimationCurveCubic" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveCubic">HereSDKMapAnimationCurveCubic</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -283,19 +283,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Feature outline color. Default is <code>nil</code>.</p>
+                        <p>Cube animation ease type</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">UIColor</span> <span class="o">*</span><span class="n">borderColor</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKMapAnimationCurveCubic</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">borderColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">cubic</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -305,9 +305,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKFeatureStyle(py)borderWidth"></a>
-                    <a name="//apple_ref/objc/Property/borderWidth" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKFeatureStyle(py)borderWidth">borderWidth</a>
+                    <a name="/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveQuint"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKMapAnimationCurveQuint" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveQuint">HereSDKMapAnimationCurveQuint</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -315,19 +315,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Width in points of the feature outline. Default is <code>0</code>.</p>
+                        <p>Quint animation ease type</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">borderWidth</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKMapAnimationCurveQuint</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">borderWidth</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">quint</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveSine"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKMapAnimationCurveSine" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKMapAnimationCurve@HereSDKMapAnimationCurveSine">HereSDKMapAnimationCurveSine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sine animation ease type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKMapAnimationCurveSine</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sine</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
 
                         </div>
                       </div>

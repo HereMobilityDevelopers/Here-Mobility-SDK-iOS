@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) NSDate *estimatedDropoffTime;
 
 /** Price estimate for the ride */
-@property (nonatomic, readonly, nullable) HereSDKDemandPriceEstimate *estimatedPriceRange;
+@property (nonatomic, readonly, nullable) HereSDKDemandPriceEstimate *estimatedPrice;
 
 /** The time the offer will expire */  // TODO : document
 @property (nonatomic, readonly, nullable) NSNumber *duration;

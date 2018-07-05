@@ -119,6 +119,9 @@
                 <a class="nav-group-task-link" href="../Enums/HereSDKGeocodeResultType.html">HereSDKGeocodeResultType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a>
               </li>
               <li class="nav-group-task">
@@ -238,61 +241,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKFeatureStyle(cm)styleWithColor:"></a>
-                    <a name="//apple_ref/objc/Method/+styleWithColor:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKFeatureStyle(cm)styleWithColor:">+styleWithColor:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Generates the feature style with the given color.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">styleWithColor</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="nv">color</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">color</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>color</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The fill color for the feature.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>A featureStyle object with set feature color.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)HereSDKFeatureStyle(py)color"></a>
                     <a name="//apple_ref/objc/Property/color" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKFeatureStyle(py)color">color</a>
@@ -303,7 +251,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Fill color of the feature</p>
+                        <p>Fill color of the feature. Default is <code>UIColor.blueColor</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -335,7 +283,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Feature outline color</p>
+                        <p>Feature outline color. Default is <code>nil</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -367,7 +315,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Width in points of the feature outline</p>
+                        <p>Width in points of the feature outline. Default is <code>0</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -394,7 +342,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-25)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

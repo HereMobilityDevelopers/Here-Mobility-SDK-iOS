@@ -119,6 +119,9 @@
                 <a class="nav-group-task-link" href="../Enums/HereSDKGeocodeResultType.html">HereSDKGeocodeResultType</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKMapCompassPosition.html">HereSDKMapCompassPosition</a>
               </li>
               <li class="nav-group-task">
@@ -1895,13 +1898,792 @@ the compass will use the standard compass image.</p>
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Animations"></a>
+                <a name="//apple_ref/objc/Section/Animations" class="dashAnchor"></a>
+                <a href="#/Animations">
+                  <h3 class="section-name">Animations</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setCenterCoordinate:withDuration:"></a>
+                    <a name="//apple_ref/objc/Method/-setCenterCoordinate:withDuration:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setCenterCoordinate:withDuration:">-setCenterCoordinate:withDuration:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the center coordinate of the map with the specified duration and <code>HereSDKAnimationCurveCubic</code> animation type.</p>
+
+<p>Changing the center coordinate centers the map on the new coordinate without
+changing the current zoom level.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCenterCoordinate</span><span class="p">:(</span><span class="n">CLLocationCoordinate2D</span><span class="p">)</span><span class="nv">coordinate</span>
+               <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>coordinate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new center coordinate for the map.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setCenterCoordinate:withDuration:animationCurve:"></a>
+                    <a name="//apple_ref/objc/Method/-setCenterCoordinate:withDuration:animationCurve:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setCenterCoordinate:withDuration:animationCurve:">-setCenterCoordinate:withDuration:animationCurve:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the center coordinate of the map with the specified duration and animation
+type.</p>
+
+<p>Changing the center coordinate centers the map on the new coordinate without
+changing the current zoom level.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCenterCoordinate</span><span class="p">:(</span><span class="n">CLLocationCoordinate2D</span><span class="p">)</span><span class="nv">coordinate</span>
+               <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span>
+             <span class="nf">animationCurve</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span><span class="nv">animationCurve</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCenter</span><span class="p">(</span><span class="n">_</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="kt">CLLocationCoordinate2D</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">animationCurve</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>coordinate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new center coordinate for the map.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationCurve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation type for the change. Defines the animation curve
+and ease type for the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setZoom:withDuration:"></a>
+                    <a name="//apple_ref/objc/Method/-setZoom:withDuration:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setZoom:withDuration:">-setZoom:withDuration:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the zoom level of the map with the specified duration and <code>HereSDKAnimationCurveCubic</code> animation type.</p>
+
+<p>Changes the zoom level of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">zoom</span> <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">zoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zoom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new zoom level for the map.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setZoom:withDuration:animationCurve:"></a>
+                    <a name="//apple_ref/objc/Method/-setZoom:withDuration:animationCurve:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setZoom:withDuration:animationCurve:">-setZoom:withDuration:animationCurve:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the zoom level of the map with the specified duration and animation
+type.</p>
+
+<p>Changes the zoom level of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">zoom</span>
+      <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span>
+    <span class="nf">animationCurve</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span><span class="nv">animationCurve</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">zoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">animationCurve</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zoom</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new zoom level for the map.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationCurve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation type for the change. Defines the animation curve
+and ease type for the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setRotation:withDuration:"></a>
+                    <a name="//apple_ref/objc/Method/-setRotation:withDuration:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setRotation:withDuration:">-setRotation:withDuration:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the rotation of the map with the specified duration and <code>HereSDKAnimationCurveCubic</code> animation type.</p>
+
+<p>Changes the rotation of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotation</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">rotation</span> <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRotation</span><span class="p">(</span><span class="n">_</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rotation of the map, measured in radians clockwise from true north.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setRotation:withDuration:animationCurve:"></a>
+                    <a name="//apple_ref/objc/Method/-setRotation:withDuration:animationCurve:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setRotation:withDuration:animationCurve:">-setRotation:withDuration:animationCurve:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the rotation of the map with the specified duration and animation
+type.</p>
+
+<p>Changes the rotation of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotation</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">rotation</span>
+       <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span>
+     <span class="nf">animationCurve</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span><span class="nv">animationCurve</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRotation</span><span class="p">(</span><span class="n">_</span> <span class="nv">rotation</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">animationCurve</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rotation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rotation of the map, measured in radians clockwise from true north.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationCurve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation type for the change. Defines the animation curve
+and ease type for the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setTilt:withDuration:"></a>
+                    <a name="//apple_ref/objc/Method/-setTilt:withDuration:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setTilt:withDuration:">-setTilt:withDuration:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the tilt angle of the map <q>camera</q> with the specified duration and <code>HereSDKAnimationCurveCubic</code> animation type.</p>
+
+<p>Changes the rotation of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTilt</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">tilt</span> <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTilt</span><span class="p">(</span><span class="n">_</span> <span class="nv">tilt</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tilt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The tilt angle of the map camera, measured in radians. Can not exceed <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setTilt:withDuration:animationCurve:"></a>
+                    <a name="//apple_ref/objc/Method/-setTilt:withDuration:animationCurve:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setTilt:withDuration:animationCurve:">-setTilt:withDuration:animationCurve:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the tilt angle of the map <q>camera</q> with the specified duration and animation
+type.</p>
+
+<p>Changes the rotation of the map without changing the center coordinate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTilt</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">tilt</span>
+      <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span>
+    <span class="nf">animationCurve</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span><span class="nv">animationCurve</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTilt</span><span class="p">(</span><span class="n">_</span> <span class="nv">tilt</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">animationCurve</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tilt</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The tilt angle of the map camera, measured in radians. Can not exceed <code><a href="../Classes/HereSDKMapView.html#/c:objc(cs)HereSDKMapView(py)maxTilt">maxTilt</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationCurve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation type for the change. Defines the animation curve
+and ease type for the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setVisibleMapRect:edgePadding:withDuration:"></a>
+                    <a name="//apple_ref/objc/Method/-setVisibleMapRect:edgePadding:withDuration:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setVisibleMapRect:edgePadding:withDuration:">-setVisibleMapRect:edgePadding:withDuration:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the receiver’s viewport to fit the given coordinate bounds with
+additional padding on each side with the specified duration and <code>HereSDKAnimationCurveCubic</code> animation type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">setVisibleMapRect</span><span class="p">:(</span><span class="n"><a href="../Type Definitions/HereSDKMapRect.html">HereSDKMapRect</a></span><span class="p">)</span><span class="nv">mapRect</span>
+              <span class="nf">edgePadding</span><span class="p">:(</span><span class="n">UIEdgeInsets</span><span class="p">)</span><span class="nv">insets</span>
+             <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setVisibleMapRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapRect</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions/HereSDKMapRect.html">HereSDKMapRect</a></span><span class="p">,</span> <span class="n">edgePadding</span> <span class="nv">insets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapRect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bounds that the viewport will show in its entirety.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>insets</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The minimum padding (in screen points) that will be visible around the given coordinate bounds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code>, if coordinate bounds are valid and can be set.
+Otherwise returns <code>NO</code>. The method returns immediately.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKMapView(im)setVisibleMapRect:edgePadding:withDuration:animationCurve:"></a>
+                    <a name="//apple_ref/objc/Method/-setVisibleMapRect:edgePadding:withDuration:animationCurve:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKMapView(im)setVisibleMapRect:edgePadding:withDuration:animationCurve:">-setVisibleMapRect:edgePadding:withDuration:animationCurve:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the receiver’s viewport to fit the given coordinate bounds with
+additional padding on each side with the specified duration and animation
+type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">setVisibleMapRect</span><span class="p">:(</span><span class="n"><a href="../Type Definitions/HereSDKMapRect.html">HereSDKMapRect</a></span><span class="p">)</span><span class="nv">mapRect</span>
+              <span class="nf">edgePadding</span><span class="p">:(</span><span class="n">UIEdgeInsets</span><span class="p">)</span><span class="nv">insets</span>
+             <span class="nf">withDuration</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">duration</span>
+           <span class="nf">animationCurve</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span><span class="nv">animationCurve</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setVisibleMapRect</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapRect</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions/HereSDKMapRect.html">HereSDKMapRect</a></span><span class="p">,</span> <span class="n">edgePadding</span> <span class="nv">insets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span><span class="p">,</span> <span class="n">withDuration</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">animationCurve</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKMapAnimationCurve.html">HereSDKMapAnimationCurve</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mapRect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The bounds that the viewport will show in its entirety.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>insets</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The minimum padding (in screen points) that will be visible around the given coordinate bounds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The time interval/duration of the animation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animationCurve</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The animation type for the change. Defines the animation curve
+and ease type for the change.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>YES</code>, if coordinate bounds are valid and can be set.
+Otherwise returns <code>NO</code>. The method returns immediately.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-06-25)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-07-05)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
