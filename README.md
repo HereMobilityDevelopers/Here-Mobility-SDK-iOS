@@ -4,7 +4,7 @@
 
 # HERE Mobility SDK for iOS
 
-Version 1.0.6
+Version 1.0.7
 
 <br />
 
@@ -13,7 +13,7 @@ Version 1.0.6
 <br />
 
 <!-- Date -->
-**July, 2018**
+**August, 2018**
 
 <br />
 
@@ -79,7 +79,7 @@ The Mobility package (_DemandKit_) allows your app’s users to manage passenger
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 1.0.6 supports iOS version **9.0** or later.
+HERE Mobility SDK version 1.0.7 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -128,8 +128,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod HereSDKDemandKit, '~>1.0.6'
-pod HereSDKMapKit, '~>1.0.6'
+pod HereSDKDemandKit, '~>1.0.7'
+pod HereSDKMapKit, '~>1.0.7'
 ```
 
 **4.** Complete the installation by performing the following commands:
@@ -144,7 +144,7 @@ These instructions will setup your local CocoaPods environment and import the de
 ### 3.3. Initializing the HERE Mobility SDK
 
 The SDK's `HereSDKManager` uses credentials from your app's `Info.plist` file to initialize.
-If the `appId` and `appSecret` are missing from the file, the SDK will fail to initialize.
+If the `appId` is missing from the file, the SDK will fail to initialize.
 
 #### 3.3.1 Configuring your app's Info.plist
 
@@ -154,11 +154,9 @@ If the `appId` and `appSecret` are missing from the file, the SDK will fail to i
 ```xml
 <key>HereMobilitySDKAppId</key>
 <string>{your-app-id}</string>
-<key>HereMobilitySDKAppSecret</key>
-<string>{your-app-secret}</string>
 ```
 
-Replace `{your-app-id}`, and `{your-app-secret}` with your app's ID and secret, that you've obtained from HERE.
+Replace `{your-app-id}` with your app's ID, that you've obtained from HERE.
 
 In your app's `UIApplicationDelegate` method `didFinishLaunchingWithOptions:` call the method to initialize and configure the HereSDK.
 

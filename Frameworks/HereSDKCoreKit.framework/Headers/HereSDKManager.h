@@ -22,10 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The shared HereSDKManager instance.
  * The first time the sharedManager is required, it is initialized with credentials from the app's Info.plist file.
- * Make sure the Info.plist includes correct values for keys HereMobilitySDKAppId and HereMobilitySDKAppSecret
- * If either of the credentials is missing, the SDK initialization fails, and the results are undefined.
+ * Make sure the Info.plist includes correct value for HereMobilitySDKAppId.
+ * If it missing, the SDK initialization fails, and the results are undefined.
 
- * @return The shared HereSDKManager instance.  nil if either credential is missing.
+ * @return The shared HereSDKManager instance.  nil if HereMobilitySDKAppId is missing.
  */
 @property (class, nonatomic, readonly, nullable) HereSDKManager *sharedManager;
 
@@ -36,6 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
  * To log out, set this property to nil
  */
 @property (nonatomic, readwrite, nullable) HereSDKUser *user;
+
+/**
+ * Returns a logging id.
+ * This id can be used to query Here Mobility SDK logs.
+ */
+@property (nonatomic, readonly) NSString *loggingId;
 
 /**
  * Tells the SDK to begin a fetch operation, if it has data to download.

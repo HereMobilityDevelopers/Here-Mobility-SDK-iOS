@@ -21,11 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
   A completion block for ride updates.
   Will contain either one of the parameters.
 
+ @param ride ride updated
  @param statusLog ride status update
  @param location ride location update
  @param error error returned from ride updates
  */
-typedef void (^HereSDKDemandRideUpdateBlock)(HereSDKDemandRideStatusLog *_Nullable statusLog, HereSDKDemandRideLocation *_Nullable location, NSError *_Nullable error);
+typedef void (^HereSDKDemandRideUpdateBlock)(HereSDKDemandRide *_Nullable ride, HereSDKDemandRideStatusLog *_Nullable statusLog, HereSDKDemandRideLocation *_Nullable location, NSError *_Nullable error);
 
 /**
  A completion block for ride cancellation
