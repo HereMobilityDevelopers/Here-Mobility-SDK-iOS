@@ -5,6 +5,8 @@
 #import <Foundation/Foundation.h>
 #import "HereSDKDemandPassenger.h"
 
+@class HereSDKDemandRidePreferences;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -22,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly) HereSDKDemandPassenger *passengerDetails;
 
+/**
+ The preferences of a ride.
+ */
+@property(nonatomic, readonly) HereSDKDemandRidePreferences *ridePreferences;
+
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
 /// :nodoc:
@@ -29,11 +36,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a ride request
-
+ 
  @param offerId The ride offer ID received from requestRide
  @param passengerDetails Details about the passenger booking the ride
  */
-+(instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails;
++ (instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails;
+
+/**
+ Creates a ride request
+ 
+ @param offerId The ride offer ID received from requestRide
+ @param passengerDetails Details about the passenger booking the ride
+ @param ridePreferences The preferences of a ride.
+ */
++ (instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails ridePreferences:(HereSDKDemandRidePreferences *) ridePreferences;
 
 @end
 

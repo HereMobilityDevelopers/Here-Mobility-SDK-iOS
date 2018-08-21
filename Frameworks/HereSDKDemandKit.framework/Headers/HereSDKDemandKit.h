@@ -32,3 +32,4 @@
 #import <HereSDKDemandKit/HereSDKDemandTaxiRideOffer.h>
 #import <HereSDKDemandKit/HereSDKDemandTransitOptions.h>
 #import <HereSDKDemandKit/HereSDKDemandVehicle.h>
+#import <HereSDKDemandKit/HereSDKDemandRidePreferences.h>
