@@ -4,7 +4,7 @@
 
 # HERE Mobility SDK for iOS
 
-Version 1.0.10
+Version 1.1.0
 
 <br />
 
@@ -79,7 +79,7 @@ The Mobility package (_DemandKit_) allows your app’s users to manage passenger
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 1.0.10 supports iOS version **9.0** or later.
+HERE Mobility SDK version 1.1.0 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -110,7 +110,7 @@ To set up your local CocoaPods environment and import the desired HERE Mobility 
 
 ```
 $ sudo gem install cocoapods
-$ pod setup
+$ pod init
 ```
 
 **2.** In the root directory of your project, create a `Podfile` and add the source for the HERE Mobility SDK repository to the beginning of the file, as follows:
@@ -134,8 +134,8 @@ use_frameworks!
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod HereSDKDemandKit, '~>1.0.10'
-pod HereSDKMapKit, '~>1.0.10'
+pod 'HereSDKDemandKit', '~>1.1.0'
+pod 'HereSDKMapKit', '~>1.1.0'
 ```
 
 **4.** Complete the installation by performing the following commands:
