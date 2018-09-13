@@ -65,11 +65,18 @@ You can use any combination of these packages. There is no dependency between th
 
 ### 1.1. Mobility Package
 
-The Mobility package (_DemandKit_) allows your app’s users to manage passenger rides anywhere in the world, supplied through the HERE Mobility Marketplace. This includes requesting ride offers, booking and canceling rides, and updating a ride’s status.  ### 1.2. Map Services Package
-The Map Services package (_MapKit_) provides comprehensive map capabilities, including: 
+The Mobility package (_DemandKit_) allows your app’s users to manage passenger rides anywhere in the world, supplied through the HERE Mobility Marketplace. This includes requesting ride offers, booking and canceling rides, and updating a ride’s status.  
 
-* Searching for locations by address or name* Dynamic rendering of map display
-* Point-to-point route calculation<br />
+
+### 1.2. Map Services Package
+
+The Map Services package (_MapKit_) provides comprehensive map capabilities, including: 
+
+* Searching for locations by address or name
+* Dynamic rendering of map display
+* Point-to-point route calculation
+
+<br />
 
 * * *
 
@@ -82,21 +89,27 @@ The Mobility package (_DemandKit_) allows your app’s users to manage passenger
 HERE Mobility SDK version 1.1.0 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
-
-The HERE Mobility SDK uses GRPC libraries.
+* [gRPC](https://github.com/grpc/grpc)
+* [Tangram ES](https://github.com/tangrams/tangram-es)
 
 <br />
 
 * * *
 
 <br />
-## 3. Getting Started
+
+## 3. Getting Started
 
 ### 3.1. Obtaining HERE Credentials for Your App
 
 To use the HERE Mobility SDK, you’ll need a unique app ID and app secret. To obtain these credentials, contact us at [mobility_developers@here.com](mailto:mobility_developers@here.com).
-Please include the following information in your email: 
-* Full name* Phone* Application name* Bundle Identifier
+
+Please include the following information in your email: 
+
+* Full name
+* Phone
+* Application name
+* Bundle Identifier
 
 ### 3.2. Adding the HERE Mobility SDK to your App
 
@@ -228,7 +241,8 @@ _Notes:_
 * Your application's `Info.plist` should also contain descriptions explaining location usage for the `NSLocationWhenInUseUsageDescription` and `NSLocationAlwaysUsageDescription` keys. 
 * Some SDK features, such as detecting Personal Points of Interest, work better when **_`Always`_** access is granted.
 
-The following sections provide examples for how to request access in Swift and Objective-C.
+
+The following sections provide examples for how to request access in Swift and Objective-C.
 
 **_Swift_**
 <!-- Swift sample code for requesting location permissions -->
@@ -261,8 +275,10 @@ CLLocationManager *locationManager = [CLLocationManager new];
 ```
 
 ### 3.5. Using the HERE Sandbox Platform
-You can use the HERE Mobility Sandbox platform to develop and test your app’s functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not change the platform’s state).
-The HERE Mobility service directs your app’s calls to the sandbox or production environment according to the app key you provide (there is no need to use different endpoints).
+
+You can use the HERE Mobility Sandbox platform to develop and test your app’s functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not change the platform’s state).
+
+The HERE Mobility service directs your app’s calls to the sandbox or production environment according to the app key you provide (there is no need to use different endpoints).
 
 <br />
 
@@ -272,4 +288,7 @@ CLLocationManager *locationManager = [CLLocationManager new];
 
 ## 4. API Reference
 
-For detailed information about HERE Mobility SDK functions, please refer to the [Here Mobility API reference](https://heremobilitydevelopers.github.io/Here-Mobility-SDK-iOS/). 
+For detailed information about HERE Mobility SDK functions, please refer to the [Here Mobility API reference](https://heremobilitydevelopers.github.io/Here-Mobility-SDK-iOS/). 
+
+
+
