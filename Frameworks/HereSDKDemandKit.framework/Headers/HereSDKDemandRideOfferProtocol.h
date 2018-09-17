@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, HereSDKDemandTransitType)
 {
     /** Transit Type: Taxi */
-    HereSDKDemandTransitTypeTaxi = 0,
+    HereSDKDemandTransitTypeTaxi = (1 << 0),
     /** Transit Type: Public Transport */
-    HereSDKDemandTransitTypePublicTransport = 1,
+    HereSDKDemandTransitTypePublicTransport = (1 << 1),
 };
 
 /**

@@ -96,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  If this method is absent from the delegate, or if it returns `nil`, a standard, two-line, bubble-like callout view is displayed by default.
  */
-- (UIView *)mapView:(HereSDKMapView *)mapView calloutViewForAnnotation:(id<HereSDKAnnotation>)annotation;
+- (nullable UIView *)mapView:(HereSDKMapView *)mapView calloutViewForAnnotation:(id<HereSDKAnnotation>)annotation;
 
 /**
  Tells the receiver an annotation was selected and presented its view on the map

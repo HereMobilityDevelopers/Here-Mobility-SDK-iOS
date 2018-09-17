@@ -13,13 +13,15 @@
 #import <HereSDKDemandKit/HereSDKDemandRideLocation.h>
 #import <HereSDKDemandKit/HereSDKDemandRideQuery.h>
 #import <HereSDKDemandKit/HereSDKDemandQueryRidesResponse.h>
+#import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageRequest.h>
+#import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 
- /**
-  A completion block for ride updates.
-  Will contain either one of the parameters.
+/**
+ A completion block for ride updates.
+ Will contain either one of the parameters.
 
  @param ride ride updated
  @param statusLog ride status update
@@ -126,6 +128,16 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
  @param handler The block that will handle the response.
  */
 - (void)getRideWithRequest:(NSString *)rideId withHandler:(void(^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
+
+/**
+ Get the verticals coverage available at a specific location
+ This request will return a mask of all available TransitTypes at the given location.
+
+ @param request The HereSDKDemandVerticalsCoverageRequest object.
+ @param handler The block that will handle the response.
+ */
+- (void)getVerticalsCoverageWithRequest:(HereSDKDemandVerticalsCoverageRequest *)request withHandler:(void(^)(HereSDKDemandVerticalsCoverageResponse *_Nullable verticalsCoverageResponse, NSError *_Nullable error))handler;
+
 
 @end
 

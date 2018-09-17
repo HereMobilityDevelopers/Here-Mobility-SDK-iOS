@@ -33,3 +33,5 @@
 #import <HereSDKDemandKit/HereSDKDemandTransitOptions.h>
 #import <HereSDKDemandKit/HereSDKDemandVehicle.h>
 #import <HereSDKDemandKit/HereSDKDemandRidePreferences.h>
+#import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageRequest.h>
+#import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h>
