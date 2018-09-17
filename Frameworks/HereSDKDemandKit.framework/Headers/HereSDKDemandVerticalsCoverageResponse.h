@@ -4,13 +4,23 @@
  **************************************************************/
 
 #import <Foundation/Foundation.h>
-#import <HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ Type definition for vertical coverage.
+ */
+typedef NS_OPTIONS(NSUInteger, HereSDKDemandVerticalType)
+{
+    /** Vertical Type: Taxi */
+    HereSDKDemandVerticalTypeTaxi = (1 << 0),
+    /** Vertical Type: Public Transport */
+    HereSDKDemandVerticalTypePublicTransport = (1 << 1),
+};
+
 @interface HereSDKDemandVerticalsCoverageResponse : NSObject
 
-@property (nonatomic, readonly) HereSDKDemandTransitType transitTypeMask;
+@property (nonatomic, readonly) HereSDKDemandVerticalType verticalTypeMask;
 
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
