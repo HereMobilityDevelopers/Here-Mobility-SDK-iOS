@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Type definition for transit type
  */
-typedef NS_ENUM(NSUInteger, HereSDKDemandTransitType)
+typedef NS_OPTIONS(NSUInteger, HereSDKDemandTransitType)
 {
     /** Transit Type: Taxi */
     HereSDKDemandTransitTypeTaxi = (1 << 0),
