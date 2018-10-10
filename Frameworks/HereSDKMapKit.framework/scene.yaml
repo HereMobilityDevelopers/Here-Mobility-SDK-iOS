@@ -19,12 +19,22 @@ styles:
   _hmsdk_custom_polyline_style:
     base: lines
     blend: overlay
-    blend_order: -1
+    blend_order: 0
 
   _hmsdk_custom_polygon_style:
     base: polygons
     blend: overlay
-    blend_order: -1
+    blend_order: 0
+
+  _hmsdk_custom_point_style:
+    base: points
+    blend: overlay
+    blend_order: 2
+
+  text-overlay:
+    base: text
+    blend: overlay
+    blend_order: 1
 
   park-dashed-lines:
     base: lines
@@ -244,7 +254,8 @@ layers:
       layer: housenumber
     draw:
       text:
-        visible: false
+        style: text-overlay
+        visible: true
         font:
           fill: [0.812, 0.706, 0.616, 1.00]
           size: 10
@@ -735,6 +746,7 @@ layers:
       layer: poi
     draw:
       text:
+        style: text-overlay
         font:
           fill: '#666'
           stroke:
@@ -761,6 +773,7 @@ layers:
       layer: aerodrome_label
     draw:
       text:
+        style: text-overlay
         font:
           fill: '#666'
           stroke:
@@ -783,6 +796,7 @@ layers:
       layer: transportation_name
     draw:
       text:
+        style: text-overlay
         font:
           fill: [0.188, 0.188, 0.243, 1.0]
           stroke:
@@ -815,6 +829,7 @@ layers:
       layer: place
     draw:
       text:
+        style: text-overlay
         font:
           fill: 'hsl(0, 0%, 25%)'
           stroke:
@@ -843,6 +858,7 @@ layers:
       layer: place
     draw:
       text:
+        style: text-overlay
         font:
           fill: 'hsl(0, 0%, 0%)'
           stroke:
@@ -870,6 +886,7 @@ layers:
       layer: place
     draw:
       text:
+        style: text-overlay
         font:
           fill: 'hsl(0, 0%, 13%)'
           stroke:
@@ -898,6 +915,7 @@ layers:
       layer: place
     draw:
       text:
+        style: text-overlay
         font:
           fill: 'hsl(0, 0%, 13%)'
           stroke:

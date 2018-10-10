@@ -1,6 +1,47 @@
 {
   "warnings": [
-
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 7,
+      "symbol": "kHereSDKPhoneVerificationDomain",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 9,
+      "symbol": "HereSDKPhoneVerificationError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 9,
+      "symbol": "HereSDKPhoneVerificationError",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 10,
+      "symbol": "HereSDKPhoneVerificationError.HereSDKInvalidPhoneNumberErr",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 11,
+      "symbol": "HereSDKPhoneVerificationError.HereSDKSMSProviderErr",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKErrors.h",
+      "line": 12,
+      "symbol": "HereSDKPhoneVerificationError.HereSDKInternalErr",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration"
+  "source_directory": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration"
 }

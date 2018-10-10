@@ -38,8 +38,40 @@ typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationStatus)
     HereSDKDemandCancellationStatusProcessing,
     /** Cancellation status: Accepted */
     HereSDKDemandCancellationStatusAccepted,
-    /** Cancellation status: Rejected */
+    /** Cancellation status: Rejected. This means that whether or not the ride takes place, the user will be charged. */
     HereSDKDemandCancellationStatusRejected,
+};
+
+/**
+  The cancel reason category. Some reasons are relevant only to passenger cancellations,
+  and some are relevant only to supplier cancellations.
+ */
+typedef NS_ENUM(NSUInteger, HereSDKDemandCancellationReasonCategory)
+{
+    /** Passenger cancellation, driver didn't arrive. */
+    HereSDKDemandCancellationReasonCategoryDriverNoShow,
+    /** Passenger cancellation, price changed. */
+    HereSDKDemandCancellationReasonCategoryPriceChanged,
+    /** Passenger cancellation, ETA changed. */
+    HereSDKDemandCancellationReasonCategoryEtaChanged,
+    /** Passenger cancellation, vehicle unsuitable for passenger's needs. */
+    HereSDKDemandCancellationReasonCategoryUnsuitableVehicle,
+    /** Passenger cancellation, driver behaved inappropriately. */
+    HereSDKDemandCancellationReasonCategoryDriverBehavedInappropriately,
+    /** Passenger cancellation, passenger plans changed. */
+    HereSDKDemandCancellationReasonCategoryChangedMyPlans,
+    /** Supplier cancellation. No drivers available. */
+    HereSDKDemandCancellationReasonCategoryDriversUnavailable,
+    /** Supplier cancellation. Passenger didn't arrive. */
+    HereSDKDemandCancellationReasonCategoryPassengerNoShow,
+    /** Supplier cancellation. Passenger called the driver and asked to cancel the ride. */
+    HereSDKDemandCancellationReasonCategoryPassengerRequestedToCancel,
+    /** Supplier cancellation. Vehicle malfunction. */
+    HereSDKDemandCancellationReasonCategoryVehicleMalfunction,
+    /** Supplier cancellation. Driver couldn't arrive due to heavy traffic. */
+    HereSDKDemandCancellationReasonCategoryHeavyTraffic,
+    /** Other cancellation reason. */
+    HereSDKDemandCancellationReasonCategoryOther,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -60,6 +92,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Status of cancellation */
 @property(nonatomic, readonly) HereSDKDemandCancellationStatus cancellationStatus;
+
+/** The cancellation reason category. */
+@property(nonatomic, readonly) HereSDKDemandCancellationReasonCategory cancellationReasonCategory;
 
 @end
 

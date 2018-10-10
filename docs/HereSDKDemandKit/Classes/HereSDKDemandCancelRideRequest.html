@@ -149,7 +149,13 @@
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandCancellationPolicy.html">HereSDKDemandCancellationPolicy</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandCancellationReasonCategory.html">HereSDKDemandCancellationReasonCategory</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandCancellationStatus.html">HereSDKDemandCancellationStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPublicTransportRouteLegTransportMode.html">HereSDKDemandPublicTransportRouteLegTransportMode</a>
@@ -253,6 +259,39 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)HereSDKDemandCancelRideRequest(py)passengerCancelReason"></a>
+                    <a name="//apple_ref/objc/Property/passengerCancelReason" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKDemandCancelRideRequest(py)passengerCancelReason">passengerCancelReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Passenger cancel reason.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a></span> <span class="n">passengerCancelReason</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">passengerCancelReason</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)HereSDKDemandCancelRideRequest(py)cancelReason"></a>
                     <a name="//apple_ref/objc/Property/cancelReason" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKDemandCancelRideRequest(py)cancelReason">cancelReason</a>
@@ -346,6 +385,84 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKDemandCancelRideRequest(cm)cancelRideWithRideId:passengerCancelReason:cancelReason:"></a>
+                    <a name="//apple_ref/objc/Method/+cancelRideWithRideId:passengerCancelReason:cancelReason:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKDemandCancelRideRequest(cm)cancelRideWithRideId:passengerCancelReason:cancelReason:">+cancelRideWithRideId:passengerCancelReason:cancelReason:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a ride cancellation request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+ <span class="nf">cancelRideWithRideId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">rideId</span>
+<span class="nf">passengerCancelReason</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a></span><span class="p">)</span><span class="nv">passengerCancelReason</span>
+         <span class="nf">cancelReason</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">cancelReason</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">cancelRide</span><span class="p">(</span><span class="n">withRideId</span> <span class="nv">rideId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">passengerCancelReason</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a></span><span class="p">,</span> <span class="nv">cancelReason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rideId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The ID of the ride to be cancelled</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passengerCancelReason</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The passenger cancellation reason</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cancelReason</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The cancellation reason</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -354,7 +471,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-09-17)</p>
+      <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-10-10)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

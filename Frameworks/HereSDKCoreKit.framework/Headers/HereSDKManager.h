@@ -44,6 +44,31 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *loggingId;
 
 /**
+ * requests SMS PIN code for verification.
+ * This API is currently partially implemented, and is subject to changes.
+
+   @param phoneNumber The user phone number.
+   @param handler The block to execute when action is completed.
+ */
+- (void)sendVerificationSMS:(NSString*)phoneNumber withHandler:(void(^)(NSError *_Nullable error))handler;
+
+/**
+ * verifies phone number with the given PIN code.
+ * This API is currently partially implemented, and is subject to changes.
+
+   @param phoneNumber The user phone number
+   @param pinCode The pin code received via SMS.
+   @param handler The block to execute when action is completed.
+ */
+- (void)verifyPhoneNumber:(NSString*)phoneNumber pinCode:(NSString*)pinCode withHandler:(void(^)(NSError *_Nullable error))handler;
+
+/**
+ * Returns a boolean value of phone number verification status.
+ * This API is currently partially implemented, and is subject to changes.
+ */
+- (BOOL)isPhoneNumberVerified;
+
+/**
  * Tells the SDK to begin a fetch operation, if it has data to download.
  * To be called from application:performFetchWithCompletionHandler, if the application's `background fetch` mode is enabled.
  *

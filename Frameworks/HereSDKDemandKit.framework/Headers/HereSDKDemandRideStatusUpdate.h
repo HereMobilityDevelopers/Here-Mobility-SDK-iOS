@@ -31,6 +31,8 @@ typedef NS_ENUM(NSUInteger, HereSDKDemandRideStatusUpdateStatus)
     HereSDKDemandRideStatusLogRecordCompleted = 9,
     /** The ride was cancelled (either by the driver or by the passenger). */
     HereSDKDemandRideStatusLogRecordCancelled = 10,
+    /** Ride closed after a duration with no updates. */
+    HereSDKDemandRideStatusLogRecordFailure = 11,
 };
 
 NS_ASSUME_NONNULL_BEGIN

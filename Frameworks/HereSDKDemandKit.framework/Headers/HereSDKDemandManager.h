@@ -130,8 +130,8 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 - (void)getRideWithRequest:(NSString *)rideId withHandler:(void(^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
 
 /**
- Get the verticals coverage available at a specific location
- This request will return a mask of all available TransitTypes at the given location.
+ Get the verticals coverage available around a specific location
+ This request will return a mask of all available TransitTypes around the given location.
 
  @param request The HereSDKDemandVerticalsCoverageRequest object.
  @param handler The block that will handle the response.

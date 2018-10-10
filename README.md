@@ -4,16 +4,16 @@
 
 # HERE Mobility SDK for iOS
 
-Version 1.1.3
+Version 1.1.4
 
 <br />
-
 
 <!-- Table of contents with links to different sections -->
 
 1. [Introduction](#1-introduction)
 	1. [Mobility Package](#11-mobility-package)
 	2. [Map Services Package](#12-map-services-package)
+	3. [Sample Apps](#13-sample-apps)
 2. [Pre-requisites](#2-pre-requisites)
 	1. [Operating System](#21-operating-system)
 	2. [3rd Party Packages](#22-3rd-party-packages) 
@@ -59,6 +59,13 @@ The Map Services package (_MapKit_) provides comprehensive map capabilities, inc
 * Dynamic rendering of map display
 * Point-to-point route calculation
 
+### 1.3. Sample Apps
+Try out our sample apps:
+
+[iOS](https://github.com/HereMobilityDevelopers/Here-Mobility-SDK-iOS-SampleApp/)
+
+[React Native](https://github.com/HereMobilityDevelopers/Here-Mobility-SDK-React-Native-SampleApp)
+
 <br />
 
 * * *
@@ -69,7 +76,7 @@ The Map Services package (_MapKit_) provides comprehensive map capabilities, inc
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 1.1.3 supports iOS version **9.0** or later.
+HERE Mobility SDK version 1.1.4 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -124,8 +131,8 @@ use_frameworks!
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod 'HereSDKDemandKit', '~>1.1.3'
-pod 'HereSDKMapKit', '~>1.1.3'
+pod 'HereSDKDemandKit', '~>1.1.4'
+pod 'HereSDKMapKit', '~>1.1.4'
 ```
 
 **4.** Complete the installation by performing the following commands:

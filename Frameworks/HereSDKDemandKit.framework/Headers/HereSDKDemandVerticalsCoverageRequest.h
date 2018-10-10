@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- A Class for getting verticals coverage request.
+ A Class for requesting verticals (transit types) coverage.
  */
 @interface HereSDKDemandVerticalsCoverageRequest : NSObject
 

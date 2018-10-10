@@ -13,6 +13,8 @@
 #import <HereSDKDemandKit/HereSDKDemandPassenger.h>
 #import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
 
+@class HereSDKDemandPrice;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -21,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface HereSDKDemandRide : NSObject
 
-/** user ID of the user who ordered the ride */
+/** The ID of the user who ordered the ride */
 @property (nonatomic, readonly) NSString *userId;
 
 /** The unique ride ID */
@@ -30,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** The ride's route */
 @property (nonatomic, readonly) HereSDKDemandRoute *route;
 
-/** The prebook pickup time. nil of no time was given in the offers request */
+/** The pre-booked pickup time. Nil if no time was given in the request (meaning that the request is for an immediate ride) */
 @property (nonatomic, readonly, nullable) NSDate *prebookPickupTime;
 
 /** Price at the time of booking (if applicable) */
@@ -62,6 +64,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** When a cancellation occurs, contains info about the cancellation */
 @property (nonatomic, readonly, nullable) HereSDKDemandCancellationInfo *cancellationInfo;
+
+/**
+ The price of the ride updated by the supplier.
+ This may be updated around the time of the ride's end, when the ride's duration and final price can be known.
+ */
+@property (nonatomic, readonly, nullable) HereSDKDemandPrice *price;
+
+/**
+ Optional. This is the actual point where the driver will arrive to pick up the passenger.
+ This may be adjusted slightly in relation to the address that the passenger entered, 
+ to ensure that the vehicle can access this location.
+ Display this location rather than the user-defined address, 
+ because the confirmed pickup point is where the driver will arrive.
+ */
+@property (nonatomic, readonly, nullable) CLLocation *confirmedPickupPoint;
 
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;
