@@ -4,7 +4,7 @@
 
 # HERE Mobility SDK for iOS
 
-Version 1.1.3
+Version 1.1.5
 
 <br />
 
@@ -76,7 +76,7 @@ Try out our sample apps:
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 1.1.3 supports iOS version **9.0** or later.
+HERE Mobility SDK version 1.1.5 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -131,8 +131,8 @@ use_frameworks!
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod 'HereSDKDemandKit', '~>1.1.3'
-pod 'HereSDKMapKit', '~>1.1.3'
+pod 'HereSDKDemandKit', '~>1.1.5'
+pod 'HereSDKMapKit', '~>1.1.5'
 ```
 
 **4.** Complete the installation by performing the following commands:
@@ -194,7 +194,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 #### 3.3.2 Authenticating App Users
-In order to make Here SDK API calls on behalf of your users (e.g. book rides), you must first "prove" us that they are indeed your users by signing their username with your Secret Key. The recommended procedure is to have your backend server do this when the user logs in, and send the signed "hash" to the app. Once the app has the hash, it should pass it to the SDK like so:
+In order to make Here SDK API calls on behalf of your users, you must first "prove" us that they are indeed your app users by signing their username with the Secret Key provided to you as part of your app registration process. The recommended procedure is to have your backend server do the following procedure when users logs in or when the app is activated where no sign in is required (by using random uid) .You will need to generate a signed hash and pass it to the SDK following these steps:
 
 **_Swift_**
 <!-- Swift sample code for setting User -->
@@ -215,6 +215,77 @@ HereSDKManager.sharedManager.user = [HereSDKUser userWithId:userId expiration:[N
 ```
 
 _**Note:**_ For reference on how to generate a signed hash (given the secret key) please check [iOS sampleApp project](https://github.com/HereMobilityDevelopers/Here-Mobility-SDK-iOS-SampleApp) (function `generateUserCredentialsWithUser` in `AppDelegate`).
+
+#### 3.3.3 Phone verfication
+We require a second level of authentication for booking a ride ,receiving ride updates, cancellation etc.. (all rides related demand API calls) ,verifying that the phone number provided by your users is valid
+You may use the Hash app level user authentication to get access for : requestRide, getVerticalsCoverage requests only.
+Access to the Maps kit API doesn’t require phone verification.
+Phone number verification is done in 2 steps:
+
+#### 3.3.3.1 Receive verification code SMS
+
+**_Swift_**
+<!-- Swift sample code for setting User -->
+
+```swift
+import HereSDKCoreKit
+
+HereSDKManager.shared?.sendVerificationSMS(phoneNumber, withHandler: handler)
+```
+
+**_Objective-C_**
+<!-- Objective-C sample code for setting User -->
+
+```obj-c
+#import <HereSDKCoreKit/HereSDKCoreKit.h>
+
+[HereSDKManager.sharedManager sendVerificationSMS:phoneNumber withHandler:handler];
+
+```
+
+#### 3.3.3.2 Verify phone number
+
+**_Swift_**
+<!-- Swift sample code for setting User -->
+
+```swift
+import HereSDKCoreKit
+
+HereSDKManager.sharedManager?.verifyPhoneNumber(phoneNumber pinCode: verificationCode withHandler:handler)
+```
+
+**_Objective-C_**
+<!-- Objective-C sample code for setting User -->
+
+```obj-c
+#import <HereSDKCoreKit/HereSDKCoreKit.h>
+
+[HereSDKManager.sharedManager verifyPhoneNumber:phoneNumber pinCode:verificationCode withHandler:handler];
+
+```
+
+#### 3.3.3.3 Check if phone number is verified
+You can check whether phone number is verified using following API.
+
+**_Swift_**
+<!-- Swift sample code for setting User -->
+
+```swift
+import HereSDKCoreKit
+
+HereSDKManager.shared?.isPhoneNumberVerified()
+```
+
+**_Objective-C_**
+<!-- Objective-C sample code for setting User -->
+
+```obj-c
+#import <HereSDKCoreKit/HereSDKCoreKit.h>
+
+[HereSDKManager.shared isPhoneNumberVerified];
+
+```
+
 
 ### 3.4. Requesting Location Access Permission
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HereSDKPhoneVerificationError Enumeration Reference</title>
+    <title>HereSDKNetworkError Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Enum/HereSDKPhoneVerificationError" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Enum/HereSDKNetworkError" class="dashAnchor"></a>
 
-    <a title="HereSDKPhoneVerificationError Enumeration Reference"></a>
+    <a title="HereSDKNetworkError Enumeration Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -38,7 +38,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">HereSDKCoreKit Reference</a>
       <img class="carat" src="../img/carat.png" />
-      HereSDKPhoneVerificationError Enumeration Reference
+      HereSDKNetworkError Enumeration Reference
     </p>
 
     <div class="content-wrapper">
@@ -89,18 +89,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>HereSDKPhoneVerificationError</h1>
+            <h1>HereSDKNetworkError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">HereSDKPhoneVerificationError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">HereSDKInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span>
-    <span class="n">HereSDKSMSProviderErr</span><span class="p">,</span>
-    <span class="n">HereSDKInternalErr</span>
-<span class="p">}</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">HereSDKNetworkError</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Type definition for network error types</p>
 
           </div>
         </section>
@@ -112,9 +108,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKInvalidPhoneNumberErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKInvalidPhoneNumberErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKInvalidPhoneNumberErr">HereSDKInvalidPhoneNumberErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkNotAvailableErr"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkNotAvailableErr" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkNotAvailableErr">HereSDKNetworkNotAvailableErr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -122,19 +118,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Network not available</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkNotAvailableErr</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdkInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">networkNotAvailableErr</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
 
                         </div>
                       </div>
@@ -144,9 +140,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKSMSProviderErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKSMSProviderErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKSMSProviderErr">HereSDKSMSProviderErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKSendingDataFailedErr"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKSendingDataFailedErr" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKSendingDataFailedErr">HereSDKSendingDataFailedErr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -154,19 +150,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sending data failed</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKSMSProviderErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKSendingDataFailedErr</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdksmsProviderErr</span> <span class="o">=</span> <span class="mi">10001</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sendingDataFailedErr</span> <span class="o">=</span> <span class="mi">10101</span></code></pre>
 
                         </div>
                       </div>
@@ -176,9 +172,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKInternalErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKInternalErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKInternalErr">HereSDKInternalErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKUserNotDefinedErr"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKUserNotDefinedErr" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKUserNotDefinedErr">HereSDKUserNotDefinedErr</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,19 +182,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>User auth info wasn&rsquo;t supplied.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKInternalErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKUserNotDefinedErr</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdkInternalErr</span> <span class="o">=</span> <span class="mi">10002</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userNotDefinedErr</span> <span class="o">=</span> <span class="mi">10102</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKPhoneVerificationErr"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKPhoneVerificationErr" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKPhoneVerificationErr">HereSDKPhoneVerificationErr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Phone number wasn&rsquo;t verified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKPhoneVerificationErr</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">phoneVerificationErr</span> <span class="o">=</span> <span class="mi">10103</span></code></pre>
 
                         </div>
                       </div>

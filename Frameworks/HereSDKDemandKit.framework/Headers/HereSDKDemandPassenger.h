@@ -16,7 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 /** Passenger's name */
 @property (nonatomic, readonly) NSString *name;
 
-/** Passenger's phone number */
+/**
+  The phone number of the passenger.
+  A valid phone number format is E.164 as describe at https://en.wikipedia.org/wiki/E.164.
+
+  E.164 general format must contain only digits split as follows:
+  - Country code (max 3 digits)
+  - Subscriber number (max 12 digits)
+ */
 @property (nonatomic, readonly) NSString *phoneNumber;
 
 /** Passenger's photo URL */
