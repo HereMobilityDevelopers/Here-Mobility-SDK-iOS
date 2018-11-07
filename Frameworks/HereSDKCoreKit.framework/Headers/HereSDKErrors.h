@@ -23,6 +23,8 @@ typedef NS_ENUM (NSInteger, HereSDKNetworkError) {
     HereSDKSendingDataFailedErr,
     /** User auth info wasn't supplied. */
     HereSDKUserNotDefinedErr,
+    /** User authentication expired. */
+    HereSDKUserAuthExpiredErr,
     /** Phone number wasn't verified. */
     HereSDKPhoneVerificationErr
 };

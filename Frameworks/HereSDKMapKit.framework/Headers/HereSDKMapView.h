@@ -23,6 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
+ Received when user hash is expired
+
+ @param mapView mapview instance
+ @param error the error passed to delegate
+ */
+- (void)mapViewAuthenticationDidFail:(HereSDKMapView *)mapView withError:(NSError *)error;
+
+/**
  Update that mapview finished loading (its definition)
 
  @param mapView mapview that finished loading
