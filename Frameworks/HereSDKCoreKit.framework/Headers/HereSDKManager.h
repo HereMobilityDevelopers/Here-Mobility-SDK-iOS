@@ -44,8 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *loggingId;
 
 /**
- * requests SMS PIN code for verification.
- * This API is currently partially implemented, and is subject to changes.
+ * requests SMS with verification code for given phone number.
+ * Calling this API will invalidate previous phone verification.
 
    @param phoneNumber The user phone number.
    @param handler The block to execute when action is completed.
@@ -54,7 +54,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * verifies phone number with the given PIN code.
- * This API is currently partially implemented, and is subject to changes.
 
    @param phoneNumber The user phone number
    @param pinCode The pin code received via SMS.
@@ -64,7 +63,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Returns a boolean value of phone number verification status.
- * This API is currently partially implemented, and is subject to changes.
  */
 - (BOOL)isPhoneNumberVerified;
 
