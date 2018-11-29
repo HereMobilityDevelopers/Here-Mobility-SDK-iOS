@@ -72,13 +72,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, nullable) HereSDKDemandPrice *price;
 
 /**
- Optional. This is the actual point where the driver will arrive to pick up the passenger.
+ This is the actual point where the driver will arrive to pick up the passenger.
  This may be adjusted slightly in relation to the address that the passenger entered, 
  to ensure that the vehicle can access this location.
  Display this location rather than the user-defined address, 
  because the confirmed pickup point is where the driver will arrive.
  */
-@property (nonatomic, readonly, nullable) CLLocation *confirmedPickupPoint;
+@property (nonatomic, readonly) CLLocation *confirmedPickupPoint;
 
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;

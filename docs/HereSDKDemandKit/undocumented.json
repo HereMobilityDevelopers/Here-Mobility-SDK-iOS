@@ -1,19 +1,19 @@
 {
   "warnings": [
     {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h",
+      "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h",
       "line": 21,
       "symbol": "HereSDKDemandVerticalsCoverageResponse",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h",
+      "file": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKDemandKit.framework/HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h",
       "line": 23,
       "symbol": "HereSDKDemandVerticalsCoverageResponse.verticalTypeMask",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration"
+  "source_directory": "/private/var/lib/jenkins-slave-01/workspace/sdk/ios/deploy/ios/build/docGeneration"
 }
