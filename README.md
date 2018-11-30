@@ -4,7 +4,7 @@
 
 # HERE Mobility SDK for iOS
 
-Version 1.2.0
+Version 1.2.1
 
 <br />
 
@@ -76,7 +76,7 @@ Try out our sample apps:
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 1.2.0 supports iOS version **9.0** or later.
+HERE Mobility SDK version 1.2.1 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -131,8 +131,8 @@ use_frameworks!
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod 'HereSDKDemandKit', '~>1.2.0'
-pod 'HereSDKMapKit', '~>1.2.0'
+pod 'HereSDKDemandKit', '~>1.2.1'
+pod 'HereSDKMapKit', '~>1.2.1'
 ```
 
 **4.** Complete the installation by performing the following commands:
