@@ -232,9 +232,11 @@ layers:
       layer: building
     draw:
       polygons:
+        visible: false
         color: [0.902, 0.859, 0.773, 1.00]
         order: 140
       lines:
+        visible: false
         color:
             -
               - 15

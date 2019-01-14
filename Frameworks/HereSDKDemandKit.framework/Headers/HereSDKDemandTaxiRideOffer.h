@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface HereSDKDemandTaxiRideOffer : HereSDKDemandRideOffer <HereSDKDemandRideOfferProtocol>
 
+/** The requested route. May be different from the ride route. */
+@property (nonatomic, readonly) HereSDKDemandRoute *requestedRoute;
+
 /** The offer identifier */
 @property (nonatomic, readonly) NSString *offerId;
 

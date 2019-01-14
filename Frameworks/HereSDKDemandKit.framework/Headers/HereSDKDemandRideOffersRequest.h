@@ -23,6 +23,21 @@ typedef NS_ENUM(NSUInteger, HereDemandRideOffersRequestSortType) {
     HereDemandRideOffersRequestSortType_ByEta  = 2,
 };
 
+/**
+ Type definition for transport type.
+ */
+typedef NS_OPTIONS(NSUInteger, HereSDKDemandTransportType)
+{
+    /** Transport Type: Taxi */
+    HereSDKDemandTransportTypeTaxi = 1 << 0,
+
+    /** Transport Type: Public Transport */
+    HereSDKDemandTransportTypePublicTransport = 1 << 1,
+
+    /** Transport Type: All */
+    HereSDKDemandTransportTypeAll = NSUIntegerMax
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -67,6 +82,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly, nullable) HereSDKDemandTransitOptions *transitOptions;
 
+/**
+ Parameters for transport type preference.
+ */
+@property(nonatomic, readonly) HereSDKDemandTransportType transportTypeFilterMask;
+
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
 /// :nodoc:
@@ -82,6 +102,19 @@ NS_ASSUME_NONNULL_BEGIN
  @param sortType The sorting order of the ride offers response
  @param passengerNote Free text for passenger notes
  @param transitOptions Added constraints for public transport offers
+ */
++(instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter;
+
+/**
+ Creates a request for ride offers
+ Get all transportation Types in the response
+
+ @param route The route for the requested ride
+ @param constraints The constraints for the requested ride
+ @param prebookPickupTime The pre-booked time of pickup
+ @param priceRange The price range of the requested ride
+ @param sortType The sorting order of the ride offers response
+ @param passengerNote Free text for passenger notes
  */
 +(instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
 

@@ -27,7 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The preferences of a ride.
  */
-@property(nonatomic, readonly) HereSDKDemandRidePreferences *ridePreferences;
+@property(nonatomic, readonly, nullable) HereSDKDemandRidePreferences *ridePreferences;
 
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a ride request
- 
+
  @param offerId The ride offer ID received from requestRide
  @param passengerDetails Details about the passenger booking the ride
  */
@@ -44,12 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a ride request
- 
+
  @param offerId The ride offer ID received from requestRide
  @param passengerDetails Details about the passenger booking the ride
- @param ridePreferences The preferences of a ride.
+ @param ridePreferences The preferences of a ride. If not specified, will be determined by the settings in the developer portal
  */
-+ (instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails ridePreferences:(HereSDKDemandRidePreferences *) ridePreferences;
++ (instancetype)rideRequestWithOfferId:(NSString *)offerId passengerDetails:(HereSDKDemandPassenger *)passengerDetails ridePreferences:(HereSDKDemandRidePreferences *_Nullable) ridePreferences;
 
 @end
 

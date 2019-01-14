@@ -1,26 +1,57 @@
 <html>
     <head>
         <title>Here Mobility SDK - iOS - Documentation</title>
-        <link rel="stylesheet" type="text/css" href="HereSDKCoreKit/css/jazzy.css" />
-        <link rel="stylesheet" type="text/css" href="HereSDKCoreKit/css/highlight.css" />
+        <link rel="stylesheet" type="text/css" href="versions/1.2.3/HereSDKCoreKit/css/jazzy.css" />
+        <link rel="stylesheet" type="text/css" href="versions/1.2.3/HereSDKCoreKit/css/highlight.css" />
+
+        <script src="versions/1.2.3/HereSDKCoreKit/js/jquery.min.js"></script>
     </head>
     <body>
-        <div style="max-width: 800px; margin: auto;">
-            <div>
-                <h1>Here Mobility SDK - iOS - Documentation</h1>
-                <hr />
+        <header class="header">
+            <h1 class="header-col header-col--primary">Here Mobility SDK - iOS - Documentation</h1>
+            <div class="header-col--secondary">
+                <select style="position:relative; top:50%; transform: translateY(-50%);">
+                    <option value="1.2.2">1.2.2</option><option value="1.2.3" selected>1.2.3 (latest)</option>
+                </select>
+            </div>
+        </header>
+        <div class="content-wrapper">
+            <div id="kits" style="padding: 0 5% 0 5%; width: 100%;">
+                <h3>Version: 1.2.3</h3>
                 <ul>
-                    <li>
-                        <a href="HereSDKCoreKit/">HereSDKCoreKit Documentation</a>
-                    </li>
-                    <li>
-                        <a href="HereSDKDemandKit/">HereSDKDemandKit Documentation</a>
-                    </li>
-                    <li>
-                        <a href="HereSDKMapKit/">HereSDKMapKit Documentation</a>
-                    </li>
+                    <li><a href="versions/1.2.3/HereSDKCoreKit/"><b>HereSDKCoreKit</b> Documentation</a></li><li><a href="versions/1.2.3/HereSDKDemandKit/"><b>HereSDKDemandKit</b> Documentation</a></li><li><a href="versions/1.2.3/HereSDKMapKit/"><b>HereSDKMapKit</b> Documentation</a></li>  
                 </ul>
             </div>
         </div>
+
+        <script type="application/javascript">
+            document.getElementsByTagName('select')[0].onchange = function() {
+                var index = this.selectedIndex;
+                loadFunction(this.children[index].value)
+            }
+
+            var loadFunction = function(version) {
+                var url = "../deploy/docs/versions/" + version + "/content.json"
+                $.get(url, function(data) {
+
+                var output = '<h3>Version: ' + version + '</h3><br />';
+
+                output += '<ul>';
+
+                for (var i = 0; i < data.length; i++)
+				{
+					var kit = data[i];
+                    
+                    output += "<li><a href=\"versions/" + version + "/" + kit + "/\"><b>" + kit + "</b> Documentation</a></li>"
+                }
+
+                output += '</ul>';
+
+                document.getElementById('kits').innerHTML = output;
+                }, 'json');
+            }
+
+            loadFunction("1.2.3");
+        </script>
     </body>
 </html>
