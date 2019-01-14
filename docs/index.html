@@ -1,10 +1,10 @@
 <html>
     <head>
         <title>Here Mobility SDK - iOS - Documentation</title>
-        <link rel="stylesheet" type="text/css" href="versions/1.2.3/HereSDKCoreKit/css/jazzy.css" />
-        <link rel="stylesheet" type="text/css" href="versions/1.2.3/HereSDKCoreKit/css/highlight.css" />
+        <link rel="stylesheet" type="text/css" href="HereSDKCoreKit/css/jazzy.css" />
+        <link rel="stylesheet" type="text/css" href="HereSDKCoreKit/css/highlight.css" />
 
-        <script src="versions/1.2.3/HereSDKCoreKit/js/jquery.min.js"></script>
+        <script src="HereSDKCoreKit/js/jquery.min.js"></script>
     </head>
     <body>
         <header class="header">
@@ -31,7 +31,7 @@
             }
 
             var loadFunction = function(version) {
-                var url = "../deploy/docs/versions/" + version + "/content.json"
+                var url = "versions/" + version + "/content.json"
                 $.get(url, function(data) {
 
                 var output = '<h3>Version: ' + version + '</h3><br />';
