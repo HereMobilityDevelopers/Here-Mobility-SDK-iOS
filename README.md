@@ -93,7 +93,7 @@ HERE Mobility SDK version 1.2.3 supports iOS version **9.0** or later.
 
 ### 3.1. Obtaining HERE Credentials for Your App
 
-To use the HERE Mobility SDK, you’ll need a unique app ID and app secret. To obtain these, please go to our [website](https://developers.mobility.here.com/) and sign up for a developer account.
+To use the HERE Mobility SDK, you'll need App ID key and App secret key values. To get new app keys, sign up first to [Here Mobility Developer Zone](https://developer.mobility.here.com) and then register your app using the app bundle id/package name.
 
 ### 3.2. Adding the HERE Mobility SDK to your App
 
