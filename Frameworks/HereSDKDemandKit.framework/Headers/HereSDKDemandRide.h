@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
  Display this location rather than the user-defined address, 
  because the confirmed pickup point is where the driver will arrive.
  */
-@property (nonatomic, readonly) CLLocation *confirmedPickupPoint;
+@property (nonatomic, readonly) CLLocation *confirmedPickupPoint DEPRECATED_MSG_ATTRIBUTE("This property is deprecated, please use route.pickup.point instead.");
 
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;

@@ -87,6 +87,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readonly) HereSDKDemandTransportType transportTypeFilterMask;
 
+/**
+ The client's locale. Complies with the ISO 639-1 standard and defaults to [HereSDKManager userPreferences].locale.
+ */
+@property(nonatomic, readonly) NSString *locale;
+
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
 /// :nodoc:
@@ -103,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param passengerNote Free text for passenger notes
  @param transitOptions Added constraints for public transport offers
  */
-+(instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter;
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter;
 
 /**
  Creates a request for ride offers
@@ -116,7 +121,21 @@ NS_ASSUME_NONNULL_BEGIN
  @param sortType The sorting order of the ride offers response
  @param passengerNote Free text for passenger notes
  */
-+(instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
+
+/**
+ Creates a request for ride offers
+ Set the response locale
+
+ @param route The route for the requested ride
+ @param constraints The constraints for the requested ride
+ @param prebookPickupTime The pre-booked time of pickup
+ @param priceRange The price range of the requested ride
+ @param sortType The sorting order of the ride offers response
+ @param passengerNote Free text for passenger notes
+ @param locale The client's locale. Complies with the ISO 639-1 standard.
+ */
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions locale:(NSString *_Nullable)locale;
 
 @end
 

@@ -4,6 +4,7 @@
 
 #import <UIKit/UIKit.h>
 #import <HereSDKCoreKit/HereSDKUser.h>
+#import <HereSDKCoreKit/HereSDKUserPreferences.h>
 
 #import <HereSDKCoreKit/HereSDKLoggingLevel.h>
 
@@ -36,6 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
  * To log out, set this property to nil
  */
 @property (nonatomic, readwrite, nullable) HereSDKUser *user;
+
+/**
+ * Returns a HereSDKUserPreferences instance.
+
+ * Holds user preferences, If not set the default is UserPrefereces with the `NSLocale.currentLocale`.
+ */
+@property (nonatomic) HereSDKUserPreferences *userPreferences;
 
 /**
  * Returns a logging id.
@@ -77,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Configures the global that determines whether network calls can be made over a cellular connection. The default is `NO`.
 
- * @param allow a boolean flag, Set to `YES` to allow network calls should be allowed.  Set to `YES` to allow network calls to be made over a cellular connection, or to 'NO' to prevent it.
+ * @param allow a boolean flag, Set to `YES` to allow network calls should be allowed. Set to `YES` to allow network calls to be made over a cellular connection, or to 'NO' to prevent it.
  */
 + (void)allowCellularAccess:(BOOL)allow;
 
