@@ -75,22 +75,27 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  A free text note for the passenger
  */
-@property(nonatomic, readonly, nullable) NSString *passengerNote;
+@property (nonatomic, readonly, nullable) NSString *passengerNote;
 
 /**
  Parameters for transit offers.
  */
-@property(nonatomic, readonly, nullable) HereSDKDemandTransitOptions *transitOptions;
+@property (nonatomic, readonly, nullable) HereSDKDemandTransitOptions *transitOptions;
 
 /**
  Parameters for transport type preference.
  */
-@property(nonatomic, readonly) HereSDKDemandTransportType transportTypeFilterMask;
+@property (nonatomic, readonly) HereSDKDemandTransportType transportTypeFilterMask;
 
 /**
  The client's locale. Complies with the ISO 639-1 standard and defaults to [HereSDKManager userPreferences].locale.
  */
-@property(nonatomic, readonly) NSString *locale;
+@property (nonatomic, readonly) NSString *locale;
+
+/**
+ The maximum number of offers to be returned by the request. Defaults to `0`, which returns all available offers.
+ */
+@property (nonatomic, readonly) NSUInteger maxOffers;
 
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
@@ -107,8 +112,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param sortType The sorting order of the ride offers response
  @param passengerNote Free text for passenger notes
  @param transitOptions Added constraints for public transport offers
+ @param transportTypeFilter Transport type preference
  */
-+ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter;
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route
+                        constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints
+                  prebookPickupTime:(NSDate *_Nullable)prebookPickupTime
+                         priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange
+                           sortType:(HereDemandRideOffersRequestSortType)sortType
+                      passengerNote:(NSString *_Nullable)passengerNote
+                     transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions
+                transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter;
 
 /**
  Creates a request for ride offers
@@ -120,8 +133,15 @@ NS_ASSUME_NONNULL_BEGIN
  @param priceRange The price range of the requested ride
  @param sortType The sorting order of the ride offers response
  @param passengerNote Free text for passenger notes
+ @param transitOptions Added constraints for public transport offers
  */
-+ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route
+                        constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints
+                  prebookPickupTime:(NSDate *_Nullable)prebookPickupTime
+                         priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange
+                           sortType:(HereDemandRideOffersRequestSortType)sortType
+                      passengerNote:(NSString *_Nullable)passengerNote
+                     transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions;
 
 /**
  Creates a request for ride offers
@@ -133,9 +153,43 @@ NS_ASSUME_NONNULL_BEGIN
  @param priceRange The price range of the requested ride
  @param sortType The sorting order of the ride offers response
  @param passengerNote Free text for passenger notes
+ @param transitOptions Added constraints for public transport offers
  @param locale The client's locale. Complies with the ISO 639-1 standard.
  */
-+ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints prebookPickupTime:(NSDate *_Nullable)prebookPickupTime priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange sortType:(HereDemandRideOffersRequestSortType)sortType passengerNote:(NSString *_Nullable)passengerNote transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions locale:(NSString *_Nullable)locale;
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route
+                        constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints
+                  prebookPickupTime:(NSDate *_Nullable)prebookPickupTime
+                         priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange
+                           sortType:(HereDemandRideOffersRequestSortType)sortType
+                      passengerNote:(NSString *_Nullable)passengerNote
+                     transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions
+                             locale:(NSString *_Nullable)locale;
+
+/**
+ Creates a request for ride offers
+ Set the response locale
+
+ @param route The route for the requested ride
+ @param constraints The constraints for the requested ride
+ @param prebookPickupTime The pre-booked time of pickup
+ @param priceRange The price range of the requested ride
+ @param sortType The sorting order of the ride offers response
+ @param passengerNote Free text for passenger notes
+ @param transitOptions Added constraints for public transport offers
+ @param transportTypeFilter Transport type preference
+ @param locale The client's locale. Complies with the ISO 639-1 standard.
+ @param maxOffers The maximum number of offers to be returned by the request.
+ */
++ (instancetype)rideOffersWithRoute:(HereSDKDemandRoute *)route
+                        constraints:(HereSDKDemandBookingConstraints *_Nullable)constraints
+                  prebookPickupTime:(NSDate *_Nullable)prebookPickupTime
+                         priceRange:(HereSDKDemandPriceRange *_Nullable)priceRange
+                           sortType:(HereDemandRideOffersRequestSortType)sortType
+                      passengerNote:(NSString *_Nullable)passengerNote
+                     transitOptions:(HereSDKDemandTransitOptions *_Nullable)transitOptions
+                transportTypeFilter:(HereSDKDemandTransportType)transportTypeFilter
+                             locale:(NSString *_Nullable)locale
+                          maxOffers:(NSUInteger)maxOffers;
 
 @end
 

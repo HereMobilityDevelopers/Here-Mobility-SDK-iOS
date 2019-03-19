@@ -137,6 +137,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -153,6 +161,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandCancellationStatus.html">HereSDKDemandCancellationStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandClientError.html">HereSDKDemandClientError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a>
@@ -526,6 +537,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)HereSDKDemandRideOffersRequest(py)maxOffers"></a>
+                    <a name="//apple_ref/objc/Property/maxOffers" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKDemandRideOffersRequest(py)maxOffers">maxOffers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of offers to be returned by the request. Defaults to <code>0</code>, which returns all available offers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">maxOffers</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxOffers</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)HereSDKDemandRideOffersRequest(cm)rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:"></a>
                     <a name="//apple_ref/objc/Method/+rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKDemandRideOffersRequest(cm)rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:">+rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:</a>
@@ -648,6 +691,18 @@
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transportTypeFilter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transport type preference</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -764,6 +819,18 @@ Get all transportation Types in the response</p>
                               <td>
                                 <div>
                                   <p>Free text for passenger notes</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transitOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Added constraints for public transport offers</p>
                                 </div>
                               </td>
                             </tr>
@@ -890,12 +957,194 @@ Set the response locale</p>
                             <tr>
                               <td>
                                 <code>
+                                <em>transitOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Added constraints for public transport offers</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>locale</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>The client&rsquo;s locale. Complies with the ISO 639-1 standard.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKDemandRideOffersRequest(cm)rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:locale:maxOffers:"></a>
+                    <a name="//apple_ref/objc/Method/+rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:locale:maxOffers:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKDemandRideOffersRequest(cm)rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:locale:maxOffers:">+rideOffersWithRoute:constraints:prebookPickupTime:priceRange:sortType:passengerNote:transitOptions:transportTypeFilter:locale:maxOffers:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a request for ride offers
+Set the response locale</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">rideOffersWithRoute</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKDemandRoute.html">HereSDKDemandRoute</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">route</span>
+        <span class="nf">constraints</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKDemandBookingConstraints.html">HereSDKDemandBookingConstraints</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">constraints</span>
+  <span class="nf">prebookPickupTime</span><span class="p">:(</span><span class="n">NSDate</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">prebookPickupTime</span>
+         <span class="nf">priceRange</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKDemandPriceRange.html">HereSDKDemandPriceRange</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">priceRange</span>
+           <span class="nf">sortType</span><span class="p">:(</span><span class="n"><a href="../Enums/HereDemandRideOffersRequestSortType.html">HereDemandRideOffersRequestSortType</a></span><span class="p">)</span><span class="nv">sortType</span>
+      <span class="nf">passengerNote</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">passengerNote</span>
+     <span class="nf">transitOptions</span><span class="p">:(</span><span class="n"><a href="../Classes/HereSDKDemandTransitOptions.html">HereSDKDemandTransitOptions</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">transitOptions</span>
+<span class="nf">transportTypeFilter</span><span class="p">:(</span><span class="n"><a href="../Enums/HereSDKDemandTransportType.html">HereSDKDemandTransportType</a></span><span class="p">)</span><span class="nv">transportTypeFilter</span>
+             <span class="nf">locale</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">locale</span>
+          <span class="nf">maxOffers</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">maxOffers</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">rideOffers</span><span class="p">(</span><span class="n">with</span> <span class="nv">route</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandRoute.html">HereSDKDemandRoute</a></span><span class="p">,</span> <span class="nv">constraints</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandBookingConstraints.html">HereSDKDemandBookingConstraints</a></span><span class="p">?,</span> <span class="nv">prebookPickupTime</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">priceRange</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandPriceRange.html">HereSDKDemandPriceRange</a></span><span class="p">?,</span> <span class="nv">sortType</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereDemandRideOffersRequestSortType.html">HereDemandRideOffersRequestSortType</a></span><span class="p">,</span> <span class="nv">passengerNote</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transitOptions</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandTransitOptions.html">HereSDKDemandTransitOptions</a></span><span class="p">?,</span> <span class="nv">transportTypeFilter</span><span class="p">:</span> <span class="kt"><a href="../Enums/HereSDKDemandTransportType.html">HereSDKDemandTransportType</a></span><span class="p">,</span> <span class="nv">locale</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">maxOffers</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>route</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The route for the requested ride</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constraints</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The constraints for the requested ride</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>prebookPickupTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The pre-booked time of pickup</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>priceRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The price range of the requested ride</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sortType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sorting order of the ride offers response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>passengerNote</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Free text for passenger notes</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transitOptions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Added constraints for public transport offers</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transportTypeFilter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Transport type preference</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>locale</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The client&rsquo;s locale. Complies with the ISO 639-1 standard.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maxOffers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of offers to be returned by the request.</p>
                                 </div>
                               </td>
                             </tr>
@@ -913,7 +1162,7 @@ Set the response locale</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-05)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

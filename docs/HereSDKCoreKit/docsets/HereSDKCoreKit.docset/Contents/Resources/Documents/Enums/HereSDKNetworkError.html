@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKCoreKit Docs
         </a>
-         (87% documented)
+         (95% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -54,6 +54,12 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKManager.html">HereSDKManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKTimeZoneResponse.html">HereSDKTimeZoneResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKTimeZoneService.html">HereSDKTimeZoneService</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKUser.html">HereSDKUser</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +76,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKPhoneVerificationDomain">kHereSDKPhoneVerificationDomain</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKTimeZoneServiceDomain">kHereSDKTimeZoneServiceDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -83,6 +92,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKPhoneVerificationError.html">HereSDKPhoneVerificationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKTimeZoneServiceError.html">HereSDKTimeZoneServiceError</a>
               </li>
             </ul>
           </li>
@@ -99,7 +111,7 @@
 
                 </div>
               </div>
-            <p>Type definition for network error types</p>
+            <p>Type definition for network error types, returned as the error code of NSError objects</p>
 
           </div>
         </section>
@@ -111,9 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkNotAvailableErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKNetworkNotAvailableErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkNotAvailableErr">HereSDKNetworkNotAvailableErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkErrorNotAvailable"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkErrorNotAvailable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkErrorNotAvailable">HereSDKNetworkErrorNotAvailable</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -128,12 +140,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkNotAvailableErr</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkErrorNotAvailable</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">networkNotAvailableErr</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notAvailable</span> <span class="o">=</span> <span class="mi">10100</span></code></pre>
 
                         </div>
                       </div>
@@ -143,9 +155,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKNetworkError@HereSDKSendingDataFailedErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKSendingDataFailedErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKSendingDataFailedErr">HereSDKSendingDataFailedErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkErrorSendingFailed"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkErrorSendingFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkErrorSendingFailed">HereSDKNetworkErrorSendingFailed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,12 +172,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKSendingDataFailedErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkErrorSendingFailed</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sendingDataFailedErr</span> <span class="o">=</span> <span class="mi">10101</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sendingFailed</span> <span class="o">=</span> <span class="mi">10101</span></code></pre>
 
                         </div>
                       </div>
@@ -175,9 +187,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKNetworkError@HereSDKUserNotDefinedErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKUserNotDefinedErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKUserNotDefinedErr">HereSDKUserNotDefinedErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkErrorUserNotDefined"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkErrorUserNotDefined" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkErrorUserNotDefined">HereSDKNetworkErrorUserNotDefined</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -192,12 +204,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKUserNotDefinedErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkErrorUserNotDefined</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userNotDefinedErr</span> <span class="o">=</span> <span class="mi">10102</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userNotDefined</span> <span class="o">=</span> <span class="mi">10102</span></code></pre>
 
                         </div>
                       </div>
@@ -207,9 +219,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKNetworkError@HereSDKUserAuthExpiredErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKUserAuthExpiredErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKUserAuthExpiredErr">HereSDKUserAuthExpiredErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkErrorAuthExpired"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkErrorAuthExpired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkErrorAuthExpired">HereSDKNetworkErrorAuthExpired</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -224,12 +236,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKUserAuthExpiredErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkErrorAuthExpired</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">userAuthExpiredErr</span> <span class="o">=</span> <span class="mi">10103</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">authExpired</span> <span class="o">=</span> <span class="mi">10103</span></code></pre>
 
                         </div>
                       </div>
@@ -239,9 +251,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKNetworkError@HereSDKPhoneVerificationErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKPhoneVerificationErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKPhoneVerificationErr">HereSDKPhoneVerificationErr</a>
+                    <a name="/c:@E@HereSDKNetworkError@HereSDKNetworkErrorPhoneNotVerified"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKNetworkErrorPhoneNotVerified" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKNetworkError@HereSDKNetworkErrorPhoneNotVerified">HereSDKNetworkErrorPhoneNotVerified</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -256,12 +268,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKPhoneVerificationErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKNetworkErrorPhoneNotVerified</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">phoneVerificationErr</span> <span class="o">=</span> <span class="mi">10104</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">phoneNotVerified</span> <span class="o">=</span> <span class="mi">10104</span></code></pre>
 
                         </div>
                       </div>
@@ -276,7 +288,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-05)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

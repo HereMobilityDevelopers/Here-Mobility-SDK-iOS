@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param coordinate The coordinates of the location, where we will get the coverage response.
  */
-+ (instancetype)verticalsCoverageRequestWithCoordinate:(CLLocationCoordinate2D) coordinate;
++ (instancetype)verticalsCoverageRequestWithCoordinate:(CLLocationCoordinate2D)coordinate;
 
 
 @end

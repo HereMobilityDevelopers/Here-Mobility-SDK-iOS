@@ -137,6 +137,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -153,6 +161,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandCancellationStatus.html">HereSDKDemandCancellationStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandClientError.html">HereSDKDemandClientError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a>
@@ -334,7 +345,9 @@ messages related to the open rides updates.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts monitoring all open rides.</p>
+                        <p>Starts monitoring all open rides.
+Rides monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isPhoneNumberVerified]</code>.
+If monitoring is not possible, the delegate method <code>didReceiveUpdateError:</code> will be called.</p>
 
                       </div>
                       <div class="declaration">
@@ -418,7 +431,9 @@ messages related to the open rides updates.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Starts monitoring a ride.</p>
+                        <p>Starts monitoring a ride.
+Ride monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isPhoneNumberVerified]</code>.
+If monitoring is not possible, the handler will be called with phone verification error.</p>
 
                       </div>
                       <div class="declaration">
@@ -535,6 +550,8 @@ messages related to the open rides updates.</p>
                       <div class="abstract">
                         <p>Request ride offers that match a given request.</p>
 
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -576,7 +593,7 @@ messages related to the open rides updates.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, with an array of offers, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -600,6 +617,8 @@ messages related to the open rides updates.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Create a new ride object with the given offer ID.</p>
+
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
 
                       </div>
                       <div class="declaration">
@@ -641,7 +660,7 @@ messages related to the open rides updates.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, with a ride object, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -665,6 +684,8 @@ messages related to the open rides updates.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Query for rides with the given statuses and update time.</p>
+
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
 
                       </div>
                       <div class="declaration">
@@ -706,7 +727,7 @@ messages related to the open rides updates.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, with a rides response, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -730,6 +751,8 @@ messages related to the open rides updates.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Cancel a ride related to a given request.</p>
+
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
 
                       </div>
                       <div class="declaration">
@@ -771,7 +794,7 @@ messages related to the open rides updates.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, with cancellation info, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -795,6 +818,8 @@ messages related to the open rides updates.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Get a ride by rideId.</p>
+
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
 
                       </div>
                       <div class="declaration">
@@ -836,7 +861,7 @@ messages related to the open rides updates.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, with a ride object, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -861,6 +886,8 @@ messages related to the open rides updates.</p>
                       <div class="abstract">
                         <p>Get the verticals coverage available around a specific location
 This request will return a mask of all available TransitTypes around the given location.</p>
+
+<p>@remarks Request specific errors will have a <code><a href="../Constants.html#/c:@kHereSDKDemandErrorDomain">kHereSDKDemandErrorDomain</a></code> domain. See <code>HereSDKDemandErrors</code> for detailed error codes.</p>
 
                       </div>
                       <div class="declaration">
@@ -906,7 +933,7 @@ This request will return a mask of all available TransitTypes around the given l
                               </td>
                               <td>
                                 <div>
-                                  <p>The block that will handle the response.</p>
+                                  <p>The block that will handle the response, , with a coverage response, if successful, or an error, if an error has occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -924,7 +951,7 @@ This request will return a mask of all available TransitTypes around the given l
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-05)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

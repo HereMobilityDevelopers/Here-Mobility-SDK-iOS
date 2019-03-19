@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKCoreKit Docs
         </a>
-         (87% documented)
+         (95% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -54,6 +54,12 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKManager.html">HereSDKManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKTimeZoneResponse.html">HereSDKTimeZoneResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKTimeZoneService.html">HereSDKTimeZoneService</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKUser.html">HereSDKUser</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +76,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKPhoneVerificationDomain">kHereSDKPhoneVerificationDomain</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKTimeZoneServiceDomain">kHereSDKTimeZoneServiceDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -84,6 +93,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKPhoneVerificationError.html">HereSDKPhoneVerificationError</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKTimeZoneServiceError.html">HereSDKTimeZoneServiceError</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -95,15 +107,11 @@
             <h1>HereSDKPhoneVerificationError</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">HereSDKPhoneVerificationError</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">HereSDKInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span>
-    <span class="n">HereSDKSMSProviderErr</span><span class="p">,</span>
-    <span class="n">HereSDKInternalErr</span>
-<span class="p">}</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">HereSDKPhoneVerificationError</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Type definition for phone verification error types, returned as the error code of NSError objects</p>
 
           </div>
         </section>
@@ -115,9 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKInvalidPhoneNumberErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKInvalidPhoneNumberErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKInvalidPhoneNumberErr">HereSDKInvalidPhoneNumberErr</a>
+                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorInvalidPhoneNumber"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKPhoneVerificationErrorInvalidPhoneNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorInvalidPhoneNumber">HereSDKPhoneVerificationErrorInvalidPhoneNumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,19 +133,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Provided phone number was invalid or an incorrect format</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKPhoneVerificationErrorInvalidPhoneNumber</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdkInvalidPhoneNumberErr</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidPhoneNumber</span> <span class="o">=</span> <span class="mi">10000</span></code></pre>
 
                         </div>
                       </div>
@@ -147,9 +155,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKSMSProviderErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKSMSProviderErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKSMSProviderErr">HereSDKSMSProviderErr</a>
+                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorSMSProviderError"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKPhoneVerificationErrorSMSProviderError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorSMSProviderError">HereSDKPhoneVerificationErrorSMSProviderError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -157,19 +165,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The SMS provider returned an error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKSMSProviderErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKPhoneVerificationErrorSMSProviderError</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdksmsProviderErr</span> <span class="o">=</span> <span class="mi">10001</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">smsProviderError</span> <span class="o">=</span> <span class="mi">10001</span></code></pre>
 
                         </div>
                       </div>
@@ -179,9 +187,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKInternalErr"></a>
-                    <a name="//apple_ref/objc/Case/HereSDKInternalErr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKInternalErr">HereSDKInternalErr</a>
+                    <a name="/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorInternal"></a>
+                    <a name="//apple_ref/objc/Case/HereSDKPhoneVerificationErrorInternal" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereSDKPhoneVerificationError@HereSDKPhoneVerificationErrorInternal">HereSDKPhoneVerificationErrorInternal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,19 +197,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Internal error</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereSDKInternalErr</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereSDKPhoneVerificationErrorInternal</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">sdkInternalErr</span> <span class="o">=</span> <span class="mi">10002</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="err">`</span><span class="kd">internal</span><span class="err">`</span> <span class="o">=</span> <span class="mi">10002</span></code></pre>
 
                         </div>
                       </div>
@@ -216,7 +224,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-05)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

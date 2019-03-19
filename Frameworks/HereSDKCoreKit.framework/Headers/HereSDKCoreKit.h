@@ -6,4 +6,6 @@
 #import <HereSDKCoreKit/HereSDKLoggingLevel.h>
 #import <HereSDKCoreKit/HereSDKManager.h>
 #import <HereSDKCoreKit/HereSDKUser.h>
-#import <HereSDKCoreKit/HereSDKErrors.h>
+#import <HereSDKCoreKit/HereSDKCoreErrors.h>
+#import <HereSDKCoreKit/HereSDKTimeZoneResponse.h>
+#import <HereSDKCoreKit/HereSDKTimeZoneService.h>

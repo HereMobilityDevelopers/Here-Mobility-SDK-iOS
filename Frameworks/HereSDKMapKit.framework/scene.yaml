@@ -4,7 +4,7 @@
 sources:
   openmaptiles:
     type: MVT
-    url: 'https://mp-prd-rest.inc-stg.solo-experiments.com/mbtiles/tile/{x}/{y}/{z}'
+    url: 'https://DOMAINPLACEHOLDER/mbtiles/tile/{x}/{y}/{z}'
     max_zoom: 14
 
 

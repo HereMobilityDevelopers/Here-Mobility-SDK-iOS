@@ -8,6 +8,7 @@
 #import <HereSDKDemandKit/HereSDKDemandCancelRideRequest.h>
 #import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
 #import <HereSDKDemandKit/HereSDKDemandDriver.h>
+#import <HereSDKDemandKit/HereSDKDemandErrors.h>
 #import <HereSDKDemandKit/HereSDKDemandLocation.h>
 #import <HereSDKDemandKit/HereSDKDemandManager.h>
 #import <HereSDKDemandKit/HereSDKDemandPassenger.h>

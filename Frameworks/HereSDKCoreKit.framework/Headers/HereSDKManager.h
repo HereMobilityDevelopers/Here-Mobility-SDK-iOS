@@ -83,6 +83,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)performFetchWithCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult result))completionHandler;
 
 /**
+ * Flushes SDK logs to the server
+ */
+- (void)forceLogsUpload:(void (^)(BOOL))completion;
+
+/**
  * Configures the global that determines whether network calls can be made over a cellular connection. The default is `NO`.
 
  * @param allow a boolean flag, Set to `YES` to allow network calls should be allowed. Set to `YES` to allow network calls to be made over a cellular connection, or to 'NO' to prevent it.
