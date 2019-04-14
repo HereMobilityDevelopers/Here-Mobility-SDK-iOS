@@ -2,7 +2,11 @@
  * Copyright © 2017 HERE Global B.V. All rights reserved. *
  **************************************************************/
 
-#import <HereSDKDemandKit/HereSDKDemandKit.h>
+#import <Foundation/Foundation.h>
+
+#import <HereSDKDemandKit/HereSDKDemandRideOffer.h>
+#import <HereSDKDemandKit/HereSDKDemandSupplier.h>
+#import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
 #import <HereSDKDemandKit/HereSDKDemandRideOfferProtocol.h>
 
 NS_ASSUME_NONNULL_BEGIN

@@ -9,7 +9,7 @@ sources:
 
 
 global:
-  text_name: [name, name_us, name_int]
+  text_name: TEXTLOCALIZATIONPLACEHOLDER
 
 scene:
   background:

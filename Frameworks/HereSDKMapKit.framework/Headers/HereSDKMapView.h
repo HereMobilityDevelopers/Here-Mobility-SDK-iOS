@@ -153,6 +153,7 @@ typedef NS_ENUM (NSUInteger, HereSDKMapCompassVisibility) {
 
 /**
  * A UIView subclass for displaying a geographical map
+ * Map titles localization based on HereSDKManager.sharedManager.userPreferences.locale value at init time.
  */
 @interface HereSDKMapView : UIView
 

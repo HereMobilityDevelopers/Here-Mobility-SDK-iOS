@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** Vehicle color */
 @property (nonatomic, readonly) NSString *color;
 
+/** Vehicle identifier (optional). An identifier that displayed on the vehicle and helps the passenger identify it.*/
+@property (nonatomic, nullable, readonly) NSString *identifier;
+
 /// :nodoc:
 - (instancetype)init NS_UNAVAILABLE;
 /// :nodoc:

@@ -31,7 +31,7 @@ typedef void (^HereSDKGeocodeCompletionHandler)(NSArray<HereSDKGeocodeResult *> 
  @param routeRequest Route constraints that the results must comply with
  @param handler Block for handling route results
  */
-- (void)getRoutesWithRequest:(HereSDKRouteRequest *)routeRequest andHandler:(void(^)(NSArray<HereSDKRoute *> *_Nullable routes, NSError * _Nullable error))handler;
+- (void)getRoutesWithRequest:(HereSDKRouteRequest *)routeRequest andHandler:(void (^)(NSArray<HereSDKRoute *> *_Nullable routes, NSError * _Nullable error))handler;
 
 /**
  Submits a reverse-geocoding request (coordinates to place names) for the specified location.
@@ -76,7 +76,7 @@ typedef void (^HereSDKGeocodeCompletionHandler)(NSArray<HereSDKGeocodeResult *> 
  @param addressId The address for which to get the details
  @param handler Block for handling address details results
  */
-- (void)getAddressDataWithAddressId:(NSString *)addressId andHandler:(void(^)(HereSDKAddressData *_Nullable addressData, NSError * _Nullable error))handler;
+- (void)getAddressDataWithAddressId:(NSString *)addressId andHandler:(void (^)(HereSDKAddressData *_Nullable addressData, NSError * _Nullable error))handler;
 
 @end
 

@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           HereSDKCoreKit Docs
         </a>
-         (95% documented)
+         (96% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -51,6 +51,9 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKAddressData.html">HereSDKAddressData</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HereSDKApplicationAuthenticationInfo.html">HereSDKApplicationAuthenticationInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKManager.html">HereSDKManager</a>
               </li>
               <li class="nav-group-task">
@@ -60,9 +63,6 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKTimeZoneService.html">HereSDKTimeZoneService</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Classes/HereSDKUser.html">HereSDKUser</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKUserPreferences.html">HereSDKUserPreferences</a>
               </li>
             </ul>
@@ -70,6 +70,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKAuthDomain">kHereSDKAuthDomain</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@kHereSDKNetworkDomain">kHereSDKNetworkDomain</a>
               </li>
@@ -84,6 +87,9 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKAuthError.html">HereSDKAuthError</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKLoggingLevel.html">HereSDKLoggingLevel</a>
               </li>
@@ -162,41 +168,6 @@ If it missing, the SDK initialization fails, and the results are undefined.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKManager(py)user"></a>
-                    <a name="//apple_ref/objc/Property/user" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKManager(py)user">user</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a HereSDKUser instance.</p>
-
-<p>Holds user credentials data
-To log out, set this property to nil</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/HereSDKUser.html">HereSDKUser</a></span> <span class="o">*</span><span class="n">user</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">user</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKUser.html">HereSDKUser</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)HereSDKManager(py)userPreferences"></a>
                     <a name="//apple_ref/objc/Property/userPreferences" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKManager(py)userPreferences">userPreferences</a>
@@ -265,6 +236,72 @@ This id can be used to query Here Mobility SDK logs.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)HereSDKManager(im)authenticateApplication:withHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-authenticateApplication:withHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)authenticateApplication:withHandler:">-authenticateApplication:withHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Authenticate the application. You must call this before any network operation of the sdk (like demand, maps, etc.)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">authenticateApplication</span><span class="p">:</span>
+            <span class="p">(</span><span class="n"><a href="../Classes/HereSDKApplicationAuthenticationInfo.html">HereSDKApplicationAuthenticationInfo</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span>
+                <span class="n">applicationAuthenticationInfo</span>
+                    <span class="n">withHandler</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">handler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticateApplication</span><span class="p">(</span><span class="n">_</span> <span class="nv">applicationAuthenticationInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKApplicationAuthenticationInfo.html">HereSDKApplicationAuthenticationInfo</a></span><span class="p">?,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>applicationAuthenticationInfo</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the application authentication info</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a handler that will be called to allow error handling</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)HereSDKManager(im)sendVerificationSMS:withHandler:"></a>
                     <a name="//apple_ref/objc/Method/-sendVerificationSMS:withHandler:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)HereSDKManager(im)sendVerificationSMS:withHandler:">-sendVerificationSMS:withHandler:</a>
@@ -275,8 +312,8 @@ This id can be used to query Here Mobility SDK logs.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>requests SMS with verification code for given phone number.
-Calling this API will invalidate previous phone verification.</p>
+                        <p>Requests SMS with verification code for given phone number.
+Calling this API will invalidate previous phone/email verification.</p>
 
                       </div>
                       <div class="declaration">
@@ -330,9 +367,9 @@ Calling this API will invalidate previous phone verification.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKManager(im)verifyPhoneNumber:pinCode:withHandler:"></a>
-                    <a name="//apple_ref/objc/Method/-verifyPhoneNumber:pinCode:withHandler:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)verifyPhoneNumber:pinCode:withHandler:">-verifyPhoneNumber:pinCode:withHandler:</a>
+                    <a name="/c:objc(cs)HereSDKManager(im)sendVerificationEmail:withHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-sendVerificationEmail:withHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)sendVerificationEmail:withHandler:">-sendVerificationEmail:withHandler:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -340,21 +377,89 @@ Calling this API will invalidate previous phone verification.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>verifies phone number with the given PIN code.</p>
+                        
+<ul>
+<li>Requests email with verification code for given email.</li>
+<li><p>Calling this API will invalidate previous phone/email verification.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">verifyPhoneNumber</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">phoneNumber</span>
-                  <span class="nf">pinCode</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">pinCode</span>
-              <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">handler</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendVerificationEmail</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">email</span>
+                  <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">handler</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyPhoneNumber</span><span class="p">(</span><span class="n">_</span> <span class="nv">phoneNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">pinCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendVerificationEmail</span><span class="p">(</span><span class="n">_</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user phone number.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute when action is completed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(im)verifyUserPhoneNumber:pinCode:withHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-verifyUserPhoneNumber:pinCode:withHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)verifyUserPhoneNumber:pinCode:withHandler:">-verifyUserPhoneNumber:pinCode:withHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verifies phone number with the given PIN code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">verifyUserPhoneNumber</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">phoneNumber</span>
+                      <span class="nf">pinCode</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">pinCode</span>
+                  <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">handler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyUserPhoneNumber</span><span class="p">(</span><span class="n">_</span> <span class="nv">phoneNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">pinCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -407,9 +512,9 @@ Calling this API will invalidate previous phone verification.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)HereSDKManager(im)isPhoneNumberVerified"></a>
-                    <a name="//apple_ref/objc/Method/-isPhoneNumberVerified" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)isPhoneNumberVerified">-isPhoneNumberVerified</a>
+                    <a name="/c:objc(cs)HereSDKManager(im)verifyUserEmail:pinCode:withHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-verifyUserEmail:pinCode:withHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)verifyUserEmail:pinCode:withHandler:">-verifyUserEmail:pinCode:withHandler:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -417,19 +522,131 @@ Calling this API will invalidate previous phone verification.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a boolean value of phone number verification status.</p>
+                        
+<ul>
+<li><p>Verifies email with the given PIN code.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isPhoneNumberVerified</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">verifyUserEmail</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">email</span>
+                <span class="nf">pinCode</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">pinCode</span>
+            <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">handler</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isPhoneNumberVerified</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">verifyUserEmail</span><span class="p">(</span><span class="n">_</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">pinCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The user email</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pinCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The pin code received via Email.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute when action is completed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(im)userLogout"></a>
+                    <a name="//apple_ref/objc/Method/-userLogout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)userLogout">-userLogout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Invalidates the verified tokens.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">userLogout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">userLogout</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)HereSDKManager(im)isUserVerified"></a>
+                    <a name="//apple_ref/objc/Method/-isUserVerified" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)HereSDKManager(im)isUserVerified">-isUserVerified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a boolean value of user verification status.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isUserVerified</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isUserVerified</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -509,14 +726,33 @@ Calling this API will invalidate previous phone verification.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">forceLogsUpload</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">forceLogsUpload</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">_Nullable</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">forceLogsUpload</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">forceLogsUpload</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional block to execute when the operation is complete. The block is called with <code>YES</code> if succesful, or <code>NO</code> otherwise</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -696,7 +932,7 @@ and before using HereSDK services.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-04-14)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

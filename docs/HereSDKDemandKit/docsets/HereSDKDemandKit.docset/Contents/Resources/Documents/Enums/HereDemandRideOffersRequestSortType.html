@@ -69,6 +69,9 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKDemandPassenger.html">HereSDKDemandPassenger</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKDemandPaymentMethod">HereSDKDemandPaymentMethod</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKDemandPrice.html">HereSDKDemandPrice</a>
               </li>
               <li class="nav-group-task">
@@ -169,6 +172,9 @@
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandPaymentOption.html">HereSDKDemandPaymentOption</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPublicTransportRouteLegTransportMode.html">HereSDKDemandPublicTransportRouteLegTransportMode</a>
               </li>
               <li class="nav-group-task">
@@ -241,38 +247,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeUnknown"></a>
-                    <a name="//apple_ref/objc/Case/HereDemandRideOffersRequestSortTypeUnknown" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeUnknown">HereDemandRideOffersRequestSortTypeUnknown</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sort type: Unknown</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortTypeUnknown</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unknown</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByPrice"></a>
                     <a name="//apple_ref/objc/Case/HereDemandRideOffersRequestSortTypeByPrice" class="dashAnchor"></a>
                     <a class="token" href="#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByPrice">HereDemandRideOffersRequestSortTypeByPrice</a>
@@ -290,12 +264,77 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortTypeByPrice</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortTypeByPrice</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">byPrice</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">byPrice</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeUnknown"></a>
+                    <a name="//apple_ref/objc/Case/HereDemandRideOffersRequestSortTypeUnknown" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeUnknown">HereDemandRideOffersRequestSortTypeUnknown</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort type: by price (lowest first)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortTypeUnknown</span> <span class="o">=</span>
+    <span class="n"><a href="../Enums/HereDemandRideOffersRequestSortType.html#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByPrice">HereDemandRideOffersRequestSortTypeByPrice</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">unknown</span><span class="p">:</span> <span class="kt">HereDemandRideOffersRequestSortType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByEta"></a>
+                    <a name="//apple_ref/objc/Case/HereDemandRideOffersRequestSortTypeByEta" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByEta">HereDemandRideOffersRequestSortTypeByEta</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sort type: by ETA (earliest first)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortTypeByEta</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">byEta</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -322,12 +361,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortType_ByEta</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="n">HereDemandRideOffersRequestSortType_ByEta</span> <span class="o">=</span>
+    <span class="n"><a href="../Enums/HereDemandRideOffersRequestSortType.html#/c:@E@HereDemandRideOffersRequestSortType@HereDemandRideOffersRequestSortTypeByEta">HereDemandRideOffersRequestSortTypeByEta</a></span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">_ByEta</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">_ByEta</span><span class="p">:</span> <span class="kt">HereDemandRideOffersRequestSortType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -342,7 +382,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-04-14)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

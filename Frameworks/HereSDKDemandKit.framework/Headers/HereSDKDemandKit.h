@@ -36,3 +36,5 @@
 #import <HereSDKDemandKit/HereSDKDemandRidePreferences.h>
 #import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageRequest.h>
 #import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h>
+#import <HereSDKDemandKit/HereSDKDemandPaymentOption.h>
+#import <HereSDKDemandKit/HereSDKDemandPaymentMethod.h>

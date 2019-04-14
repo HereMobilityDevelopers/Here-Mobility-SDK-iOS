@@ -3,8 +3,8 @@
  **************************************************************/
 
 #import <UIKit/UIKit.h>
-#import <HereSDKCoreKit/HereSDKUser.h>
 #import <HereSDKCoreKit/HereSDKUserPreferences.h>
+#import <HereSDKCoreKit/HereSDKApplicationAuthenticationInfo.h>
 
 #import <HereSDKCoreKit/HereSDKLoggingLevel.h>
 
@@ -31,14 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, nonatomic, readonly, nullable) HereSDKManager *sharedManager;
 
 /**
- * Returns a HereSDKUser instance.
-
- * Holds user credentials data
- * To log out, set this property to nil
- */
-@property (nonatomic, readwrite, nullable) HereSDKUser *user;
-
-/**
  * Returns a HereSDKUserPreferences instance.
 
  * Holds user preferences, If not set the default is UserPrefereces with the `NSLocale.currentLocale`.
@@ -52,8 +44,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *loggingId;
 
 /**
- * requests SMS with verification code for given phone number.
- * Calling this API will invalidate previous phone verification.
+ Authenticate the application. You must call this before any network operation of the sdk (like demand, maps, etc.)
+
+ @param applicationAuthenticationInfo the application authentication info
+ @param handler a handler that will be called to allow error handling
+ */
+- (void)authenticateApplication:(HereSDKApplicationAuthenticationInfo *_Nullable)applicationAuthenticationInfo withHandler:(void (^)(NSError *_Nullable error))handler;
+
+/**
+ * Requests SMS with verification code for given phone number.
+ * Calling this API will invalidate previous phone/email verification.
 
    @param phoneNumber The user phone number.
    @param handler The block to execute when action is completed.
@@ -61,18 +61,42 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendVerificationSMS:(NSString*)phoneNumber withHandler:(void(^)(NSError *_Nullable error))handler;
 
 /**
- * verifies phone number with the given PIN code.
+ * Requests email with verification code for given email.
+ * Calling this API will invalidate previous phone/email verification.
+
+ @param email The user phone number.
+ @param handler The block to execute when action is completed.
+ */
+- (void)sendVerificationEmail:(NSString*)email withHandler:(void(^)(NSError *_Nullable error))handler;
+
+/**
+ * Verifies phone number with the given PIN code.
 
    @param phoneNumber The user phone number
    @param pinCode The pin code received via SMS.
    @param handler The block to execute when action is completed.
  */
-- (void)verifyPhoneNumber:(NSString*)phoneNumber pinCode:(NSString*)pinCode withHandler:(void(^)(NSError *_Nullable error))handler;
+- (void)verifyUserPhoneNumber:(NSString*)phoneNumber pinCode:(NSString*)pinCode withHandler:(void(^)(NSError *_Nullable error))handler;
 
 /**
- * Returns a boolean value of phone number verification status.
+ * Verifies email with the given PIN code.
+
+ @param email The user email
+ @param pinCode The pin code received via Email.
+ @param handler The block to execute when action is completed.
  */
-- (BOOL)isPhoneNumberVerified;
+- (void)verifyUserEmail:(NSString*)email pinCode:(NSString*)pinCode withHandler:(void(^)(NSError *_Nullable error))handler;
+
+
+/**
+ * Invalidates the verified tokens.
+ */
+- (void)userLogout;
+
+/**
+ * Returns a boolean value of user verification status.
+ */
+- (BOOL)isUserVerified;
 
 /**
  * Tells the SDK to begin a fetch operation, if it has data to download.
@@ -84,8 +108,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Flushes SDK logs to the server
+ *
+ * @param completion Optional block to execute when the operation is complete. The block is called with `YES` if succesful, or `NO` otherwise
  */
-- (void)forceLogsUpload:(void (^)(BOOL))completion;
+- (void)forceLogsUpload:(void (^ _Nullable)(BOOL))completion;
 
 /**
  * Configures the global that determines whether network calls can be made over a cellular connection. The default is `NO`.

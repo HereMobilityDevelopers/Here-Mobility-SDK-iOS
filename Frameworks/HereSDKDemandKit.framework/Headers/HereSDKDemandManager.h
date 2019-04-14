@@ -64,7 +64,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
 /**
  Starts monitoring all open rides.
- Rides monitoring is only possible, if the phone number is verified. This can be checked by calling `[HereSDKManager.sharedManager isPhoneNumberVerified]`.
+ Rides monitoring is only possible, if the phone number is verified. This can be checked by calling `[HereSDKManager.sharedManager isVerified]`.
  If monitoring is not possible, the delegate method `didReceiveUpdateError:` will be called.
 
  @param delegate The delegate that will receive ride updates.
@@ -78,7 +78,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
 /**
  Starts monitoring a ride.
- Ride monitoring is only possible, if the phone number is verified. This can be checked by calling `[HereSDKManager.sharedManager isPhoneNumberVerified]`.
+ Ride monitoring is only possible, if the phone number is verified. This can be checked by calling `[HereSDKManager.sharedManager isVerified]`.
  If monitoring is not possible, the handler will be called with phone verification error.
 
  @param rideId The ride's identifier.
@@ -101,7 +101,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
  @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
  */
-- (void)requestRide:(HereSDKDemandRideOffersRequest *)request withHandler:(void(^)(NSArray<id<HereSDKDemandRideOfferProtocol>> *_Nullable offers, NSError *_Nullable error))handler;
+- (void)requestRide:(HereSDKDemandRideOffersRequest *)request withHandler:(void (^)(NSArray<id<HereSDKDemandRideOfferProtocol>> *_Nullable offers, NSError *_Nullable error))handler;
 
 /**
  Create a new ride object with the given offer ID.
@@ -111,7 +111,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
  @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
  */
-- (void)createRideWithRequest:(HereSDKDemandRideRequest *)request withHandler:(void(^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
+- (void)createRideWithRequest:(HereSDKDemandRideRequest *)request withHandler:(void (^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
 
 /**
  Query for rides with the given statuses and update time.
@@ -121,7 +121,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
  @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
  */
-- (void)getRides:(HereSDKDemandRideQuery *)query withHandler:(void(^)(HereSDKDemandQueryRidesResponse *ridesResponse, NSError *_Nullable error))handler;
+- (void)getRides:(HereSDKDemandRideQuery *)query withHandler:(void (^)(HereSDKDemandQueryRidesResponse *_Nullable ridesResponse, NSError *_Nullable error))handler;
 
 /**
  Cancel a ride related to a given request.
@@ -141,7 +141,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
  @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
  */
-- (void)getRideWithRequest:(NSString *)rideId withHandler:(void(^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
+- (void)getRideWithRequest:(NSString *)rideId withHandler:(void (^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
 
 /**
  Get the verticals coverage available around a specific location
@@ -152,7 +152,7 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 
  @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
  */
-- (void)getVerticalsCoverageWithRequest:(HereSDKDemandVerticalsCoverageRequest *)request withHandler:(void(^)(HereSDKDemandVerticalsCoverageResponse *_Nullable verticalsCoverageResponse, NSError *_Nullable error))handler;
+- (void)getVerticalsCoverageWithRequest:(HereSDKDemandVerticalsCoverageRequest *)request withHandler:(void (^)(HereSDKDemandVerticalsCoverageResponse *_Nullable verticalsCoverageResponse, NSError *_Nullable error))handler;
 
 
 /// :nodoc:

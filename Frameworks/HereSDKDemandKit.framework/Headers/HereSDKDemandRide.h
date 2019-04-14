@@ -12,6 +12,7 @@
 #import <HereSDKDemandKit/HereSDKDemandSupplier.h>
 #import <HereSDKDemandKit/HereSDKDemandPassenger.h>
 #import <HereSDKDemandKit/HereSDKDemandCancellationInfo.h>
+#import <HereSDKDemandKit/HereSDKDemandPaymentOption.h>
 
 @class HereSDKDemandPrice;
 
@@ -70,6 +71,9 @@ NS_ASSUME_NONNULL_BEGIN
  This may be updated around the time of the ride's end, when the ride's duration and final price can be known.
  */
 @property (nonatomic, readonly, nullable) HereSDKDemandPrice *price;
+
+/** Chosen payment option for the ride */
+@property (nonatomic, readonly) HereSDKDemandPaymentOption paymentOption;
 
 /**
  This is the actual point where the driver will arrive to pick up the passenger.

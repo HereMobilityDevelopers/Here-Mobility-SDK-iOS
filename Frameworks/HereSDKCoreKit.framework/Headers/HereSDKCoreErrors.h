@@ -13,6 +13,9 @@ extern NSErrorDomain const kHereSDKNetworkDomain;
 /** Domain of NSError objects related to TimeZoneService errors */
 extern NSErrorDomain const kHereSDKTimeZoneServiceDomain;
 
+/** Domain of NSError objects related to Auth errors */
+extern NSErrorDomain const kHereSDKAuthDomain;
+
 /**
  Type definition for phone verification error types, returned as the error code of NSError objects
  */
@@ -47,5 +50,19 @@ typedef NS_ERROR_ENUM (kHereSDKNetworkDomain, HereSDKNetworkError) {
 typedef NS_ERROR_ENUM (kHereSDKTimeZoneServiceDomain, HereSDKTimeZoneServiceError) {
     /** Timezone not found */
     HereSDKTimeZoneNotFound = 10201,
+    /** Coordinate not valid */
+    HereSDKTimeZoneCoordinateNotValid,
+};
+
+/**
+ Type definition for auth error types, returned as the error code of NSError objects
+ */
+typedef NS_ERROR_ENUM(kHereSDKAuthDomain, HereSDKAuthError) {
+    /** Provided arguments was invalid or an incorrect format */
+    HereSDKAuthErrorInvalidArgument = 10300,
+    /** Internal error */
+    HereSDKAuthErrorInternal,
+    /** general auth error */
+    HereSDKAuthenticationError
 };
 

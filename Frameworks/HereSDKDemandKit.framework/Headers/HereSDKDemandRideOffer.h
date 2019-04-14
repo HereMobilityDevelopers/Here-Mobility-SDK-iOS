@@ -3,8 +3,10 @@
  **************************************************************/
 
 #import <Foundation/Foundation.h>
+
 #import <HereSDKDemandKit/HereSDKDemandRoute.h>
 #import <HereSDKDemandKit/HereSDKDemandPriceEstimate.h>
+#import <HereSDKDemandKit/HereSDKDemandPaymentOption.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -35,6 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
  It does not include the time it takes for the driver to arrive at the pickup location. 
  */
 @property (nonatomic, readonly, nullable) NSNumber * estimatedRideDurationSeconds;
+
+/** Supported payment options. */
+@property (nonatomic, readonly) HereSDKDemandPaymentOption paymentOptions;
 
 /// :nodoc:
 + (instancetype)new NS_UNAVAILABLE;

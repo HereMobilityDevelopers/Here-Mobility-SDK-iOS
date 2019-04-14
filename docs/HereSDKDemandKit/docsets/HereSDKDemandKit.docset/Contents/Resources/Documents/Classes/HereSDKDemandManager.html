@@ -69,6 +69,9 @@
                 <a class="nav-group-task-link" href="../Classes/HereSDKDemandPassenger.html">HereSDKDemandPassenger</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)HereSDKDemandPaymentMethod">HereSDKDemandPaymentMethod</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/HereSDKDemandPrice.html">HereSDKDemandPrice</a>
               </li>
               <li class="nav-group-task">
@@ -167,6 +170,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPassengerCancelReason.html">HereSDKDemandPassengerCancelReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HereSDKDemandPaymentOption.html">HereSDKDemandPaymentOption</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/HereSDKDemandPublicTransportRouteLegTransportMode.html">HereSDKDemandPublicTransportRouteLegTransportMode</a>
@@ -346,7 +352,7 @@ messages related to the open rides updates.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Starts monitoring all open rides.
-Rides monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isPhoneNumberVerified]</code>.
+Rides monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isVerified]</code>.
 If monitoring is not possible, the delegate method <code>didReceiveUpdateError:</code> will be called.</p>
 
                       </div>
@@ -432,7 +438,7 @@ If monitoring is not possible, the delegate method <code>didReceiveUpdateError:<
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Starts monitoring a ride.
-Ride monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isPhoneNumberVerified]</code>.
+Ride monitoring is only possible, if the phone number is verified. This can be checked by calling <code>[HereSDKManager.sharedManager isVerified]</code>.
 If monitoring is not possible, the handler will be called with phone verification error.</p>
 
                       </div>
@@ -693,13 +699,13 @@ If monitoring is not possible, the handler will be called with phone verificatio
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">getRides</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/HereSDKDemandRideQuery.html">HereSDKDemandRideQuery</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">query</span>
-     <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/HereSDKDemandQueryRidesResponse.html">HereSDKDemandQueryRidesResponse</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span>
+     <span class="nf">withHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n"><a href="../Classes/HereSDKDemandQueryRidesResponse.html">HereSDKDemandQueryRidesResponse</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                    <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">handler</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getRides</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandRideQuery.html">HereSDKDemandRideQuery</a></span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/HereSDKDemandQueryRidesResponse.html">HereSDKDemandQueryRidesResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getRides</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Classes/HereSDKDemandRideQuery.html">HereSDKDemandRideQuery</a></span><span class="p">,</span> <span class="n">withHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/HereSDKDemandQueryRidesResponse.html">HereSDKDemandQueryRidesResponse</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -951,7 +957,7 @@ This request will return a mask of all available TransitTypes around the given l
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-03-19)</p>
+      <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-04-14)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
