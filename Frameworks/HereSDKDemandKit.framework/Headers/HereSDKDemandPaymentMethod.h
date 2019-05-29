@@ -7,9 +7,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- A class containing information a payment method.
+ An abstract superclass containing information about a payment method.
  */
-
 @interface HereSDKDemandPaymentMethod : NSObject
 
 /// :nodoc:

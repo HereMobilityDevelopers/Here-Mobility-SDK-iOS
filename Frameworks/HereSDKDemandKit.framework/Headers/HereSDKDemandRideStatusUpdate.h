@@ -35,6 +35,23 @@ typedef NS_ENUM(NSUInteger, HereSDKDemandRideStatusUpdateStatus)
     HereSDKDemandRideStatusLogRecordFailure = 11,
 };
 
+/**
+ Type definition for ride status reason
+ */
+typedef NS_ENUM(NSUInteger, HereSDKDemandRideStatusUpdateStatusReason)
+{
+    /** No reason for given status */
+    HereSDKDemandRideStatusUpdateStatusReasonNone = 0,
+    /** technical error during payment. */
+    HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentTechnicalError,
+    /** the bank rejected the pay method. Example - the credit card is expired. */
+    HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentRejectedPayMethod,
+    /** the bank rejected the transaction for some reason. */
+    HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentRejectedTransaction,
+    /** the supplier declined the request. */
+    HereSDKDemandRideStatusUpdateStatusReasonRejectedSupplierDeclined,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -43,10 +60,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HereSDKDemandRideStatusUpdate : NSObject
 
 /** The current status of the ride */
-@property(nonatomic, readonly) HereSDKDemandRideStatusUpdateStatus status;
+@property (nonatomic, readonly) HereSDKDemandRideStatusUpdateStatus status;
 
 /** The time the ride status was updated */
-@property(nonatomic, readonly, copy) NSDate *timestamp;
+@property (nonatomic, readonly, copy) NSDate *timestamp;
+
+/** The reason for the current ride status */
+@property (nonatomic, readonly) HereSDKDemandRideStatusUpdateStatusReason statusReason;
 
 /**
  Returns a text description of the ride status

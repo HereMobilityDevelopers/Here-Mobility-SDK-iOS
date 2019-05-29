@@ -4,7 +4,7 @@
 
 # HERE Mobility SDK for iOS
 
-Version 2.0.0
+Version 2.0.1
 
 <br />
 
@@ -48,7 +48,7 @@ You can use any combination of these packages. There is no dependency between th
 
 ### 1.1. Mobility Package
 
-The Mobility package (_DemandKit_) allows your app’s users to manage passenger rides anywhere in the world, supplied through the HERE Mobility Marketplace. This includes requesting ride offers, booking and canceling rides, and updating a ride’s status.  
+The Mobility package (_DemandKit_) allows your app to manage passenger rides anywhere in the world, supplied through the HERE Mobility Marketplace. This includes requesting ride offers, booking and canceling rides, and updating a ride’s status.  
 
 
 ### 1.2. Map Services Package
@@ -76,7 +76,7 @@ Try out our sample apps:
 
 ### 2.1. Operating System
 
-HERE Mobility SDK version 2.0.0 supports iOS version **9.0** or later.
+HERE Mobility SDK version 2.0.1 supports iOS version **9.0** or later.
 
 ### 2.2. 3rd Party Packages
 
@@ -131,8 +131,8 @@ use_frameworks!
 **3.** Depending on the HERE Mobility SDK packages you want to use, add any or all of the following pods to the `Podfile` (optionally, you can specify which versions to add):
 
 ```ruby
-pod 'HereSDKDemandKit', '~>2.0.0'
-pod 'HereSDKMapKit', '~>2.0.0'
+pod 'HereSDKDemandKit', '~>2.0.1'
+pod 'HereSDKMapKit', '~>2.0.1'
 ```
 
 **4.** Complete the installation by performing the following commands:
@@ -193,8 +193,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-#### 3.3.2 Authenticating App Users
-In order to make Here SDK API calls on behalf of your users, you must first "prove" us that they are indeed your app users by signing their username with the Secret Key provided to you as part of your app registration process. The recommended procedure is to have your backend server do the following procedure when users logs in or when the app is activated where no sign in is required (by using random uid) .You will need to generate a signed hash and pass it to the SDK following these steps:
+#### 3.3.2 Authenticating your app
+In order to make Here SDK API calls, you must first "prove" us that it's indeed your app by signing your App Key with the Secret Key provided to you as part of your app registration process. 
+You may use the Hash app level authentication to get access for : requestRideOffers, getVerticalsCoverage requests and all the _MapKit_ services.
+The recommended procedure is to have your backend server do the following procedure when the app is activated. You will need to generate a signed hash and pass it to the SDK following these steps:
 
 **_Swift_**
 <!-- Swift sample code for setting User -->
@@ -202,7 +204,8 @@ In order to make Here SDK API calls on behalf of your users, you must first "pro
 ```swift
 import HereSDKCoreKit
 
-HereSDKManager.shared?.user = HereSDKUser(id: userId, expiration: Date(timeIntervalSince1970: TimeInterval(expiration)), verificationHash: hashString!)
+HereSDKManager.shared().authenticateApplication(HereSDKApplicationAuthenticationInfo(creationTime: date, verificationHash: verificationHash), withHandler: { error in
+})
 ```
 
 **_Objective-C_**
@@ -211,18 +214,17 @@ HereSDKManager.shared?.user = HereSDKUser(id: userId, expiration: Date(timeInter
 ```obj-c
 #import <HereSDKCoreKit/HereSDKCoreKit.h>
 
-HereSDKManager.sharedManager.user = [HereSDKUser userWithId:userId expiration:[NSDate dateWithTimeIntervalSince1970:expiration] verificationHash: hashedString];
+[[HereSDKManager sharedManager] authenticateApplication:[HereSDKApplicationAuthenticationInfo                                                           applicationAuthenticationInfoWithCreationTime:date verificationHash:verificationHash] withHandler:^(NSError * _Nullable error) {
+}];
 ```
 
-_**Note:**_ For reference on how to generate a signed hash (given the secret key) please check [iOS sampleApp project](https://github.com/HereMobilityDevelopers/Here-Mobility-SDK-iOS-SampleApp) (function `generateUserCredentialsWithUser` in `AppDelegate`).
+_**Note:**_ For reference on how to generate a signed hash (given the secret key) please check [iOS sampleApp project](https://github.com/HereMobilityDevelopers/Here-Mobility-SDK-iOS-SampleApp) (function `generateAppCredentials(creationTime : Date)` in `AuthorizationViewController`).
 
-#### 3.3.3 Phone verfication
-We require a second level of authentication for booking a ride ,receiving ride updates, cancellation etc.. (all rides related demand API calls) ,verifying that the phone number provided by your users is valid
-You may use the Hash app level user authentication to get access for : requestRide, getVerticalsCoverage requests only.
-Access to the Maps kit API doesn’t require phone verification.
-Phone number verification is done in 2 steps:
+#### 3.3.3 User verfication
+We require a second level of authentication for booking a ride ,receiving ride updates, cancellation etc.. (all rides related demand API calls), verifying that the phone number or email provided by your users is valid
+Phone number or email verification is done in 2 steps:
 
-#### 3.3.3.1 Receive verification code SMS
+#### 3.3.3.1 Receive verification code via SMS/Email
 
 **_Swift_**
 <!-- Swift sample code for setting User -->
@@ -230,7 +232,10 @@ Phone number verification is done in 2 steps:
 ```swift
 import HereSDKCoreKit
 
+//Phone verification
 HereSDKManager.shared?.sendVerificationSMS(phoneNumber, withHandler: handler)
+//Email verification
+HereSDKManager.shared?.sendVerificationEmail(email, withHandler: handler)
 ```
 
 **_Objective-C_**
@@ -239,11 +244,13 @@ HereSDKManager.shared?.sendVerificationSMS(phoneNumber, withHandler: handler)
 ```obj-c
 #import <HereSDKCoreKit/HereSDKCoreKit.h>
 
+//Phone verification
 [HereSDKManager.sharedManager sendVerificationSMS:phoneNumber withHandler:handler];
-
+//Email verification
+[HereSDKManager.sharedManager sendVerificationEmail:email withHandler:handler];
 ```
 
-#### 3.3.3.2 Verify phone number
+#### 3.3.3.2 Verify phone number/Email
 
 **_Swift_**
 <!-- Swift sample code for setting User -->
@@ -251,7 +258,11 @@ HereSDKManager.shared?.sendVerificationSMS(phoneNumber, withHandler: handler)
 ```swift
 import HereSDKCoreKit
 
-HereSDKManager.sharedManager?.verifyPhoneNumber(phoneNumber pinCode: verificationCode withHandler:handler)
+//Phone verification
+HereSDKManager.sharedManager?.verifyPhoneNumber(phoneNumber pinCode:verificationCode withHandler:handler)
+//Email verification
+HereSDKManager.sharedManager?.verifyEmail(email pinCode:verificationCode withHandler:handler)
+
 ```
 
 **_Objective-C_**
@@ -260,12 +271,16 @@ HereSDKManager.sharedManager?.verifyPhoneNumber(phoneNumber pinCode: verificatio
 ```obj-c
 #import <HereSDKCoreKit/HereSDKCoreKit.h>
 
+//Phone verification
 [HereSDKManager.sharedManager verifyPhoneNumber:phoneNumber pinCode:verificationCode withHandler:handler];
+//Email verification
+[HereSDKManager.sharedManager verifyEmail:phoneNumber pinCode:verificationCode withHandler:handler];
 
 ```
 
-#### 3.3.3.3 Check if phone number is verified
-You can check whether phone number is verified using following API.
+
+#### 3.3.3.3 Check if user is verified
+You can check whether user is verified using following API.
 
 **_Swift_**
 <!-- Swift sample code for setting User -->
@@ -273,7 +288,7 @@ You can check whether phone number is verified using following API.
 ```swift
 import HereSDKCoreKit
 
-HereSDKManager.shared?.isPhoneNumberVerified()
+HereSDKManager.shared?.isVerified()
 ```
 
 **_Objective-C_**
@@ -282,7 +297,7 @@ HereSDKManager.shared?.isPhoneNumberVerified()
 ```obj-c
 #import <HereSDKCoreKit/HereSDKCoreKit.h>
 
-[HereSDKManager.shared isPhoneNumberVerified];
+[[HereSDKManager.shared] isVerified];
 
 ```
 

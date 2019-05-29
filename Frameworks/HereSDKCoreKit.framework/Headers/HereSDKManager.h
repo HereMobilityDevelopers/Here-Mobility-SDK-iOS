@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param applicationAuthenticationInfo the application authentication info
  @param handler a handler that will be called to allow error handling
  */
-- (void)authenticateApplication:(HereSDKApplicationAuthenticationInfo *_Nullable)applicationAuthenticationInfo withHandler:(void (^)(NSError *_Nullable error))handler;
+- (void)authenticateApplication:(HereSDKApplicationAuthenticationInfo *)applicationAuthenticationInfo withHandler:(void (^)(NSError *_Nullable error))handler;
 
 /**
  * Requests SMS with verification code for given phone number.

@@ -15,6 +15,7 @@
 #import <HereSDKDemandKit/HereSDKDemandQueryRidesResponse.h>
 #import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageRequest.h>
 #import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h>
+#import <HereSDKDemandKit/HereSDKDemandRidePayment.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -96,20 +97,37 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
 /**
  Request ride offers that match a given request.
 
- @param request The HereSDKDemandRideOffersRequest object containing the ride constraints (e.g. numbers of passengers and suitcases).
+ @param request The `HereSDKDemandRideOffersRequest` object containing the ride constraints (e.g. numbers of passengers and suitcases).
  @param handler The block that will handle the response, with an array of offers, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the request parameter was invalid.
+    - `HereSDKDemandClientErrorInvalidCoordinate` Invalid coordinate values for pickup or destination locations.
+    - `HereSDKDemandClientErrorInvalidDate` Invalid prebook pickup time.
+    - `HereSDKDemandClientErrorInvalidMaxWalkingDistancePublicTransport` Invalid maximum walking distance in transit options.
+    - `HereSDKDemandClientErrorInvalidMaxTransfersPublicTransport` Invalid max transfers value in transit options.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorAuthExpired`
+    - `HereSDKAuthenticationError`
  */
 - (void)requestRide:(HereSDKDemandRideOffersRequest *)request withHandler:(void (^)(NSArray<id<HereSDKDemandRideOfferProtocol>> *_Nullable offers, NSError *_Nullable error))handler;
 
 /**
  Create a new ride object with the given offer ID.
 
- @param request The HereSDKDemandRideRequest object containing the offerId.
+ @param request The `HereSDKDemandRideRequest` object containing the offerId.
  @param handler The block that will handle the response, with a ride object, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @warning Requires the user to be verified. Use `HereSDKManager.sharedManager.isUserVerified` to check verification status.
+
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the request parameter was invalid.
+    - `HereSDKDemandClientErrorOfferExpired` The requested offer has expired.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorPhoneNotVerified`
+    - `HereSDKAuthenticationError`
  */
 - (void)createRideWithRequest:(HereSDKDemandRideRequest *)request withHandler:(void (^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
 
@@ -119,7 +137,14 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
  @param query The HereSDKDemandRideQuery object containing the filters on ride statuses and update time.
  @param handler The block that will handle the response, with a rides response, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @warning Requires the user to be verified. Use `HereSDKManager.sharedManager.isUserVerified` to check verification status.
+
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the request parameter was invalid.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorPhoneNotVerified`
+    - `HereSDKAuthenticationError`
  */
 - (void)getRides:(HereSDKDemandRideQuery *)query withHandler:(void (^)(HereSDKDemandQueryRidesResponse *_Nullable ridesResponse, NSError *_Nullable error))handler;
 
@@ -129,7 +154,14 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
  @param request The HereSDKDemandCancelRideRequest object representing the ride to be cancelled.
  @param handler The block that will handle the response, with cancellation info, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @warning Requires the user to be verified. Use `HereSDKManager.sharedManager.isUserVerified` to check verification status.
+
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the request parameter was invalid.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorPhoneNotVerified`
+    - `HereSDKAuthenticationError`
  */
 - (void)cancelRideWithRequest:(HereSDKDemandCancelRideRequest *)request withHandler:(HereSDKDemandRideCancellationBlock)handler;
 
@@ -139,9 +171,33 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
  @param rideId The ID of the ride to retrieve.
  @param handler The block that will handle the response, with a ride object, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @warning Requires the user to be verified. Use `HereSDKManager.sharedManager.isUserVerified` to check verification status.
+
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the rideId parameter was invalid.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorPhoneNotVerified`
+    - `HereSDKAuthenticationError`
  */
 - (void)getRideWithRequest:(NSString *)rideId withHandler:(void (^)(HereSDKDemandRide *_Nullable ride, NSError *_Nullable error))handler;
+
+/**
+ Get ride payment information for a specific ride.
+
+ @param rideId The ID of the ride to retrieve.
+ @param handler The block that will handle the response, with a ride payment object, if successful or an error, if an error has occurred.
+
+ @warning Requires the user to be verified. Use `HereSDKManager.sharedManager.isUserVerified` to check verification status.
+
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the rideId parameter was invalid.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorPhoneNotVerified`
+    - `HereSDKAuthenticationError`
+ */
+- (void)getRidePaymentForRideId:(NSString *)rideId withHandler:(void (^)(HereSDKDemandRidePayment *_Nullable ridePayment, NSError *_Nullable error))handler;
 
 /**
  Get the verticals coverage available around a specific location
@@ -150,7 +206,13 @@ typedef void (^HereSDKDemandRideCancellationBlock)(HereSDKDemandCancellationInfo
  @param request The HereSDKDemandVerticalsCoverageRequest object.
  @param handler The block that will handle the response, , with a coverage response, if successful, or an error, if an error has occurred.
 
- @remarks Request specific errors will have a `kHereSDKDemandErrorDomain` domain. See <code>HereSDKDemandErrors</code> for detailed error codes.
+ @note Can return `HereSDKDemandClientError` for request related errors,
+ or `HereSDKNetworkError` and `HereSDKAuthError` for network or authentication errors:
+    - `HereSDKDemandClientErrorInternal` When the request parameter was invalid.
+    - `HereSDKDemandClientErrorInvalidCoordinate` Invalid coordinate values.
+    - `HereSDKNetworkErrorNotAvailable`
+    - `HereSDKNetworkErrorAuthExpired`
+    - `HereSDKAuthenticationError`
  */
 - (void)getVerticalsCoverageWithRequest:(HereSDKDemandVerticalsCoverageRequest *)request withHandler:(void (^)(HereSDKDemandVerticalsCoverageResponse *_Nullable verticalsCoverageResponse, NSError *_Nullable error))handler;
 

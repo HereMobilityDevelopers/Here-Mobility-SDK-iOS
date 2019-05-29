@@ -27,11 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 /** The ride's current status */
 @property (nonatomic, readonly) HereSDKDemandRideStatusUpdateStatus currentStatus;
 
+/** The reason for the ride's current status */
+@property (nonatomic, readonly) HereSDKDemandRideStatusUpdateStatusReason currentStatusReason;
+
 /** Previous ride statuses, in descending their timestamp */
-@property (nonatomic, readonly) NSMutableArray<HereSDKDemandRideStatusUpdate*> *prevStatusesArray;
+@property (nonatomic, readonly) NSArray<HereSDKDemandRideStatusUpdate*> *prevStatusesArray;
 
 /** Number of statuses in prevStatusesArray */
-@property (nonatomic, readonly) NSUInteger prevStatusesArrayCount;
+@property (nonatomic, readonly) NSUInteger prevStatusesArrayCount DEPRECATED_MSG_ATTRIBUTE("This method is deprecated. Use `-prevStatusesArray.count` instead.");
 
 @end
 

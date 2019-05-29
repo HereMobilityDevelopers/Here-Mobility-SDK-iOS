@@ -38,3 +38,7 @@
 #import <HereSDKDemandKit/HereSDKDemandVerticalsCoverageResponse.h>
 #import <HereSDKDemandKit/HereSDKDemandPaymentOption.h>
 #import <HereSDKDemandKit/HereSDKDemandPaymentMethod.h>
+#import <HereSDKDemandKit/HereSDKDemandCreditCard.h>
+#import <HereSDKDemandKit/HereSDKDemandRidePayment.h>
+#import <HereSDKDemandKit/HereSDKDemandFare.h>
+#import <HereSDKDemandKit/HereSDKDemandFareItem.h>
