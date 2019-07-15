@@ -7,6 +7,7 @@
 
 #import <HereSDKMapKit/HereSDKRouteManeuver.h>
 #import <HereSDKMapKit/HereSDKPolyline.h>
+#import <HereSDKMapKit/HereSDKRoutePoint.h>
 
 /**
  Part of the route between two consecutive waypoints
@@ -17,6 +18,10 @@
  Polyline of the route leg
  */
 @property (nonatomic, readonly) HereSDKPolyline *polyline;
+/**
+ Geometry points of the route leg
+ */
+@property (nonatomic, readonly) NSArray<HereSDKRoutePoint *> *points;
 /**
  Distance of the leg (in the units requested in HereSDKRouteRequest)
  */

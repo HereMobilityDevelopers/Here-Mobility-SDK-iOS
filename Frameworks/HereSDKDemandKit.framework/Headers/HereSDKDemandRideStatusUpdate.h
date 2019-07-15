@@ -44,10 +44,6 @@ typedef NS_ENUM(NSUInteger, HereSDKDemandRideStatusUpdateStatusReason)
     HereSDKDemandRideStatusUpdateStatusReasonNone = 0,
     /** technical error during payment. */
     HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentTechnicalError,
-    /** the bank rejected the pay method. Example - the credit card is expired. */
-    HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentRejectedPayMethod,
-    /** the bank rejected the transaction for some reason. */
-    HereSDKDemandRideStatusUpdateStatusReasonRejectedPaymentRejectedTransaction,
     /** the supplier declined the request. */
     HereSDKDemandRideStatusUpdateStatusReasonRejectedSupplierDeclined,
 };

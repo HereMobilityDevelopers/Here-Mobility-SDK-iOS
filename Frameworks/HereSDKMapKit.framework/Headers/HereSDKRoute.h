@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) HereSDKPolyline *polyline;
 /**
+ Geometry points of the route
+ */
+@property (nonatomic, readonly) NSArray<HereSDKRoutePoint *> *points;
+/**
  Legs of the route
  */
 @property (nonatomic, readonly) NSArray<HereSDKRouteLeg *> *routeLegs;

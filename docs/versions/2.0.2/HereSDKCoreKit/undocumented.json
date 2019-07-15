@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKTimeZoneResponse.h",
+      "line": 10,
+      "symbol": "HereSDKTimeZoneResponse",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKTimeZoneResponse.h",
+      "line": 21,
+      "symbol": "HereSDKTimeZoneResponse.+new",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration/HereSDKCoreKit.framework/HereSDKCoreKit/HereSDKTimeZoneResponse.h",
+      "line": 22,
+      "symbol": "HereSDKTimeZoneResponse.-init",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/private/var/lib/jenkins-slave-02/workspace/sdk/ios/deploy/ios/build/docGeneration"
+}

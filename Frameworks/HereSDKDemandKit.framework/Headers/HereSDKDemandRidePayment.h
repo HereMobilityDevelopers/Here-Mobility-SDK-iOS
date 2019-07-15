@@ -25,14 +25,9 @@ typedef NS_ENUM(NSUInteger, HereSDKDemandRidePaymentStatus) {
     /** when the ride, or payment, is cancelled */
     HereSDKDemandRidePaymentStatusCancelled,
 
-    /** failure on technical issue */
-    HereSDKDemandRidePaymentStatusFailedTechnical,
+    /** failure */
+    HereSDKDemandRidePaymentStatusFailure,
 
-    /** failure because the transaction is rejected */
-    HereSDKDemandRidePaymentStatusFailedRejectedTransaction,
-
-    /** failure because the pay method is invalid */
-    HereSDKDemandRidePaymentStatusFailedRejectedPayMethod,
 };
 
 NS_ASSUME_NONNULL_BEGIN
